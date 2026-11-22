@@ -1,0 +1,5 @@
+# make build-trace (heap tracing with callers, tools/simtools/leak_cycles.py): on top of sdkconfig.defaults + sdkconfig.defaults.bt. A fragment, not a copy of app/sdkconfig (FIX3 I5).
+# CONFIG_HEAP_TRACING_OFF is not set
+CONFIG_HEAP_TRACING_STANDALONE=y
+CONFIG_HEAP_TRACING_STACK_DEPTH=8
+CONFIG_ESP_SYSTEM_USE_FRAME_POINTER=y

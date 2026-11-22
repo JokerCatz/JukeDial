@@ -1,0 +1,60 @@
+# id <TAB> zh_cn : hand written rows of the phase B draft (mainland wording); everything else comes from the phrase + character tables in the deleted one-off i18n_cn_draft.py (see git history)
+AGAIN_IN_9_MIN	9 分钟后再响
+AGAIN_IN_9_MIN_2	：9 分钟后再响
+AND_CANNOT_BE_BROUGHT_BACK	无法恢复
+BUILT_WITHOUT_AURACAST	此固件未包含 Auracast
+BUILT_WITHOUT_BLUETOOTH	此固件未包含蓝牙
+CLICK_THE_BROWSER_S_ADDRESS_BAR_FIRST	先点击电脑浏览器的地址栏
+COLOURS	噪声颜色
+NOISE_COLOURS	噪声颜色
+NOISE	噪声
+D_YES_IN_A_ROW	连续 %d 次圣杯
+MOON_BLOCKS	掷杯
+THREE_YES_IN_A_ROW	连续三次圣杯！心想事成
+THINK_OF_A_QUESTION_TAP_TO_THROW	心里想好问题，点击掷杯
+DUB_OFF	停止叠录
+OVERDUB	叠加录音
+STOP_THE_OVERDUB_FIRST	先停止叠加录音
+EDIT_SETTINGS_PAGE_LISTS	在设置网页的“列表”中编辑
+EJECTED_SAFE_TO_UNPLUG	已弹出，可以拔出了
+FULL_2	铺满
+IN_ORDER	顺序
+IN_ORDER_2	依次
+LISTENING_2	正在听拍子…
+NEEDS_AT_LEAST_4_SONGS_WITH_DIFFERENT	曲库中至少要有 4 首标题不同的歌
+NEEDS_SONGS_BY_AT_LEAST_4_ARTISTS	曲库中至少要有 4 位不同歌手的歌
+NO_BEAT_TAP_FOR_METRONOME	没有拍子：点击使用节拍器
+PHOTOS	相册
+RE_INSERT_THE_CARD_OR_RESTART	请重新插拔存储卡或重启
+REBOOT_INTO_S	重启并切换到 %s
+REBOOTS_AS_A_USB_DRIVE_MUSIC_STOPS	重启为 U 盘\n（音乐会停止）
+REBOOTS_INTO_THE_INSTRUMENT_MUSIC_STOPS	重启进入乐器模式\n（音乐会停止）
+RESET	重置
+BLANK_SCENE	空白场景
+DELETE_SCENE	删除场景
+SAVE_AS_NEW	另存为新场景
+SAVE_NEW	另存为新文件
+SAVED	已保存
+SENDING_CLOCK	发送时钟
+SLOT	老虎机
+STATUS	状态
+SWITCH_TO_USB_DRIVE	切换为 U 盘
+USB_DRIVE	U 盘
+USB_DRIVE_MODE	U 盘模式
+SYNCING_THE_TIME	正在连接 Wi-Fi 校时…
+TAKEN	那一格已被占用
+TAP_AGAIN_REBOOT_INTO_USB_DRIVE_MODE	再点一次：重启进入 U 盘模式
+TAP_WHEN_YOU_HEAR_BOTH	听到两声请点击
+TAP_TO_SPIN	点击转动
+THE_COMPUTER_STILL_USES_THE_CARD_EJECT	电脑仍在使用 TF 卡\n请先在电脑上弹出\n再点一次：强制返回
+THINKING	电脑思考中…
+TOO_MANY_REDIRECTS	重定向次数过多
+TUBE	电子管
+UNDO	撤销
+U_GEN_STILL_TAP	%u代·静止：点击
+WEEKDAYS	工作日
+ZERO	清零
+DETAILS	详情
+NOTHING_TO_ASK_IN_THIS_DECK	这个词库里没有可考的单词
+RECONNECTING_HEADPHONES	正在重新连接耳机…
+ADD_A_SOUND	＋ 添加声音

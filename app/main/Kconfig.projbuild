@@ -1,0 +1,14 @@
+menu "JC player app"
+config APP_TEST_PANIC
+    bool "Test: abort() 5 s after boot (boot-loop guard check)"
+    default n
+config APP_TEST_NO_SD
+    bool "Test: behave as if the TF card is missing"
+    default n
+config APP_TEST_PLAY
+    bool "Test: play the first MP3 under /sdcard/export at boot"
+    default n
+config APP_TEST_SLEEP_SHORT
+    bool "Test: sleep timer counts seconds instead of minutes"
+    default n
+endmenu

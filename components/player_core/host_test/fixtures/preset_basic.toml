@@ -1,0 +1,24 @@
+format = 1
+name = "Warm room"
+
+[[music]]
+kind = "equalizer"
+equalizer = """
+Preamp: -6.2 dB
+Filter 1: ON PK Fc 105 Hz Gain -2.3 dB Q 0.70
+Filter 2: ON LSC Fc 80 Hz Gain 4.0 dB Q 0.71
+"""
+
+[[music]]
+kind = "tone"
+mix = 0.5
+params = { warmth = 0.4, depth = -0.2 }
+
+[[master]]
+kind = "limiter"
+params = { ceiling_db = -1.5 }
+
+[[sends]]
+from = 1
+level = 0.3
+nodes = [{ kind = "freeverb", params = { room = 0.7 } }]

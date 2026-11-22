@@ -1,0 +1,5 @@
+# Paths that tracked text files mention but that do not exist (tools/check/check_paths.py ratchet). Today's debt, not a licence:
+# a NEW missing path fails the check; a path listed here that now exists or is no longer mentioned fails too (delete its line).
+# Fix a stale mention by correcting the file that holds it, then remove the line. Regenerate: python3 tools/check/check_paths.py --list
+components/gme/gme/Ym2612_MAME.cpp
+components/gme/license.gpl2.txt

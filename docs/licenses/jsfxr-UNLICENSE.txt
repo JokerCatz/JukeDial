@@ -1,0 +1,34 @@
+jsfxr - a JavaScript port of sfxr, by Chris McCormick and contributors
+Source: https://github.com/chr15m/jsfxr (master, fetched 2026-11-14: UNLICENSE, package.json "license": "UNLICENSE", sfxr.js)
+Licence: public domain (the Unlicense; the repository's UNLICENSE file, copied verbatim below).
+The original sfxr is by Tomas Pettersson (DrPetter), MIT licence: "Source code is available and you're free to use it for anything
+you please. I've put it under the MIT free software license." (https://www.drpetter.se/project_sfxr.html, fetched 2026-11-14).
+Used by: app/main/sfx_bank.def, the entries credited `jsfxr` (select, coin, power_up, jump, hit, laser, boom): the middle of each
+preset generator's random ranges in sfxr.js (blipSelect, pickupCoin, powerUp, jump, hitHurt, laserShoot, explosion), converted by hand
+into Hz, ms and octaves per second (sfxr's own unit conversions in sfxr.js) for our chip voices. No jsfxr code is copied.
+
+This is free and unencumbered software released into the public
+domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org/>

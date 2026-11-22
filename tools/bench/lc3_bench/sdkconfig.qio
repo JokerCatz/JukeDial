@@ -1,0 +1,2 @@
+# flash in QIO like the player (app/sdkconfig: CONFIG_ESPTOOLPY_FLASHMODE_QIO=y); the tool default is DIO
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y

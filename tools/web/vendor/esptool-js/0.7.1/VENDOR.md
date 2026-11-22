@@ -1,0 +1,7 @@
+# esptool-js 0.7.1 (vendored)
+- Source: npm registry tarball https://registry.npmjs.org/esptool-js/-/esptool-js-0.7.1.tgz (published 2026-11-02), licence Apache-2.0 (LICENSE here).
+- Tarball integrity (registry metadata, checked against the downloaded file before extracting): `sha512-vw1isT5ROHgpRmMG3y6B81dceeZ7O1WhF1x05qFbAlH8N0N/pOQqODzJLA+36lCbOXCw06iA4CWctyrQQ7VeSA==`
+- Vendored on 2026-11-15: only `package/bundle.js` (single-file browser ES module, pako inlined, no network calls, no eval) and `package/LICENSE`. SHA256SUMS here lists our copies; `tools/web/check.sh` verifies them.
+- ESP32-S31: supported by this version: `lib/targets/esp32s31.js` (`ESP32S31ROM`, CHIP_NAME "ESP32-S31", IMAGE_CHIP_ID 32 = IDF `ESP_CHIP_ID_ESP32S31` 0x20), stub `lib/targets/stub_flasher/esp32s31.json`, `lib/stubFlasher.js` case "ESP32-S31".
+- Upgrade: new folder next to this one, repeat the download in a scratch folder, check the sha512, update `ESPTOOL_VERSION` in `tools/web/flasher.js`, never edit the bundle.
+- Notices (fetched 2026-11-16, data only; verbatim in `NOTICE`): the package has no NOTICE file. bundle.js inlines pako 2.1.0 ("MIT AND Zlib"): pako's LICENSE from the 2.1.0 tag, https://raw.githubusercontent.com/nodeca/pako/2.1.0/LICENSE (commit 3c06216518c259b569a5168dee867e6dabbe5160), and the zlib licence its lib/zlib/ port derives from, https://raw.githubusercontent.com/madler/zlib/v1.3.1/LICENSE (commit 352cb28d12baf02863ff5d4d96be0587ced419a1).

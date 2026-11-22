@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ba" viewBox="300 318 600 566" width="240" height="226" stroke-linejoin="round" stroke-linecap="round" role="img" aria-hidden="true">
+<style>svg.ba{max-width:100%;height:auto}@media (prefers-color-scheme:dark){svg.ba{color:#d8dde4}}svg.ba .o{stroke:currentColor;stroke-width:5}svg.ba .i{stroke:#000;stroke-opacity:.45;stroke-width:3;fill:none}</style>
+<!-- JukeDial: the round knob board (JC3636F118), drawn over the product photo: faceted knob ring, round screen, black base with pin-hole, USB-C, jack, side switch. -->
+<path class="o" fill="#26292e" d="M323 614V669A275 202 0 0 0 873 669V614z"/>
+<path class="o" fill="#a3272a" d="M313 539V614A285 210 0 0 0 883 614V539z"/>
+<path class="i" d="M877.5 580L865.1 687.3M861.3 619.4L840.6 724.2M835 655.7L806.7 757M799.5 687.5L764.8 784.3M756.3 713.6L716.6 805M707.1 733L663.7 818.3M653.6 745L608.4 823.9M598 749L552.6 821.3M542.4 745L498.6 810.8M488.9 733L448.4 792.7M439.7 713.6L403.9 767.8M396.5 687.5L366.9 736.9M361 655.7L338.8 701.4M334.7 619.4L320.7 662.4"/>
+<ellipse class="o" fill="#c8383a" cx="598" cy="539" rx="285" ry="210"/>
+<ellipse fill="#0b0c0e" stroke="#000" stroke-opacity=".7" stroke-width="3" cx="599" cy="543" rx="242" ry="180"/>
+<ellipse fill="#1a2230" cx="599" cy="547" rx="208" ry="155"/>
+<g fill="#e8ecf1" stroke="#e8ecf1" stroke-width="2.6" transform="matrix(4.84 0 0 3.6 357 363)"><ellipse cx="46" cy="60" rx="6.5" ry="4.5" stroke="none" transform="rotate(-20 46 60)"/><path fill="none" d="M51.5 59V36q9 2 9 11"/></g>
+<g fill="#08090b" stroke="#000" stroke-width="2">
+<ellipse cx="455" cy="822" rx="4.5" ry="3.5"/>
+<rect x="514" y="834" width="83" height="17" rx="8.5" transform="rotate(8 555 843)"/>
+<ellipse cx="711" cy="836" rx="15" ry="11" transform="rotate(-20 711 836)"/>
+<rect x="779" y="782" width="50" height="15" rx="7.5" transform="rotate(-48 804 790)"/>
+</g></svg>

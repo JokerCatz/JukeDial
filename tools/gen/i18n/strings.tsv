@@ -1,0 +1,1048 @@
+# id <TAB> zh_tw <TAB> zh_cn <TAB> en <TAB> status <TAB> ctx (optional: why two ids carry the same texts).  Edit zh_cn and status (untranslated | translated | reviewed | same); a new id: add a row, run python3 tools/gen/i18n_gen.py.
+# The ids are the names in the sources: T(S_BACK). \n \t \\ are escaped.
+S_10_MIN	10 分鐘	10 分钟	10 min	translated	
+S_16_SOUNDS_AT_MOST	已滿 16 個聲音	已满 16 个声音	16 sounds at most	translated	
+S_1ST_TO_MOVE	輪到先手	轮到先手	1st to move	translated	
+S_1ST_WINS	先手贏了！	先手赢了！	1st wins!	translated	
+S_2ND_TO_MOVE	輪到後手	轮到后手	2nd to move	translated	
+S_2ND_WINS	後手贏了！	后手赢了！	2nd wins!	translated	
+S_2_BALLS	兩顆球	两颗球	2 balls	translated	
+S_2_PLAYERS	雙人	双人	2 players	translated	
+S_3_ALIKE_WIN_CLOVER_WILD	三個一樣才中 · 幸運草百搭	三个一样才中 · 幸运草百搭	3 alike win · clover wild	translated	
+S_3_LAYERS_AT_MOST	最多 3 層	最多 3 层	3 layers at most	translated	
+S_3_MIN	3 分鐘	3 分钟	3 min	translated	
+S_5_MIN	5 分鐘	5 分钟	5 min	translated	
+S_ACTION	動作	动作	Action	translated	
+S_ADDRESS_TYPED_TURN_THE_PLUG_OVER_FOR	已輸入網址\n設定時請把插頭翻面	已输入网址\n设置时请把插头翻面	Address typed\nTurn the plug over for settings	translated	
+S_ADD_A_SOUND	＋ 加聲音	＋ 添加声音	＋ Add a sound	translated	
+S_AGAIN	再抽一道	再抽一道	Again	translated	
+S_AGAIN_2	再一次	再一次	Again	translated	
+S_AGAIN_IN_9_MIN	9 分鐘後再叫	9 分钟后再响	Again in 9 min	translated	
+S_AGAIN_IN_9_MIN_2	：9 分鐘後再叫	：9 分钟后再响	: again in 9 min	translated	
+S_ALARM	鬧鐘	闹钟	Alarm	translated	
+S_ALARM_SOUND	試聽鈴聲	试听铃声	Alarm sound	translated	
+S_ALBUM	專輯	专辑	Album	translated	
+S_ALL	全部	全部	All	translated	
+S_ALL_CLEARED	已全部清除	已全部清除	All cleared	translated	
+S_ALL_D	全部記住了！	全部记住了！	All %d!	translated	
+S_ALL_LOCKED	全部鎖定！	全部锁定！	All locked!	translated	
+S_ALL_RELEASED	三次放完	三次放完	All released	translated	
+S_AMBIENT	氛圍	氛围	Ambient	translated	
+S_TORCH	手電筒	手电筒	Flashlight	translated	
+S_AND_CANNOT_BE_BROUGHT_BACK	無法復原	无法恢复	and cannot be brought back	translated	
+S_ANOTHER_CARD_IS_IN_THE_SLOT	換了一張卡	换了一张卡	Another card is in the slot	translated	
+S_AUTO	自動	自动	auto	translated	
+S_BACK	返回	返回	Back	translated	
+S_BACK_TO_PLAYER	回到播放器	回到播放器	Back to player	translated	
+S_BAND	第	第	Band	translated	
+S_BARS	小節	小节	bars	translated	
+S_BARS_2	小節	小节	Bars	translated	
+S_BARS_3	長條	长条	Bars	translated	
+S_BAR_WIDTH	柱寬	柱宽	Bar width	translated	
+S_BEATS	拍號	拍号	Beats	translated	
+S_BEAT_HAPTICS	節拍震動	节拍振动	Beat haptics	translated	
+S_BECOMES_MBR	會做成：MBR・	会做成：MBR·	Becomes: MBR, 	translated	
+S_BELL	鈴鐺	铃铛	Bell	translated	
+S_BEST_D_MOVES_S	最佳 %d 步 · %s	最佳 %d 步 · %s	Best %d moves · %s	translated	
+S_BEST_SO_FAR	本次最佳！	本次最佳！	Best so far!	translated	
+S_BEST_STREAK_U	最佳連對 %u	最佳连对 %u	Best streak %u	translated	
+S_BEST_S_D	最佳 %s %d	最佳 %s %d	Best %s %d	translated	
+S_BEST_U_PTS	最佳 %u 分	最佳 %u 分	Best %u pts	translated	
+S_BLANK_SCENE	空白情境	空白场景	Blank scene	translated	
+S_BLUETOOTH	藍牙：	蓝牙：	Bluetooth: 	translated	
+S_BLUETOOTH_2	藍牙	蓝牙	Bluetooth	translated	
+S_BLUETOOTH_IS_ON_CANNOT_TEST	藍牙輸出中，不能測	蓝牙输出中，不能测	Bluetooth is on, cannot test	translated	
+S_BOX	箱式	箱式	Box	translated	
+S_BOX_2	方框	方框	Box	translated	
+S_BREAK	休息	休息	Break	translated	
+S_BREATHING_COACH	呼吸教練	呼吸教练	Breathing coach	translated	
+S_BRIGHT	亮度	亮度	Bright	translated	
+S_BRIGHTNESS	亮度	亮度	Brightness	translated	
+S_BROADCASTING	廣播中：	广播中：	Broadcasting: 	translated	
+S_BUBBLE_WRAP	捏泡泡紙	捏泡泡纸	Bubble wrap	translated	
+S_BUFFERING	緩衝中…	缓冲中…	Buffering...	translated	
+S_BUILD_NOW	立即建置	立即生成	Build now	translated	
+S_BUILT_IN_CHIME	內建鐘聲	内置钟声	Built-in chime	translated	
+S_BUILT_WITHOUT_AURACAST	這個韌體沒有 Auracast	此固件未包含 Auracast	Built without Auracast	translated	
+S_BUILT_WITHOUT_BLUETOOTH	這個韌體沒有藍牙	此固件未包含蓝牙	Built without Bluetooth	translated	
+S_BUT_THE_CARD_DID_NOT_MOUNT	但重新掛載失敗	但重新挂载失败	but the card did not mount	translated	
+S_CANCEL	取消	取消	Cancel	translated	
+S_CANNOT_CONNECT	連線失敗	连接失败	Cannot connect	translated	
+S_CANNOT_OPEN_THE_DECK	字庫打不開	词库打不开	Cannot open the deck	translated	
+S_CANNOT_OPEN_THE_LIST	清單打不開	列表打不开	Cannot open the list	translated	
+S_CANNOT_PLAY	無法播放	无法播放	Cannot play	translated	
+S_CANNOT_PLAY_THIS_STATION_FORMAT	這台無法播放（格式不支援）	这台无法播放（格式不支持）	Cannot play this station (format)	translated	
+S_CANNOT_READ	無法讀取	无法读取	Cannot read	translated	
+S_CANNOT_READ_THE_HLS_LIST	無法讀取 HLS 清單	无法读取 HLS 列表	Cannot read the HLS list	translated	
+S_CARD	記憶卡	存储卡	Card	translated	
+S_CARD_CANNOT_BE_USED	記憶卡無法使用（	存储卡无法使用（	Card cannot be used (	translated	
+S_CARD_ERROR	讀寫失敗	读写失败	Card error	translated	
+S_CATEGORY	選分類	选分类	Category	translated	
+S_CAUGHT_IT	釣到了！	钓到了！	Caught it!	translated	
+S_CELL	格子	格子	Cell	translated	
+S_CENTRE_D_S	到中心了！%d秒	到中心了！%d秒	Centre! %d s	translated	
+S_CHANNEL	頻道	通道	Channel	translated	
+S_CHERRY	櫻桃	樱桃	Cherry	translated	
+S_CHIP	晶片	芯片	Chip	translated	
+S_DST	夏令	夏令	DST	translated	
+S_CLEAR	清空	清空	Clear	translated	
+S_CLEAR_2	清除	清除	Clear	translated	
+S_CLEAR_ALL	全部清除	全部清除	Clear all	translated	
+S_CLICK	節拍聲	节拍声	Click	translated	
+S_CLOCK	時脈	时钟	Clock	translated	
+S_CLOCK_2	時鐘	时钟	Clock	translated	
+S_CLOCK_NOT_SET_REVIEW_DAYS_DO_NOT_ADVANCE	時間未同步：複習日不會前進	时间未同步：复习日不会前进	Clock not set: review days do not advance	translated	
+S_CLOSE	關閉	关闭	Close	translated	
+S_LEAVE	離開	离开	Leave	translated	
+S_CLOVER	幸運草	幸运草	Clover	translated	
+S_CM	公分	厘米	cm	translated	
+S_CODE	確認碼	确认码	Code	translated	
+S_COLLECTED_D_D_SSR_D_SR_D_R_D_N_D	圖鑑 %d / %d 首\nSSR%d%% SR%d%% R%d%% N%d%%	图鉴 %d / %d 首\nSSR%d%% SR%d%% R%d%% N%d%%	Collected %d / %d\nSSR%d%% SR%d%% R%d%% N%d%%	translated	
+S_COLOUR	顏色	颜色	Colour	translated	
+S_COLOURS	噪音顏色	噪声颜色	Colours	translated	
+S_COLOUR_2	色帶	色带	Colour	translated	
+S_COLUMN_FULL	這一行滿了	这一行满了	Column full	translated	
+S_CONNECTED	已連線	已连接	Connected	translated	
+S_CONNECTED_2	已連線：	已连接：	Connected: 	translated	
+S_CONNECTED_3	已連線	已连接	connected	translated	
+S_CONNECTING	連線中…	连接中…	Connecting...	translated	
+S_CONNECTION_REFUSED	對方拒絕連線	对方拒绝连接	Connection refused	translated	
+S_CONNECTION_TIMED_OUT	連線逾時	连接超时	Connection timed out	translated	
+S_CONTINUE	繼續	继续	Continue	translated	
+S_COPYRIGHT	版權	版权	Copyright	translated	
+S_COULD_NOT_ADD	無法加入	无法加入	Could not add	translated	
+S_COULD_NOT_JOIN	連不上這個廣播	连不上这个广播	Could not join	translated	
+S_COULD_NOT_START	無法開始	无法开始	Could not start	translated	
+S_COUNTERS	數量	数量	Counters	translated	
+S_COUNTERS_2	計數器	计数器	Counters	translated	
+S_COUNT_IN	預備	预备	Count-in	translated	
+S_COVER	封面	封面	Cover	translated	
+S_COVER_CACHE	封面快取	封面缓存	Cover cache	translated	
+S_COVER_CACHE_2	封面快取：	封面缓存：	Cover cache: 	translated	
+S_COVER_UNAVAILABLE_LOW_MEMORY	封面暫時無法顯示（記憶體不足）	封面暂时无法显示（内存不足）	Cover unavailable (low memory)	translated	
+S_CRACKED	開鎖成功！	开锁成功！	Cracked!	translated	
+S_CUSTOM	自訂	自定义	Custom	translated	
+S_D	得 %d 分	得 %d 分	+%d	translated	
+S_DATE	日期	日期	Date	translated	
+S_DAYLIGHT	日照	日照	Daylight	translated	
+S_DAYS	天後	天后	days	translated	
+S_DECKS	字庫	词库	Decks	translated	
+S_DEEP	深	深	deep	translated	
+S_DEEP_2	深	深	Deep	translated	
+S_DELETE	刪除	删除	Delete	translated	
+S_DELETE_SCENE	刪除情境	删除场景	Delete scene	translated	
+S_DETAILS	詳細	详情	Details	translated	
+S_DEVICE_D	電腦得 %d 分	电脑得 %d 分	Device +%d	translated	
+S_DEVICE_DRAWS	電腦抽牌	电脑抽牌	Device draws	translated	
+S_DEVICE_PASSES	電腦過牌	电脑过牌	Device passes	translated	
+S_DEVICE_PLAYS	電腦出牌	电脑出牌	Device plays	translated	
+S_DEVICE_WINS	電腦贏了	电脑赢了	Device wins	translated	
+S_DIAMOND	鑽石	钻石	Diamond	translated	
+S_DICE	骰子	骰子	Dice	translated	
+S_DICE_D	顆數：%d	颗数：%d	Dice: %d	translated	
+S_DOES_NOT_FIT	接不上	接不上	Does not fit	translated	
+S_DONE	完成	完成	Done	translated	
+S_DONE_2	完成	完成	done	translated	
+S_DONE_3	結束	结束	Done	translated	
+S_DONE_D_FALLS	到了！掉%d次	到了！掉%d次	Done! %d falls	translated	
+S_DONE_D_FALLS_D_S	到了！掉%d次 %d秒	到了！掉%d次 %d秒	Done! %d falls, %d s	translated	
+S_DONE_TAP_TO_REPEAT	完成　點一下再來	完成　点击再来	Done: tap to repeat	translated	
+S_DOUBLE	對子	对子	Double	translated	
+S_DRANK	喝了	喝了	Drank	translated	
+S_DRAW	平手！	平局！	Draw!	translated	
+S_DRAW_2	平手	平局	Draw	translated	
+S_DRAW_3	抽人	抽人	Draw	translated	
+S_DRIFT	缺口 漂移	缺口 漂移	Drift	translated	
+S_DRINK	喝水	喝水	Drink	translated	
+S_DROPPED_OUT	・不順：	·卡顿：	 - dropped out: 	translated	
+S_DUB	疊錄	叠录	Dub	translated	
+S_DUB_OFF	停疊錄	停止叠录	Dub off	translated	
+S_DYNAMICS	動態	动态	Dynamics	translated	
+S_D_D_DS	第%d/%d組 %d秒	第%d/%d组 %d秒	%d/%d · %ds	translated	
+S_D_D_D_CM	第%d/%d次 %d公分	第%d/%d次 %d厘米	%d/%d: %d cm	translated	
+S_D_D_D_S_S	%d:%d %d%% %s%s	%d:%d %d%% %s%s	%d:%d %d%% %s%s	same	
+S_D_D_D_TRIES	第%d/%d組 試%d次	第%d/%d组 试%d次	%d/%d · %d tries	translated	
+S_D_D_D_TURNS	第%d/%d環 轉了%d次	第%d/%d环 转了%d次	%d/%d, %d turns	translated	
+S_MZ_PROGRESS	環%d/%d 轉%d	环%d/%d 转%d	Ring %d/%d, x%d	translated	
+S_D_D_SIG_D	找到%d/%d 訊號%d%%	找到%d/%d 信号%d%%	%d/%d sig %d%%	translated	
+S_D_FALLS	掉進洞 %d 次	掉进洞 %d 次	%d falls	translated	
+S_D_FLOORS	%d 層	%d 层	%d floors	translated	
+S_D_FLOORS_COMBO_D	%d 層 · 連擊 %d	%d 层 · 连击 %d	%d floors · combo %d	translated	
+S_D_FOUND_DS_SIG_D	已找%d 剩%d秒 訊號%d%%	已找%d 剩%d秒 信号%d%%	%d found %ds sig %d%%	translated	
+S_D_IN_A_ROW	連勝 %d	连胜 %d	%d in a row	translated	
+S_D_IN_A_ROW_GOLDEN	連勝 %d · 金色局	连胜 %d · 金色局	%d in a row · Golden	translated	
+S_D_LIT_FULL_MOON_IN_D_D	照亮 %d%%・%d 天後滿月	照亮 %d%%·%d 天后满月	%d%% lit · full moon in %d d	translated	
+S_D_LIT_NEW_MOON_IN_D_D	照亮 %d%%・%d 天後新月	照亮 %d%%·%d 天后新月	%d%% lit · new moon in %d d	translated	
+S_D_LOBES	%d瓣	%d瓣	%d lobes	translated	
+S_D_LOBES_TAP	%d瓣 · 點一下換	%d瓣 · 点击换	%d lobes · tap	translated	
+S_D_MOVES_S	%d 步 · %s	%d 步 · %s	%d moves · %s	translated	
+S_D_ON_D_LINES	共 +%d（%d 條線）	共 +%d（%d 条线）	+%d on %d lines	translated	
+S_D_QS	%d 題	%d 题	%d Qs	translated	
+S_D_SPINS_D_WINS_BEST_D	%d 轉 · 中 %d 次 · 最高 %d	%d 转 · 中 %d 次 · 最高 %d	%d spins · %d wins · best %d	translated	
+S_D_YES_IN_A_ROW	連續 %d 聖筊	连续 %d 次圣杯	%d yes in a row	translated	
+S_EDGE	邊緣	边缘	Edge	translated	
+S_EDITED	（已修改）	（已修改）	 (edited)	translated	
+S_EDIT_LISTS_ON_PC	在電腦上編輯清單	在电脑上编辑列表	Edit lists on PC	translated	
+S_EDIT_SETTINGS_PAGE_LISTS	在設定網頁的「清單」編輯	在设置网页的“列表”中编辑	Edit: settings page, Lists	translated	
+S_EDIT_STATIONS_ON_PC	在電腦上編輯電台	在电脑上编辑电台	Edit stations on PC	translated	
+S_EMPTY	空的	空的	Empty	translated	
+S_EMPTY_PLAYLIST	播放清單是空的	播放列表是空的	Empty playlist	translated	
+S_ENCRYPTED_BROADCAST_NOT_SUPPORTED	加密的廣播，需要密碼（不支援）	加密的广播，需要密码（不支持）	Encrypted broadcast (not supported)	translated	
+S_END	完	完	End	translated	
+S_END_2	結束	结束	End	translated	
+S_EN_ZH	英→中	英→中	EN→ZH	translated	
+S_EPI	外擺	外摆	epi	translated	
+S_EVERY	間隔	间隔	Every	translated	
+S_EVERYTHING_ON_THE_CARD_IS_ERASED	卡上所有資料都會消失	卡上所有数据都会消失	Everything on the card is erased	translated	
+S_EVERY_DAY	每天	每天	Every day	translated	
+S_EXAMPLE	內建範例	内置示例	Example	translated	
+S_EXHALE	吐氣	吐气	Exhale	translated	
+S_EXPORT_MOD	匯出 MOD	导出 MOD	Export MOD	translated	
+S_EXT	外部	外部	Ext	translated	
+S_EXTERNAL	外部	外部	External	translated	
+S_EXTINCT_PEAK_U	全滅 · 高峰 %u	全灭 · 高峰 %u	Extinct, peak %u	translated	
+S_EXT_CLOCK	外部時脈	外部时钟	Ext clock	translated	
+S_EXT_UAC_NO_RATE	本機無法輸出 %s kHz	本机无法输出 %s kHz	Cannot output %s kHz	translated	
+S_EXT_UAC_STREAM	%s kHz %d 位元	%s kHz %d 位	%s kHz %d-bit	translated	
+S_EXT_UAC_XRUNS	欠載 %u 溢位 %u	欠载 %u 溢出 %u	Underruns %u, overruns %u	translated	
+S_FACE	錶面	表盘	Face	translated	
+S_FACE_2	＝換錶面	：换表盘	: face	translated	
+S_FAILED	無法播放	无法播放	failed	translated	
+S_FAST	快速	快速	Fast	translated	
+S_FAST_2	缺口 快漂	缺口 快漂	Fast	translated	
+S_FAVOURITE	收藏	收藏	Favourite	translated	
+S_FAVOURITE_NOT_FOUND	找不到這個收藏	找不到这个收藏	Favourite not found	translated	
+S_FAVS	收藏	收藏	Favs	translated	
+S_FILE_NOT_FOUND	找不到檔案	找不到文件	File not found	translated	
+S_FINISHED	播完了	播完了	Finished	translated	
+S_FM_PATCH	FM 音色	FM 音色	FM patch	translated	
+S_FOCUS	專注	专注	Focus	translated	
+S_FORGET_D_PAIRINGS	清除 %d 個配對	清除 %d 个配对	Forget %d pairings	translated	
+S_FORGET_PAIRED	清除配對	清除配对	Forget paired	translated	
+S_FORGOT_D_DEVICE_S	已清除 %d 個配對	已清除 %d 个配对	Forgot %d device(s)	translated	
+S_FORMATTED	已格式化	已格式化	Formatted	translated	
+S_FORMATTING_DO_NOT_PULL_THE_CARD	正在格式化…\n請勿拔卡	正在格式化…\n请勿拔卡	Formatting...\ndo not pull the card	translated	
+S_FORMATTING_IS_DONE	格式化完成	格式化完成	Formatting is done	translated	
+S_FORMATTING_PLEASE_WAIT	正在格式化，請稍候	正在格式化，请稍候	Formatting, please wait	translated	
+S_FORMAT_FAILED	格式化失敗	格式化失败	Format failed	translated	
+S_FORMAT_NOT_SUPPORTED	格式不支援	格式不支持	Format not supported	translated	
+S_FORMAT_THE_CARD	格式化記憶卡…	格式化存储卡…	Format the card...	translated	
+S_FORMAT_THE_CARD_2	格式化記憶卡	格式化存储卡	Format the card	translated	
+S_FORTUNE	運勢	运势	Fortune	translated	
+S_FREE	自由	自由	Free	translated	
+S_FREE_LENGTH	自由長度	自由长度	free length	translated	
+S_FROM	開始	开始	From	translated	
+S_FULL_2	滿版	铺满	Full	translated	
+S_FULL_TAP_ITS_BOTTOM_TO_POP	滿了：點最底下拿掉自己的	满了：点最底下拿掉自己的	Full: tap its bottom to pop	translated	
+S_GACHA	抽卡	抽卡	Gacha	translated	
+S_GAIN	增益	增益	Gain	translated	
+S_GAMES	遊戲清單	游戏列表	Games	translated	
+S_GAMES_2	遊戲	游戏	Games	translated	
+S_GAME_OVER	遊戲結束	游戏结束	Game over	translated	
+S_GEAR	齒輪比	齿轮比	Gear	translated	
+S_GENS	代	代	gens	translated	
+S_GLIDER_GUN	滑翔機槍！	滑翔机枪！	Glider gun!	translated	
+S_GLOW	殘影	残影	Glow	translated	
+S_GLOW_HIGH	光暈 強	光晕 强	Glow high	translated	
+S_GLOW_LOW	光暈 弱	光晕 弱	Glow low	translated	
+S_GLOW_MID	光暈 中	光晕 中	Glow mid	translated	
+S_GOAL	目標	目标	Goal	translated	
+S_GOAL_REACHED	今天達標	今天达标	Goal reached	translated	
+S_GOLD	金色	金色	Gold	translated	
+S_GOLDEN_GAME	金色局	金色局	Golden game	translated	
+S_GOLDEN_TILE	金色骨牌！	金色骨牌！	Golden tile!	translated	
+S_GOLD_2	 金	 金	 gold	translated	
+S_GOLD_3	金色！	金色！	Gold!	translated	
+S_GPT_PARTITIONS	GPT 分割	GPT 分区	GPT partitions	translated	
+S_GRAPE	葡萄	葡萄	Grape	translated	
+S_HABITS	習慣	习惯	Habits	translated	
+S_HABITS_2	數量	数量	Habits	translated	
+S_HAPTICS	震動	振动	Haptics	translated	
+S_HEADPHONES_CONNECTED	耳機已連線	耳机已连接	Headphones connected	translated	
+S_HEADPHONES_GONE_3_5_MM_OUT	耳機已斷線（3.5mm 輸出）	耳机已断线（3.5mm 输出）	Headphones gone (3.5 mm out)	translated	
+S_HELP	說明	帮助	Help	translated	
+S_HIGH	高	高	High	translated	
+S_HINTS	提示	提示	Hints	translated	
+S_HINT_HIGH	提示 強	提示 强	Hint high	translated	
+S_HINT_LOW	提示 弱	提示 弱	Hint low	translated	
+S_HINT_MID	提示 中	提示 中	Hint mid	translated	
+S_HOLD	屏息	屏息	Hold	translated	
+S_HOUR	時	时	Hour	translated	
+S_RADIO_NO_WEB_ADDRESS	這台電台沒有 http 或 https 網址	这台电台没有 http 或 https 网址	This station has no http or https address	translated	
+S_HTTPS_IS_NOT_SUPPORTED	記憶體不足，不能用 https	内存不足，不能用 https	Not enough memory for https	translated	
+S_HYPO	內擺	内摆	hypo	translated	
+S_IDEAS	點子	点子	Ideas	translated	
+S_INHALE	吸氣	吸气	Inhale	translated	
+S_INSTRUMENT	樂器	乐器	Instrument	translated	
+S_INT	內部	内部	Int	translated	
+S_INTERFACE	介面	界面	Interface	translated	
+S_INTERNAL	內部	内部	Internal	translated	
+S_IN_ORDER	循序	顺序	In order	translated	
+S_IN_ORDER_2	依序	依次	In order	translated	
+S_IT_CAN_BE_FORMATTED_AGAIN	可以再格式化一次	可以再格式化一次	It can be formatted again	translated	
+S_JOINING	連上中：	连上中：	Joining: 	translated	
+S_KEYS	按鍵	按键	keys	translated	
+S_KIND	種類	种类	Kind	translated	
+S_KIT	套組	套件	Kit	translated	
+S_KIT_IS_EMPTY	套組是空的	套件是空的	Kit is empty	translated	
+S_KIT_TOO_BIG_8_MB_MAX	套組太大（上限 8 MB）	套件太大（上限 8 MB）	Kit too big (8 MB max)	translated	
+S_KNOB	旋鈕	旋钮	Knob	translated	
+S_KNOB_COLOUR	旋鈕＝換色帶	旋钮：换色带	Knob: colour	translated	
+S_KNOB_KIND	旋鈕＝換種類	旋钮：换种类	Knob: kind	translated	
+S_KNOB_MAP	旋鈕＝換上色	旋钮：换上色	Knob: map	translated	
+S_KNOB_ORDER	旋鈕＝換排列	旋钮：换排列	Knob: order	translated	
+S_KNOB_SENSITIVITY	旋鈕＝換靈敏度	旋钮：换灵敏度	Knob: sensitivity	translated	
+S_KNOB_SIZE	旋鈕＝換大小	旋钮：换大小	Knob: size	translated	
+S_KNOB_VARIANT	旋鈕＝換變化	旋钮：换变化	Knob: variant	translated	
+S_KNOB_VOLUME	旋鈕＝音量	旋钮：音量	Knob = volume	translated	
+S_KNOB_WIDTH	旋鈕＝換柱寬	旋钮：换柱宽	Knob: width	translated	
+S_LANGUAGE	語言	语言	Language	translated	
+S_LAST_CHECK	最後確認	最后确认	Last check	translated	
+S_LAST_CHECK_FORMAT	最後確認：格式化 	最后确认：格式化 	Last check: format 	translated	
+S_LATER	稍後	稍后	Later	translated	
+S_LAYER	聲音層	声音层	Layer	translated	
+S_LAYER_2	層	层	Layer	translated	
+S_LEARNED_U_U_DUE_U_NEW_U_STREAK_UD_U	已學 %u／%u\n到期 %u · 新字 %u\n連續 %u 天 · %u%%	已学 %u／%u\n到期 %u · 新词 %u\n连续 %u 天 · %u%%	Learned %u/%u\nDue %u · new %u\nStreak %ud · %u%%	translated	
+S_LEMON	檸檬	柠檬	Lemon	translated	
+S_LENGTH	長度	长度	Length	translated	
+S_LEVEL_CLEAR	過關！	过关！	Level clear!	translated	
+S_LIMIT	上限：	上限：	Limit: 	translated	
+S_LIMITER	限幅	限幅	Limiter	translated	
+S_LINE_D	線 %d%%	线 %d%%	line %d%%	translated	
+S_LINE_SNAPPED	線斷了	线断了	Line snapped	translated	
+S_LIST	清單	列表	List	translated	
+S_LISTENING	收聽中：	收听中：	Listening: 	translated	
+S_LISTENING_2	聽拍子中…	正在听拍子…	Listening…	translated	
+S_LOAD	載入	加载	Load	translated	
+S_LOADED	已載入	已加载	Loaded	translated	
+S_LOADING	讀取中…	读取中…	Loading...	translated	
+S_LOADING_2	載入中…	加载中…	Loading…	translated	
+S_LONG_BREAK	長休息	长休息	Long break	translated	
+S_LOOKING_FOR_BROADCASTS	尋找廣播中…	寻找广播中…	Looking for broadcasts...	translated	
+S_LOOPER	循環	循环	Looper	translated	
+S_LOST_SEARCHING	訊號中斷，重新尋找…	信号中断，重新寻找…	Lost, searching...	translated	
+S_LOW	低	低	Low	translated	
+S_LOW_MEMORY_LATER	記憶體不夠，稍後再準備	内存不够，稍后再准备	Low memory: later	translated	
+S_LUNCH	午餐	午餐	Lunch	translated	
+S_L_D_D_LIVES_U	%d關 %d命 %u分	%d关 %d命 %u分	L%d · %d lives · %u	translated	
+S_L_D_D_LIVES_U_X_D	%d關 %d命 %u分 x%d	%d关 %d命 %u分 x%d	L%d · %d lives · %u · x%d	translated	
+S_MANUAL	手動	手动	manual	translated	
+S_MAP	上色	上色	Map	translated	
+S_MAPPING	對應	对应	Mapping	translated	
+S_MEDIUM	中	中	Medium	translated	
+S_MEMORY_FULL	記憶體滿	内存满	Memory full	translated	
+S_MENU	選單	菜单	Menu	translated	
+S_MENU_STYLE	選單樣式	菜单样式	Menu style	translated	
+S_METRONOME	節拍器	节拍器	Metronome	translated	
+S_MID	中	中	Mid	translated	
+S_MINUS_ONE	少一杯	少一杯	Minus one	translated	
+S_MINUTE	分	分	Minute	translated	
+S_MIN_2	分	分	min	translated	
+S_MISSING	缺	缺	missing	translated	
+S_MIXED	混合	混合	Mixed	translated	
+S_MOON_BLOCKS	擲筊	掷杯	Moon blocks	translated	
+S_MORE	更多	更多	More	translated	
+S_MORE_CHIP_COLOURS	其他晶片音色	其他芯片音色	More chip colours	translated	
+S_MOVES	步	步	Moves	translated	
+S_MOVES_2	步	步	moves	translated	
+S_MOVES_D	步數 %d	步数 %d	Moves %d	translated	
+S_MUSIC_GOES_INTO_THE_EXPORT_FOLDER	音樂放進 export 資料夾	音乐放进 export 文件夹	Music goes into the export folder	translated	
+S_MUTE	靜音	静音	Mute	translated	
+S_NAMES	名稱	名称	Names	translated	
+S_NEEDS_AT_LEAST_4_SONGS_WITH_DIFFERENT	曲庫要有至少 4 首標題不同的歌	曲库中至少要有 4 首标题不同的歌	Needs at least 4 songs with different titles	translated	
+S_NEEDS_SONGS_BY_AT_LEAST_4_ARTISTS	曲庫要有至少 4 位不同演出者的歌	曲库中至少要有 4 位不同歌手的歌	Needs songs by at least 4 artists	translated	
+S_NEEDS_WI_FI_TAP_SYNC	需要 Wi-Fi：點一下 → 立即對時	需要 Wi-Fi：点击 → 立即校时	Needs Wi-Fi: tap -> sync	translated	
+S_NEW	NEW!	NEW!	NEW!	same	
+S_NEW_2	新字	新词	New	translated	
+S_NEXT	下一首	下一首	Next	translated	
+S_NEXT_2	下一張	下一张	Next	translated	
+S_NEXT_3	下次	下次	Next	translated	
+S_NO	不要	不要	No	translated	
+S_NOISE	噪音	噪声	Noise	translated	
+S_NOISE_2	白噪音	白噪音	Noise	translated	
+S_NOISE_COLOURS	噪音顏色	噪声颜色	Noise colours	translated	
+S_NONE	無	无	None	translated	
+S_NONE_LEFT_ALL_SHOPS_ARE_BACK	每家都不想吃？全部回來了	每家都不想吃？全部回来了	None left: all shops are back	translated	
+S_NORMAL	中速	中速	Normal	translated	
+S_NOTHING_CONFIRMED_SETTING_UNCHANGED	沒有確認，設定不變	没有确认，设置不变	Nothing confirmed, setting unchanged	translated	
+S_NOTHING_PLAYABLE	沒有可播放的檔案	没有可播放的文件	Nothing playable	translated	
+S_NOTHING_TO_ASK_IN_THIS_DECK	這個字庫沒有可以考的字	这个词库里没有可考的单词	Nothing to ask in this deck	translated	
+S_NOTHING_TO_PICK_OR_OUT_OF_MEMORY	沒有可以抽的項目，或記憶體不足	没有可以抽的项目，或内存不足	Nothing to pick, or out of memory	translated	
+S_NOTHING_TO_SAVE	沒有東西可存	没有东西可存	Nothing to save	translated	
+S_NOTHING_TO_SAVE_2	沒有聲音可存	没有声音可存	Nothing to save	translated	
+S_NOT_A_LOOP_FILE	檔案格式不對	文件格式不对	Not a loop file	translated	
+S_NOT_FORMATTED	沒有格式化	没有格式化	Not formatted	translated	
+S_NOT_FORMATTED_THE_CARD_IS_AS_IT_WAS	沒有格式化，卡上資料未變	没有格式化，卡上数据未变	Not formatted: the card is as it was	translated	
+S_NOT_SYNCED	尚未對時	尚未校时	Not synced	translated	
+S_NOT_SYNCED_2	（尚未對時）	（尚未校时）	 (not synced)	translated	
+S_NOT_SYNCED_RANDOM	未對時：每次隨機	未校时：每次随机	Not synced: random	translated	
+S_NOT_SYNCED_RANDOM_EACH_TIME	未對時：每次隨機	未校时：每次随机	Not synced: random each time	translated	
+S_NOT_SYNCED_TAP_SYNC_NOW	尚未對時\n點一下 → 立即對時	尚未校时\n点击 → 立即校时	Not synced\ntap -> Sync now	translated	
+S_NOT_TODAY	今天不想吃	今天不想吃	Not today	translated	
+S_NOW	立即	立即	Now	translated	
+S_NO_ANSWER_PAIRING_REJECTED	沒有回應，已拒絕配對	没有回应，已拒绝配对	No answer: pairing rejected	translated	
+S_NO_BEAT_TAP_FOR_METRONOME	沒有拍子：點一下用節拍器	没有拍子：点击使用节拍器	No beat: tap for metronome	translated	
+S_NO_CARD	沒有卡	没有卡	no card	translated	
+S_NO_CARD_2	沒有記憶卡	没有存储卡	No card	translated	
+S_NO_CARD_FOUND	找不到卡	找不到卡	No card found	translated	
+S_NO_CHIPTUNE_ZIP	沒有 /chiptune/*.zip	没有 /chiptune/*.zip	No /chiptune/*.zip	translated	
+S_NO_CLOCK	沒有時脈	没有时钟	No clock	translated	
+S_NO_FAVOURITES_YET	還沒有收藏	还没有收藏	No favourites yet	translated	
+S_NO_FILE_SYSTEM_THE_PLAYER_CAN_READ	卡上沒有可讀的檔案系統	卡上没有可读的文件系统	No file system the player can read	translated	
+S_NO_KIT	沒有套組	没有套件	No kit	translated	
+S_NO_KITS_ON_THE_CARD_INSTRUMENT_KITS	卡上沒有套組（instrument/kits）	卡上没有套件（instrument/kits）	No kits on the card (instrument/kits)	translated	
+S_NO_LIBRARY_MUK	沒有 library.muk	没有 library.muk	No library.muk	translated	
+S_NO_LOOP_FILES	沒有循環檔	没有循环文件	No loop files	translated	
+S_NO_PHOTOS_YET_PUT_JPEGS_IN_PHOTOS_ON	TF 卡的 photos 資料夾\n還沒有照片（JPEG）	TF 卡的 photos 文件夹\n还没有照片（JPEG）	No photos yet:\nput JPEGs in photos/ on the card	translated	
+S_NO_RADIO_IN_BROADCAST_MODE	廣播模式不能聽電台	广播模式不能听电台	No radio in broadcast mode	translated	
+S_NO_READABLE_FILE_SYSTEM	讀不到檔案系統	读不到文件系统	no readable file system	translated	
+S_NO_REPEAT	不重複 ✓	不重复 ✓	No repeat ✓	translated	
+S_NO_SONGS_RESCAN	沒有歌曲\n請重新掃描	没有歌曲\n请重新扫描	No songs\nRescan	translated	
+S_NO_SOUNDS	沒有音效	没有音效	No sounds	translated	
+S_NO_TF_CARD	沒有 TF 卡	没有 TF 卡	No TF card	translated	
+S_NO_TF_CARD_CANNOT_SCAN	沒有 TF 卡，無法掃描	没有 TF 卡，无法扫描	No TF card, cannot scan	translated	
+S_NO_TRACK	沒有歌曲	没有歌曲	No track	translated	
+S_OFF	關	关	off	translated	
+S_OFF_2	關	关	Off	translated	
+S_OFF_S	關：%s	关：%s	Off: %s	translated	
+S_OMIKUJI	今日籤	今日签	Omikuji	translated	
+S_ON	開	开	on	translated	
+S_ONCE	只一次	只一次	Once	translated	
+S_ONCE_MORE	再來一次	再来一次	Once more	translated	
+S_ON_2	開	开	On	translated	
+S_ON_OFF	開／關	开／关	On/Off	translated	
+S_ON_PAUSED	開・暫停	开·暂停	On, paused	translated	
+S_ON_PAUSED_2	開・暫停	开·暂停	on, paused	translated	
+S_ON_PAUSED_S	開・暫停：%s	开·暂停：%s	On, paused: %s	translated	
+S_OPEN	開了！	开了！	Open!	translated	
+S_OPEN_2	開	开	OPEN	translated	
+S_ORDER	順序	顺序	Order	translated	
+S_ORDER_2	排列	排列	Order	translated	
+S_OTHER	未分類	未分类	Other	translated	
+S_OTHER_SHOP	換一家	换一家	Other shop	translated	
+S_OUT	出來了！	出来了！	Out!	translated	
+S_OUT_D_S	出來了！%d秒	出来了！%d秒	Out! %d s	translated	
+S_OUT_OF_MEMORY	記憶體不足	内存不足	Out of memory	translated	
+S_OUT_OF_MEMORY_2	（記憶體不足）	（内存不足）	(out of memory)	translated	
+S_OVERDUB	疊錄	叠录	Overdub	translated	
+S_O_WINS	O 贏了！	O 赢了！	O wins!	translated	
+S_PADS	鼓墊	鼓垫	Pads	translated	
+S_PAIR	配對	配对	Pair	translated	
+S_PAIRING_REJECTED	已拒絕配對	已拒绝配对	Pairing rejected	translated	
+S_PATTERN	圖案	图案	Pattern	translated	
+S_PAUSE	暫停	暂停	Pause	translated	
+S_PAUSED_TAP_TO_GO_ON	暫停：點一下繼續	暂停：点击继续	Paused: tap to go on	translated	
+S_PAUSED_TAP_TO_RESUME	已暫停・點一下繼續	已暂停·点击继续	Paused · tap to resume	translated	
+S_PEN	筆距	笔距	Pen	translated	
+S_PERFECT	完美	完美	Perfect	translated	
+S_PHASE	相位	相位	Phase	translated	
+S_PHONE	手機	手机	phone	translated	
+S_PHOTOS	相簿	相册	Photos	translated	
+S_PHOTOS_2	照片	照片	Photos	translated	
+S_PICK_ONE	點選一項	选择一项	Pick one	translated	the square panel's menu header (one tap there: no "tap the centre again")
+S_PICK_ONE_TAP_THE_CENTRE	點選一項\n再點中間	选择一项\n再点中间	Pick one,\ntap the centre	translated	
+S_PLAIN	一般	一般	Plain	translated	
+S_PLAY	播放	播放	Play	translated	
+S_PLAYER_D_S	玩家 %d：%s	玩家 %d：%s	Player %d: %s	translated	
+S_PLAYER_D_WATCH	玩家 %d：看好	玩家 %d：看好	Player %d: watch	translated	
+S_PLAYER_D_WINS	玩家 %d 贏了！	玩家 %d 赢了！	Player %d wins!	translated	
+S_PLAYING	播放畫面	播放画面	Playing	translated	
+S_PLAYING_2	播放	播放	Playing	translated	
+S_PLAYING_ON	輸出到耳機：	输出到耳机：	Playing on: 	translated	
+S_PLAY_2	▶ 播放	▶ 播放	▶ Play	translated	
+S_PLAY_AN_MP3_FIRST	先播放一首 MP3	先播放一首 MP3	Play an MP3 first	translated	
+S_PLAY_ORDER	播放順序	播放顺序	Play order	translated	
+S_PLUGGED_IN_ON_THE_DRIVE_SIDE_SETTINGS	電腦接在翻面那一面\n（改設定請插另一面）	电脑接在翻面那一面\n（改设置请插另一面）	Plugged in on the drive side\n(settings: turn the plug over)	translated	
+S_PLUG_IN_USB_POWER_TO_PREPARE_THEM	插上 USB 電源後開始準備	插上 USB 电源后开始准备	Plug in USB power to prepare them	translated	
+S_POMODORO	番茄鐘	番茄钟	Pomodoro	translated	
+S_PRACTICE	練習	练习	Practice	translated	
+S_PREPARING_PHOTOS	正在準備照片	正在准备照片	Preparing photos	translated	
+S_PRESS	按下	按下	Press	translated	
+S_PREV	上一首	上一首	Prev	translated	
+S_PROGRESS_FILE_WAS_DAMAGED_STARTED_AGAIN	進度檔壞了，已重新開始	进度文件坏了，已重新开始	Progress file was damaged: started again	translated	
+S_QUANTISE	量化	量化	Quantise	translated	
+S_QUESTION_D_OF_D	第 %d/%d 題	第 %d/%d 题	Question %d of %d	translated	
+S_QUICK	快速	快速	Quick	translated	
+S_Q_D_D_GOLDEN_X2	第 %d/%d 題  金色題 x2	第 %d/%d 题  金色题 x2	Q %d/%d  Golden x2	translated	
+S_Q_D_D_STREAK_D_X_D	第 %d/%d 題  連對 %d  x%d	第 %d/%d 题  连对 %d  x%d	Q %d/%d  Streak %d  x%d	translated	
+S_RADIO	電台	电台	Radio	translated	
+S_RADIO_LIST_DEFAULT	預設	默认	Default	translated	
+S_RANDOM	隨機	随机	Random	translated	
+S_RANDOM_D	隨機 %d%%	随机 %d%%	Random %d%%	translated	
+S_RATE_TEST	取樣率測試	采样率测试	Rate test	translated	
+S_REACHED_D	記到 %d 個	记到 %d 个	Reached %d	translated	
+S_REACHED_THE_CENTRE	到中心了！	到中心了！	Reached the centre!	translated	
+S_READY	可以使用	可以使用	ready	translated	
+S_READ_ERROR	讀取錯誤	读取错误	read error	translated	
+S_REBOOT	重開機	重启	Reboot	translated	
+S_REBOOTS_AS_A_USB_DRIVE_MUSIC_STOPS	重開機成隨身碟\n（音樂會停）	重启为 U 盘\n（音乐会停止）	Reboots as a USB drive\n(music stops)	translated	
+S_REBOOTS_INTO_THE_INSTRUMENT_MUSIC_STOPS	重開機進樂器模式\n（音樂會停）	重启进入乐器模式\n（音乐会停止）	Reboots into the instrument\n(music stops)	translated	
+S_REBOOT_INTO_S	重開機切到 %s	重启并切换到 %s	Reboot into %s	translated	
+S_REC	錄音	录音	Rec	translated	
+S_RECONNECTING	重新連線…	重新连接…	Reconnecting...	translated	
+S_RECONNECTING_HEADPHONES	重新連線耳機中…	正在重新连接耳机…	Reconnecting headphones...	translated	
+S_RECORDING	錄音	录音	Recording	translated	
+S_REJECT	拒絕	拒绝	Reject	translated	
+S_REMIND	提醒	提醒	Remind	translated	
+S_REMINDERS_OFF	提醒：關	提醒：关	Reminders off	translated	
+S_REPEAT	重複	重复	Repeat	translated	
+S_REPEATS_OK	可重複	可重复	Repeats ok	translated	
+S_REPLAY	重聽	重听	Replay	translated	
+S_RESCAN_LIBRARY	重新掃描曲庫	重新扫描曲库	Rescan library	translated	
+S_RESEED	重新播種	重新播种	Reseed	translated	
+S_RESET	重設	重置	Reset	translated	
+S_RESET_D_D	重來 %d/%d	重来 %d/%d	Reset %d/%d	translated	
+S_REST	停	停	Rest	translated	
+S_RESTART	重來	重来	Restart	translated	
+S_RESTARTING	重新開機…	重新启动…	Restarting...	translated	
+S_RESTARTING_TO_SWITCH_MODE	重新開機切換模式…	重新启动切换模式…	Restarting to switch mode...	translated	
+S_RESTING	休息中	休息中	Resting	translated	
+S_RESUME	繼續	继续	Resume	translated	
+S_REVERB	殘響	混响	Reverb	translated	
+S_REVERSED	逆位	逆位	Reversed	translated	
+S_REVIEW	複習	复习	Review	translated	
+S_RE_INSERT_THE_CARD_OR_RESTART	請拔插卡片或重開機	请重插存储卡或重启	Re-insert the card or restart	translated	
+S_RIGHT_D_D_STREAK_D	答對 %d/%d  連對 %d	答对 %d/%d  连对 %d	Right %d/%d  Streak %d	translated	
+S_RIGHT_U_STREAK_D	答對！+%u  連對 %d	答对！+%u  连对 %d	Right! +%u  streak %d	translated	
+S_RING	燈環	灯环	Ring	translated	
+S_RING_2	環形	环形	Ring	translated	
+S_RISE	日出	日出	Rise	translated	
+S_ROUND_OVER	一局結束	一局结束	Round over	translated	
+S_RULES	規則	规则	Rules	translated	
+S_SAME_NUMBER_ON_THE_PHONE	手機上是同一組數字嗎？	手机上是同一组数字吗？	Same number on the phone?	translated	
+S_SAVED	已存檔	已保存	Saved	translated	
+S_SAVE_AS_NEW	存成新情境	另存为新场景	Save as new	translated	
+S_SAVE_NEW	存新檔	另存为	Save new	translated	
+S_SCANNING	掃描中…	扫描中…	Scanning...	translated	
+S_SCANNING_FOR_HEADPHONES	掃描耳機中…	扫描耳机中…	Scanning for headphones...	translated	
+S_SCAN_AGAIN	重新掃描	重新扫描	Scan again	translated	
+S_SCAN_DONE_PICK_HEADPHONES	掃描完成：點選耳機	扫描完成：选择耳机	Scan done: pick headphones	translated	
+S_SCOPE	波形	波形	Scope	translated	
+S_SCORE	分數	分数	Score	translated	
+S_SCORE_D_ODDS	分數 %d · 賠率表	分数 %d · 赔率表	Score %d · Odds	translated	
+S_SENDING_CLOCK	送出時脈	发送时钟	Sending clock	translated	
+S_SENSITIVITY	靈敏度	灵敏度	Sensitivity	translated	
+S_SERVER_ANSWERED_WITH_AN_ERROR	伺服器回應錯誤	服务器返回错误	Server answered with an error	translated	
+S_SET	日落	日落	Set	translated	
+S_SETTINGS	設定	设置	Settings	translated	
+S_SETUP	設定	设置	Setup	translated	
+S_SET_UP_ON_PC	在電腦上設定	在电脑上设置	set up on PC	translated	
+S_SEVEN	七	七	Seven	translated	
+S_SHAKING	搖籤中…	摇签中…	Shaking...	translated	
+S_SHUFFLE	隨機	随机	Shuffle	translated	
+S_SHUFFLE_ALL	全部隨機	全部随机	Shuffle all	translated	
+S_SHUFFLE_THIS_FOLDER	隨機播放這個資料夾	随机播放这个文件夹	Shuffle this folder	translated	
+S_SIZE	容量：	容量：	Size: 	translated	
+S_SIZE_2	大小	大小	Size	translated	
+S_SLEEP	睡眠	睡眠	Sleep	translated	
+S_SLOT	拉霸	老虎机	Slot	translated	
+S_SLOW	慢速	慢速	Slow	translated	
+S_SOFT	輕	轻	soft	translated	
+S_SOFT_2	輕	轻	Soft	translated	
+S_SOLO	單人	单人	Solo	translated	
+S_SOLVED	拼好了！	拼好了！	Solved!	translated	
+S_SOLVED_D_MOVES	拼好了！%d 步	拼好了！%d 步	Solved! %d moves	translated	
+S_SONGS	歌曲清單	歌曲列表	Songs	translated	
+S_SONGS_2	歌曲	歌曲	Songs	translated	
+S_SOUND	鈴聲	铃声	Sound	translated	
+S_SOUNDS	聲音	声音	Sounds	translated	
+S_SOUND_BANK	音效庫	音效库	Sound bank	translated	
+S_SOUND_FX	音效	音效	Sound FX	translated	
+S_SPECTRUM	頻譜	频谱	Spectrum	translated	
+S_SPINNING	轉動中…	转动中…	Spinning...	translated	
+S_STABLE_8_MS	穩定 +8 ms	稳定 +8 ms	Stable +8 ms	translated	
+S_STANDARD	標準	标准	Standard	translated	
+S_STAR	星星	星星	Star	translated	
+S_START	開始	开始	Start	translated	
+S_STATIONS	電台清單	电台列表	Stations	translated	
+S_STATIONS_2	電台	电台	stations	translated	
+S_STATUS	現況	状态	Status	translated	
+S_STEREO	立體聲	立体声	Stereo	translated	
+S_STILL	缺口 不動	缺口 不动	Still	translated	
+S_STOP	停止	停止	Stop	translated	
+S_STOPPED	停止	停止	Stopped	translated	
+S_STOPPED_2	已停止	已停止	Stopped	translated	
+S_STOP_2	■ 停止	■ 停止	■ Stop	translated	
+S_STOP_THE_OVERDUB_FIRST	先停止疊錄	先停止叠录	Stop the overdub first	translated	
+S_STOP_WHAT_IS_PLAYING_FIRST	先停掉現在播放的來源	先停掉现在播放的来源	Stop what is playing first	translated	
+S_STOTAL_D	%s總和 %d	%s总和 %d	%sTotal %d	translated	
+S_STR	）	）	)	translated	
+S_STREAK	連續	连续	streak	translated	
+S_STR_2	★	★	*	same	
+S_STR_3	☆	☆	-	same	
+S_STR_4	籤	签	?	translated	
+S_STR_5	限	限	!	translated	
+S_STR_6	・	·	/	translated	
+S_STR_7	＝	：	: 	translated	
+S_STYLE	風格	风格	Style	translated	
+S_STYLE_2	樣式	样式	Style	translated	
+S_SWITCHING	切換中…	切换中…	Switching...	translated	
+S_SWITCH_TO_USB_DRIVE	切換成 USB 隨身碟	切换为 U 盘	Switch to USB drive	translated	
+S_SYNCING_THE_TIME	正在連 Wi-Fi 對時…	正在连接 Wi-Fi 校时…	Syncing the time...	translated	
+S_S_3_D	%s×3 +%d	%s×3 +%d	%s×3 +%d	same	
+S_S_3_WILD_D	%s×3（幸運草代替）+%d	%s×3（幸运草代替）+%d	%s×3 (wild) +%d	translated	
+S_S_DAY_D_D	%s・月齡 %d.%d 天	%s·月龄 %d.%d 天	%s · day %d.%d	translated	
+S_S_FAILED_S	%s 無法啟動（%s）	%s 无法启动（%s）	%s failed (%s)	translated	
+S_S_MORE_NOT_SHOWN	…還有 %s 份沒列出	…还有 %s 份没列出	…%s more not shown	translated	
+S_S_RUN_U	%s · 連對 %u	%s · 连对 %u	%s · run %u	translated	
+S_S_STEPPED_DOWN	%s（暫時）	%s（暂时）	%s (stepped down)	translated	
+S_S_S_S	%s  %s：%s	%s  %s：%s	%s  %s: %s	translated	
+S_S_TOTAL_D	%s！總和 %d	%s！总和 %d	%s! Total %d	translated	
+S_S_TO_MOVE	輪到 %s	轮到 %s	%s to move	translated	
+S_S_TRYING_ANOTHER_CODEC	%s，改用其他編碼…	%s，改用其他编码…	%s, trying another codec...	translated	
+S_S_X_LU	%s · 第 %lu 次	%s · 第 %lu 次	%s · x%lu	translated	
+S_TAKEN	那一格已經有了	那一格已被占用	Taken	translated	
+S_TAP_AGAIN	再點重來	再点重来	Tap again	translated	
+S_TAP_AGAIN_2	再點一次	再点一次	Tap again	translated	
+S_TAP_AGAIN_BACK_TO_DEFAULTS	再點一次：回到預設值	再点一次：回到默认值	Tap again: back to defaults	translated	
+S_TAP_AGAIN_BACK_TO_THE_BUILT_IN_CHIME	再點一次：改回內建鐘聲	再点一次：改回内置钟声	Tap again: back to the built-in chime	translated	
+S_TAP_AGAIN_CLEAR_ALL	再點一次：全部清除	再点一次：全部清除	Tap again: clear all	translated	
+S_TAP_AGAIN_CLEAR_THE_TRACK	再點一次：清除這軌	再点一次：清除这轨	Tap again: clear the track	translated	
+S_TAP_AGAIN_FORMAT	再點一次：格式化 	再点一次：格式化 	Tap again: format 	translated	
+S_TAP_AGAIN_ONE_CUP_LESS	再點一次：少算一杯	再点一次：少算一杯	Tap again: one cup less	translated	
+S_TAP_AGAIN_REBOOT	再點一次：重開機	再点一次：重启	Tap again: reboot	translated	
+S_TAP_AGAIN_REBOOT_INTO_THE_PLAYER	再點一次：重開機回播放器	再点一次：重启回播放器	Tap again: reboot into the player	translated	
+S_TAP_AGAIN_REBOOT_INTO_USB_DRIVE_MODE	再點一次：重開機進隨身碟模式	再点一次：重启进入 U 盘模式	Tap again: reboot into USB drive mode	translated	
+S_TAP_AGAIN_RESCAN	再點一次：重新掃描	再点一次：重新扫描	Tap again: rescan	translated	
+S_TAP_AGAIN_RUN	再點一次：執行	再点一次：执行	Tap again: run	translated	
+S_TAP_AGAIN_TO_CLEAR	再點一次清空	再点一次清空	Tap again to clear	translated	
+S_TAP_AGAIN_TO_CONFIRM	再點一下確認	再点一下确认	Tap again to confirm	translated	
+S_TAP_AGAIN_TO_DELETE	再點一次刪除	再点一次删除	Tap again to delete	translated	
+S_TAP_AGAIN_TO_STOP	再點一次停止	再点一次停止	Tap again to stop	translated	
+S_TAP_AGAIN_UNDO_TODAY_S_TICK	再點一次：取消今天的打卡	再点一次：取消今天的打卡	Tap again: undo today's tick	translated	
+S_TAP_AGAIN_ZERO_ALL	再點一次：全部歸零	再点一次：全部归零	Tap again: zero all	translated	
+S_TAP_A_CARD	點卡片看歌	点卡片看歌	Tap a card	translated	
+S_TAP_A_TILE	點旁邊的方塊	点旁边的方块	Tap a tile	translated	
+S_TAP_DRAW_TAP_THE_GROUP_TO_CHANGE	點一下抽人 · 點組名換組	点击抽人 · 点组名换组	Tap: draw · tap the group to change	translated	
+S_TAP_FOR_TODAY_S_CARD	點一下翻今天的牌	点击翻今天的牌	Tap for today's card	translated	
+S_TAP_IT_BACKWARDS	倒著點	倒着点	tap it backwards	translated	
+S_TAP_IT_BACKWARDS_2	倒著點回去	倒着点回去	Tap it backwards	translated	
+S_TAP_OR_TURN_AN_IDEA	點一下或轉旋鈕來個點子	点击或转旋钮来个点子	Tap or turn: an idea	translated	
+S_TAP_OR_TURN_DRAW_SOMEONE	點一下或轉旋鈕抽人	点击或转旋钮抽人	Tap or turn: draw someone	translated	
+S_TAP_OR_TURN_PICK_A_SHOP	點一下或轉旋鈕抽店家	点击或转旋钮抽店家	Tap or turn: pick a shop	translated	
+S_TAP_OR_TURN_TO_ROLL	點一下或轉%s擲骰	点击或转%s掷骰	Tap or turn to roll	translated	
+S_TAP_OR_TURN_TO_SHAKE	點一下或轉%s搖籤	点击或转%s摇签	Tap or turn to shake	translated	
+S_TAP_PLAY	點中間播放	点中间播放	Tap: play	translated	
+S_TAP_TO_DRAW_NOT_SYNCED	點一下抽牌（未對時：隨機）	点击抽牌（未校时：随机）	Tap to draw (not synced)	translated	
+S_TAP_TO_GO_ON	點一下繼續	点击继续	Tap to go on	translated	
+S_TAP_TO_PLAY	點卡片播放	点卡片播放	Tap to play	translated	
+S_TAP_TO_PLAY_AGAIN	點一下再來	点击再来	Tap to play again	translated	
+S_TAP_TO_SERVE	點一下發球	点击发球	Tap to serve	translated	
+S_TAP_TO_SHAKE_NOT_SYNCED_RANDOM	點一下搖籤（未對時：隨機）	点击摇签（未校时：随机）	Tap to shake (not synced: random)	translated	
+S_TAP_TO_SPIN	點一下轉	点击转动	Tap to spin	translated	
+S_TAP_TO_START	點一下開始專注	点击开始专注	Tap to start	translated	
+S_TAP_TO_START_2	點一下開始	点击开始	Tap to start	translated	
+S_TAP_TO_START_3	點中間開始	点中间开始	Tap to start	translated	
+S_TAP_TO_START_D_BPM	點一下開始 %d BPM	点击开始 %d BPM	Tap to start %d BPM	translated	
+S_TAP_TO_START_THEN_TILT	點一下開始，再傾斜	点击开始，再倾斜	Tap to start, then tilt	translated	
+S_TAP_TO_START_THEN_TURN	點一下開始，再轉	点击开始，再转	Tap to start, then turn	translated	
+S_TAP_TO_STOP	點一下停止	点击停止	Tap to stop	translated	
+S_TAP_TO_STOP_2	點一下停	点击停	Tap to stop	translated	
+S_TAP_WHEN_YOU_HEAR_BOTH	兩聲都聽到請點一下	听到两声请点击	Tap when you hear both	translated	
+S_TAROT	塔羅	塔罗	Tarot	translated	
+S_TEMPO	速度	速度	Tempo	translated	
+S_TEMPO_AND_BEATS_THE_LOOP_S	速度與拍號跟著循環	速度与拍号跟着循环	Tempo and beats: the loop's	translated	
+S_TEMPO_THE_EXTERNAL_CLOCK	速度跟著外部時脈	速度跟着外部时钟	Tempo: the external clock	translated	
+S_TEMPO_THE_LOOP_S	速度跟著循環	速度跟着循环	Tempo: the loop's	translated	
+S_TEN_PULL	十連抽！	十连抽！	Ten-pull!	translated	
+S_TESTING	正在測：	正在测：	Testing: 	translated	
+S_TEST_AGAIN	重新測試	重新测试	Test again	translated	
+S_TEST_THE_ALARM_STOPS_PLAYBACK	試聽鈴聲（會停止目前播放）	试听铃声（会停止当前播放）	Test the alarm (stops playback)	translated	
+S_TEXT_TOO_LONG	（內容太長）	（内容太长）	(text too long)	translated	
+S_THEME	配色	配色	Theme	translated	
+S_THESE_SONGS_WILL_NOT_PLAY	這幾首播不了	这几首播不了	These songs will not play	translated	
+S_THE_CARD_CANNOT_BE_READ	記憶卡讀取錯誤	存储卡读取错误	The card cannot be read	translated	
+S_THE_CARD_CANNOT_BE_USED_NOW	卡片目前無法使用	存储卡暂时无法使用	The card cannot be used now	translated	
+S_THE_CARD_IS_FORMATTED	記憶卡已格式化（	存储卡已格式化（	The card is formatted (	translated	
+S_THE_CARD_IS_READY	記憶卡可以使用	存储卡可以使用	The card is ready	translated	
+S_THE_CARD_READS_NOW_RESTART	卡可以讀了，請重開機	卡可以读了，请重启	The card reads now: restart	translated	
+S_THE_CLOCK_IS_OPEN	時鐘已經開著	时钟已经开着	The clock is open	translated	
+S_THE_COLOURS_MOVED	顏色換位置了！	颜色换位置了！	The colours moved!	translated	
+S_THE_DECK_CHANGED_PROGRESS_STARTS_AGAIN	字庫換過了，進度重新開始	词库换过了，进度重新开始	The deck changed: progress starts again	translated	
+S_THE_LIBRARY_CHANGED_TAP_TO_RESTART	曲庫更新了，點中間重新開始	曲库更新了，点中间重新开始	The library changed: tap to restart	translated	
+S_THE_LIBRARY_IS_EMPTY	曲庫是空的	曲库是空的	The library is empty	translated	
+S_THE_LIST_STOPPED_RECONNECTING	清單沒有更新，重新連線…	列表没有更新，重新连接…	The list stopped, reconnecting...	translated	
+S_THE_PLAYER_CANNOT_READ_THEM	播放器讀不了	播放器读不了	the player cannot read them	translated	
+S_THE_PLAYING_SONG_IS_NO_LONGER_ON_THE	正在播放的歌曲已不在記憶卡上	正在播放的歌曲已不在存储卡上	The playing song is no longer on the card	translated	
+S_THE_TIME_IS_NOT_SET_YET	尚未對時	尚未校时	The time is not set yet	translated	
+S_THIN	細	细	Thin	translated	
+S_THINKING	電腦想一下…	电脑思考中…	Thinking...	translated	
+S_THINKING_2	電腦思考	电脑思考	Thinking	translated	
+S_THINK_OF_A_QUESTION_TAP_TO_THROW	心裡想好問題，點一下擲	心里想好问题，点击掷杯	Think of a question, tap to throw	translated	
+S_THIS_CARD_CANNOT_BE_FORMATTED_HERE	這張卡不能在這裡格式化	这张卡不能在这里格式化	This card cannot be formatted here	translated	
+S_THIS_CARD_HAS_GPT_PARTITIONS	這張卡用 GPT 分割	这张卡用 GPT 分区	This card has GPT partitions	translated	
+S_THIS_ONE	這格	这格	This one	translated	
+S_THIS_ONE_2	就這家	就这家	This one	translated	
+S_THREE_YES_IN_A_ROW	連續三聖筊！心想事成	连续三次圣杯！心想事成	Three yes in a row!	translated	
+S_TIGHT	嚴格	严格	Tight	translated	
+S_TIME_IS_UP	時間到	时间到	Time is up	translated	
+S_TIMING	時間	时间	Timing	translated	
+S_TODAY	今天	今天	today	translated	
+S_TODAY_S_CARD	今天的牌	今天的牌	Today's card	translated	
+S_TODAY_S_SLIP	今日籤	今日签	Today's slip	translated	
+S_TODAY_S_SLIP_SAME_ALL_DAY	今天的籤：同一天抽都一樣	今天的签：同一天抽都一样	Today's slip: same all day	translated	
+S_TONE	音色	音色	Tone	translated	
+S_TOOLS	小工具	小工具	Tools	translated	
+S_TOO_LONG	太長了	太长了	Too long	translated	
+S_TOO_MANY_REDIRECTS	轉址太多次	重定向次数过多	Too many redirects	translated	
+S_TOPPLED	塔倒了	塔倒了	Toppled	translated	
+S_TOPPLED_D	塔倒了 · %d 層	塔倒了 · %d 层	Toppled · %d	translated	
+S_TOTAL_D_CM	共跑 %d 公分	共跑 %d 厘米	Total %d cm	translated	
+S_TOYS	小工具	小工具	Toys	translated	
+S_TOY_SOUNDS	小工具音效	小工具音效	Toy sounds	translated	
+S_TRACK	軌	轨	track	translated	
+S_TRACK_2	音軌	音轨	Track	translated	
+S_TRIPLE	豹子	豹子	Triple	translated	
+S_TUBE	真空管	电子管	Tube	translated	
+S_TURN_A_BLUETOOTH_MODE_ON_FIRST	先開啟藍牙模式才能清除	先打开蓝牙模式才能清除	Turn a Bluetooth mode on first	translated	
+S_TURN_THE	轉	转	Turn the 	translated	
+S_TWO_CHERRIES_FROM_THE_LEFT_D	左起兩顆櫻桃 +%d	左起两颗樱桃 +%d	Two cherries from the left +%d	translated	
+S_UNDO	復原	撤销	Undo	translated	
+S_UNDO_TODAY	取消今天	取消今天	Undo today	translated	
+S_UNFAVOURITE	取消收藏	取消收藏	Unfavourite	translated	
+S_UNMUTE	取消靜音	取消静音	Unmute	translated	
+S_UNSUPPORTED_WAV	不支援的 WAV	不支持的 WAV	Unsupported WAV	translated	
+S_UNTIL	結束	结束	Until	translated	
+S_UPRIGHT	正位	正位	Upright	translated	
+S_USB_DRIVE_MODE	USB 隨身碟模式	U 盘模式	USB drive mode	translated	
+S_USE_THE_PLAYING_SONG	鈴聲改用目前播放的歌	铃声改用当前播放的歌曲	Use the playing song	translated	
+S_U_ALIVE_D_S_S	%u活·%d代/秒%s	%u活·%d代/秒%s	%u alive, %d/s%s	translated	
+S_U_GEN_PEAK_U	%u代·高峰%u	%u代·高峰%u	%u gen, peak %u	translated	
+S_U_GEN_STILL_TAP	%u代·靜止:點一下	%u代·静止：点击	%u gen, still: tap	translated	
+S_U_PTS	%u 分	%u 分	%u pts	translated	
+S_U_PTS_LEVEL_D	%u 分 · 第 %d 關	%u 分 · 第 %d 关	%u pts · level %d	translated	
+S_VALUE	值	值	Value	translated	
+S_VARIANT	變化	变化	Variant	translated	
+S_VOICES	聲部	声部	Voices	translated	
+S_VOLUME	音量	音量	Volume	translated	
+S_WAITING_FOR_A_PHONE_JC_PLAYER	等待手機連線（JukeDial）	等待手机连接（JukeDial）	Waiting for a phone (JukeDial)	translated	
+S_WAITING_FOR_THE_COMPUTER	等電腦連上	等电脑连上	Waiting for the computer	translated	
+S_RADIO_WIFI_OFF	Wi-Fi 已關閉／飛航模式	Wi-Fi 已关闭／飞行模式	Wi-Fi is off (airplane mode)	translated	
+S_WAITING_FOR_WI_FI	等待 Wi-Fi…	等待 Wi-Fi…	Waiting for Wi-Fi...	translated	
+S_WAIT_FOR_BEAT_TAP	等拍子·點一下撒	等拍子·点击撒	Wait for beat: tap	translated	
+S_WALL	牆	墙	Wall	translated	
+S_WATCH	看好…	看好…	Watch...	translated	
+S_WATERFALL	瀑布	瀑布	Waterfall	translated	
+S_WEEKDAYS	平日	工作日	Weekdays	translated	
+S_WEEKEND	週末	周末	Weekend	translated	
+S_WHEEL	轉盤	转盘	Wheel	translated	
+S_WIDE	寬鬆	宽松	Wide	translated	
+S_WIDE_2	加寬	加宽	Wide	translated	
+S_WIDE_3	粗	粗	Wide	translated	
+S_WIND_IT_UP_TAP_THE_CENTRE	轉上去上發條，點中間放開	转上去上发条，点中间放开	Wind it up, tap the centre	translated	
+S_WIRED_MAX_RATE	有線最高取樣率：	有线最高采样率：	Wired max rate: 	translated	
+S_WORDS	單字	单词	Words	translated	
+S_WRAP	環繞	环绕	Wrap	translated	
+S_WRONG_S	答錯了，是 %s	答错了，是 %s	Wrong: %s	translated	
+S_X1	單抽	单抽	x1	translated	
+S_X10	十連	十连	x10	translated	
+S_X_D_U_DBPM	%d連擊 %u分 %dBPM	%d连击 %u分 %dBPM	x%d %u %dBPM	translated	
+S_X_D_U_PTS	%d連擊 %u分	%d连击 %u分	x%d · %u pts	translated	
+S_X_WINS	X 贏了！	X 赢了！	X wins!	translated	
+S_YES_D_LAUGH_D_NO_D	聖 %d · 笑 %d · 陰 %d	圣 %d · 笑 %d · 阴 %d	yes %d · laugh %d · no %d	translated	
+S_YOUR_MOVE	輪到你	轮到你	Your move	translated	
+S_YOUR_MOVE_S	輪到你（%s）	轮到你（%s）	Your move (%s)	translated	
+S_YOUR_TURN	輪到你	轮到你	Your turn	translated	
+S_YOUR_TURN_2	換你	换你	your turn	translated	
+S_YOUR_TURN_3	換你	换你	Your turn	translated	
+S_YOU_1ST	你先手	你先手	You 1st	translated	
+S_YOU_2ND	你後手	你后手	You 2nd	translated	
+S_YOU_DRAW	你抽了一塊	你抽了一块	You draw	translated	
+S_YOU_D_D	你 %d - %d	你 %d - %d	You %d - %d	translated	
+S_YOU_O	你是 O	你是 O	You: O	translated	
+S_YOU_PASS	你過牌	你过牌	You pass	translated	
+S_YOU_WIN	你贏了！	你赢了！	You win!	translated	
+S_YOU_WIN_2	你贏了	你赢了	You win	translated	
+S_YOU_X	你是 X	你是 X	You: X	translated	
+S_ZERO	歸零	清零	Zero	translated	
+S_ZH_EN	中→英	中→英	ZH→EN	translated	
+S_ALL_THREE	三合一	三合一	All three	translated	
+S_ARROW_KEYS	方向鍵	方向键	arrow keys	translated	
+S_BACK_TO_USB	回到 USB	回到 USB	Back to USB	translated	
+S_BLUETOOTH_IS_NOT_AVAILABLE	藍牙不能用	蓝牙不能用	Bluetooth is not available	translated	
+S_BT_CONNECTED	藍牙：已連線	蓝牙：已连接	BT: connected	translated	
+S_BT_WAITING	藍牙：等連線	蓝牙：等待连接	BT: waiting	translated	
+S_CONFIG	設定	设置	Config	translated	
+S_CONFIG_ERRORS	設定錯誤	设置错误	Config errors	translated	
+S_CONFIG_FILE	設定檔	设置文件	Config file	translated	
+S_CONFIG_RELOADED	已重讀設定	已重新读取设置	Config reloaded	translated	
+S_DRIVE_KEYS	隨身碟＋鍵盤	U盘＋键盘	Drive + keys	translated	
+S_D_MORE_NOT_LISTED	還有 %d 個沒列出	还有 %d 个没列出	%d more not listed	translated	
+S_D_PAIRED	已配對 %d 台	已配对 %d 台	%d paired	translated	
+S_EJECTED_UNPLUG	已退出，可以拔了	已弹出，可以拔了	Ejected, unplug	translated	
+S_EJECT_FIRST	先退出	先弹出	Eject first	translated	
+S_EXT_ARMED_IN_USE	卡在電腦上\n先在電腦退出\n再點＝強制回去	存储卡在电脑上\n先在电脑上弹出\n再点＝强制回去	Card in use\nEject on the PC\nTap again = force	translated	
+S_EXT_CFG_BAD	整檔不採用：%d 個錯誤	整个文件不采用：%d 个错误	Rejected: %d errors	translated	
+S_EXT_CFG_NONE	沒有設定檔	没有设置文件	No config file	translated	
+S_EXT_CFG_OK	已套用 %d 層	已套用 %d 层	Config: %d layers	translated	
+S_EXT_FUNC_ARMED	再點一次\n改成 %s	再点一次\n改成 %s	Tap again\nswitch to %s	translated	
+S_IN_USE	電腦使用中	电脑使用中	In use	translated	
+S_NEXT_LAYER	下一層	下一层	Next layer	translated	
+S_NOTHING	無	无	nothing	translated	
+S_NOT_SENT_QUEUE_FULL	送不出去（佇列滿）	送不出去（队列满）	Not sent (queue full)	translated	
+S_NO_USB_CABLE_TO_GO_BACK_TO	沒有 USB 線可以切回	没有 USB 线可以切回	No USB cable to go back to	translated	
+S_PAIRINGS_FORGOTTEN	已清除配對	已清除配对	Pairings forgotten	translated	
+S_PLAYER	回播放器	回播放器	Player	translated	
+S_PREV_LAYER	上一層	上一层	Prev layer	translated	
+S_RELOAD	重讀設定	重新读取设置	Reload	translated	
+S_SCROLL	捲動	滚动	scroll	translated	
+S_SOUND_CARD_KEYS	音效卡＋鍵盤	声卡＋键盘	Sound card + keys	translated	
+S_S_S	%s＝%s	%s＝%s	%s = %s	translated	
+S_TAP_AGAIN_FORGET_D_PAIRINGS	再點一次：清除 %d 個配對	再点一次：清除 %d 个配对	Tap again: forget %d pairings	translated	
+S_THE_CARD_IS_NOT_BACK_YET	卡還沒回來	存储卡还没回来	The card is not back yet	translated	
+S_THE_COMPUTER_HAS_THE_CARD_EJECT_IT_FIRST	卡在電腦上，先退出	存储卡在电脑上，先弹出	The computer has the card: eject it first	translated	
+S_THE_COMPUTER_TOOK_IT_BACK_NOT_READ	電腦又接手了，沒讀	电脑又接手了，没读取	The computer took it back: not read	translated	
+S_THE_USB_CABLE_IS_STILL_IN	USB 線還插著	USB 线还插着	The USB cable is still in	translated	
+S_TYPE_URL	輸入網址	输入网址	Type URL	translated	
+S_UNPAIR	清除配對	清除配对	Unpair	translated	
+S_USB_MIX	USB 功能	USB 功能	USB mix	translated	
+S_USB_PLUGGED_IN_BACK_TO_USB_KEYS	USB 插上了\n回到 USB 送鍵？	USB 插上了\n回到 USB 发送按键？	USB plugged in\nBack to USB keys?	translated	
+S_USB_UNPLUGGED	USB 拔掉了	USB 拔掉了	USB unplugged	translated	
+S_USB_UNPLUGGED_SEND_KEYS_BY_BLUETOOTH	USB 拔掉了\n改用藍牙送鍵？	USB 拔掉了\n改用蓝牙发送按键？	USB unplugged\nSend keys by Bluetooth?	translated	
+S_USE_BLUETOOTH	切到藍牙	切到蓝牙	Use Bluetooth	translated	
+S_VOLUME_2	音量	音量	volume	translated	
+S_WAITING	等電腦連上	等电脑连接	Waiting	translated	
+S_WAITING_FOR_A_BLUETOOTH_LINK	等電腦藍牙連線	等电脑蓝牙连接	Waiting for a Bluetooth link	translated	
+S_ROTATION	畫面方向	画面方向	Rotation	translated	
+S_AFTER_REBOOT	（重開機後生效）	（重启后生效）	(after reboot)	translated	
+S_QS_WIFI	Wi-Fi	Wi-Fi	Wi-Fi	same	
+S_QS_AIRPLANE	飛航	飞行	Airplane	translated	
+S_QS_OUT_WIRED	有線輸出	有线输出	Wired out	translated	
+S_QS_POWER_USB	USB 供電	USB 供电	USB power	translated	
+S_QS_POWER_BATT	電池	电池	Battery	translated	
+S_QS_WHY_MODE	這個模式自己管理無線	这个模式自己管理无线	This mode runs its own radios	translated	
+S_QS_REBOOT_APPLY	重新開機後生效	重启后生效	Takes effect after reboot	translated	
+S_QS_WHY_CAST	廣播中：Wi-Fi 記憶體不夠	广播中：Wi-Fi 内存不够	Broadcasting: no RAM for Wi-Fi	translated	
+S_TOUR_UP	從下緣快速往上滑\n返回上一層，內容頁叫出選單	从下缘快速向上滑\n返回上一层，内容页呼出菜单	Flick up from the bottom edge\nBack; on a content page, its menu	translated	
+S_TOUR_DOWN	從上緣快速往下滑\n叫出快捷面板，再從下緣往上滑關掉	从上缘快速向下滑\n呼出快捷面板，再从下缘向上滑关掉	Flick down from the top edge\nQuick settings; flick up to close	translated	
+S_TOUR_SIDE	從左右邊緣快速往內滑\n翻頁	从左右边缘快速向内滑\n翻页	Flick in from the left or right edge\nTurn the page	translated	
+S_TOUR_HOLD	按住畫面不動 %d 秒\n回到首頁	按住画面不动 %d 秒\n回到首页	Hold still for %d s\nBack to the home page	translated	
+S_TOUR_SKIP	略過	跳过	Skip	translated	
+S_TOUR_REPLAY	手勢教學	手势教程	Gesture tour	translated	
+S_SPEED	倍速	倍速	Speed	translated	
+S_CROSSFADE	淡入淡出	淡入淡出	Crossfade	translated	
+S_XFADE_SEC	%d 秒	%d 秒	%d s	translated	
+S_XFADE_RATE_NOTE	取樣率不同的兩首歌之間不交疊，直接換曲	采样率不同的两首歌之间不交叠，直接换曲	Tracks with different sample rates do not crossfade: they change directly	translated	
+S_SETUP_MAIN	主要網址	主要网址	Main address	translated	
+S_SETUP_MIRROR	備用網址	备用网址	Mirror	translated	
+S_CAST_RADIO	廣播電台	广播电台	Broadcast radio	translated	
+S_CAST_NO_WIFI	沒有 Wi-Fi 設定檔	没有 Wi-Fi 配置文件	No Wi-Fi login file	translated	
+S_CAST_WAIT_WIFI	等 Wi-Fi 連上才開廣播	等 Wi-Fi 连上才开广播	Broadcast starts once Wi-Fi is up	translated	
+S_CAST_WIFI_FAIL	Wi-Fi 連不上，請檢查設定檔	Wi-Fi 连不上，请检查配置文件	Cannot join Wi-Fi: check the login file	translated	
+S_DAC_RATE_LOW	此取樣率 (%s kHz) 有線輸出不支援	此采样率 (%s kHz) 有线输出不支持	This sample rate (%s kHz) is not supported by the wired output	translated	
+S_CAST_STARTING	廣播啟動中…	广播启动中…	Starting the broadcast...	translated	
+S_CAST_FAILED	廣播啟動失敗	广播启动失败	The broadcast did not start	translated	
+S_CAST_WIFI_DBM	Wi-Fi %d dBm　音量 %d	Wi-Fi %d dBm　音量 %d	Wi-Fi %d dBm  volume %d	translated	
+S_CAST_WIFI_OFF	Wi-Fi 未連線　音量 %d	Wi-Fi 未连接　音量 %d	Wi-Fi not connected  volume %d	translated	
+S_CAST_SWITCH	切換成廣播電台	切换为广播电台	Switch to broadcast radio	translated	
+S_CAST_SWITCH_HINT	重開機成廣播電台\n（音樂會停）	重启为广播电台\n（音乐会停止）	Reboots as a broadcast radio\n(music stops)	translated	
+S_CAST_ASK	電台從 Wi-Fi 收進來\n用 Auracast 廣播出去	电台从 Wi-Fi 收进来\n用 Auracast 广播出去	Radio in over Wi-Fi\nout as an Auracast broadcast	translated	
+S_CAST_HINT	點兩次「回播放器」離開	点两次「回播放器」离开	Tap Player twice to leave	translated	
+S_CAST_NO_SETTINGS	廣播電台模式不能改設定，請回播放器	广播电台模式不能改设置，请回播放器	The broadcast radio cannot change settings: go back to the player	translated	
+S_WIRED_HARD_RATE	有線拒收上限：	有线拒收上限：	Wired reject above: 	translated	
+S_DAC_NOTE_PLL	PLL 未鎖定：以 24.576 MHz 時脈播放	PLL 未锁定：以 24.576 MHz 时钟播放	PLL did not lock: playing from the 24.576 MHz clock	translated	
+S_DAC_NOTE_DEAD	DAC 無回應，已靜音	DAC 无响应，已静音	DAC not answering, muted	translated	
+S_DAC_NOTE_ABSENT	找不到 CS43131 DAC（PCM5102 版？），有線無聲	找不到 CS43131 DAC（PCM5102 版？），有线无声	No CS43131 DAC found (PCM5102 variant?): wired sound off	translated	
+S_DAC_ABSENT_LIVE	沒有 CS43131 回應（PCM5102 版？）：有線不出聲，只能用藍牙	没有 CS43131 响应（PCM5102 版？）：有线不出声，只能用蓝牙	No CS43131 answered (PCM5102 variant?): no wired sound, Bluetooth only	translated	
+S_DAC_NOTE_SERIAL	DAC 序列埠錯誤 (%s kHz)，降一檔播放	DAC 串行口错误 (%s kHz)，降一档播放	DAC serial port errors (%s kHz): one tier down	translated	
+S_DAC_RATE_HARD	高於有線拒收上限 (%s kHz)	高于有线拒收上限 (%s kHz)	Above the wired reject limit (%s kHz)	translated	
+S_BT_AUDIO	藍牙音訊	蓝牙音频	Bluetooth audio	translated	
+S_WIRED_OUTPUT	有線輸出	有线输出	Wired output	translated	
+S_BTA_CODEC	編碼上限：	编码上限：	Codec limit: 	translated	
+S_BTA_RATE	取樣率上限：	采样率上限：	Rate limit: 	translated	
+S_BTA_BITS	位元上限：	位数上限：	Bits limit: 	translated	
+S_BTA_CHAN	聲道模式：	声道模式：	Channel mode: 	translated	
+S_BTA_LDAC	LDAC 音質：	LDAC 音质：	LDAC quality: 	translated	
+S_BTA_APPLY	重新連線以套用	重新连接以应用	Reconnect to apply	translated	
+S_JOINT_STEREO	聯合立體聲	联合立体声	Joint stereo	translated	
+S_SLOT24_FROM	24-bit 槽起點：	24-bit 槽起点：	24-bit slot from: 	translated	
+S_SLOT24_352	352.8k 以上	352.8k 以上	352.8k and up	translated	
+S_SLOT24_192	192k 以上	192k 以上	192k and up	translated	
+S_DAC_HPF	DAC 高通濾波：	DAC 高通滤波：	DAC high-pass: 	translated	
+S_DAC_FS	輸出推力：	输出推力：	Output drive: 	translated	
+S_DAC_FS_BEST	1.0 V・高音質（預設）	1.0 V・高音质（默认）	1.0 V · best quality (default)	translated	
+S_DAC_FS_MID	1.41 V・中推力	1.41 V・中推力	1.41 V · more drive	translated	
+S_DAC_FS_HELP	1.0 V 雜訊和耗電最低，多數耳機和入耳式耳機夠用；較高只給難推（高阻抗）的耳機	1.0 V 噪声和耗电最低，多数耳机和入耳式耳机够用；较高只给难推（高阻抗）的耳机	1.0 V has the lowest noise and power and is enough for most headphones and IEMs; go higher only for hard-to-drive (high-impedance) headphones	translated	
+S_DAC_FS_HI	1.73 V・高電壓（實驗性）	1.73 V・高电压（实验性）	1.73 V · high voltage (experimental)	translated	
+S_DAC_FS_ARM	實驗性：1.73 V 高電壓模式（比 1.0 V 大 4.8 dB）。晶片廠只保證用在 600 Ω 以上的耳機；低阻抗入耳式耳機增益很小，還可能失真。這塊板的供電剛好在此模式的最低要求。請先把音量調小（高於 20 會自動降到 20）。再點一次開啟	实验性：1.73 V 高电压模式（比 1.0 V 大 4.8 dB）。芯片厂只保证用在 600 Ω 以上的耳机；低阻抗入耳式耳机增益很小，还可能失真。这块板的供电刚好在此模式的最低要求。请先把音量调小（高于 20 会自动降到 20）。再点一次开启	Experimental: 1.73 V high-voltage mode (+4.8 dB over 1.0 V). The chip maker specifies it for headphones of 600 ohm and up; low-impedance earphones gain little and may distort. This board's supply is at the minimum this mode needs. Turn the volume down first (above 20 it is set to 20). Tap again to turn on	translated	
+S_DAC_FS_CLAMP	輸出推力調高：音量已降到 20	输出推力调高：音量已降到 20	Drive raised: volume set to 20	translated	
+S_DAC_FS_ACTIVE	晶片實際推力：	芯片实际推力：	Chip drive now: 	translated	
+S_DAC_FS_DIFF	（與設定不同）	（与设置不同）	(differs from the setting)	translated	
+S_DAC_FS_PEND	（下次播放時套用）	（下次播放时应用）	(applies at the next play)	translated	
+S_DAC_FS_UNK	未知	未知	unknown	translated	
+S_DAC_FS_ODD	暫存器值異常	寄存器值异常	unexpected registers	translated	
+S_DAC_AMUTE	DAC 自動靜音：	DAC 自动静音：	DAC auto-mute: 	translated	
+S_WIRED_APPLY_NOTE	改了就套用，聲音會短暫靜音	更改后立即应用，声音会短暂静音	Changes apply at once, with a brief mute	translated	
+S_WIRED_NOW_BT	目前輸出：藍牙	当前输出：蓝牙	Current output: Bluetooth	translated	
+S_TUNER	調音器	调音器	Tuner	translated	
+S_TUNER_LISTEN	聆聽	聆听	Listen	translated	
+S_TUNER_PLAY	發音	发音	Play a note	translated	
+S_TUNER_VOICE	音色	音色	Voice	translated	
+S_WAVE_SINE	正弦波	正弦波	Sine	translated	
+S_WAVE_SQ50	方波 50%	方波 50%	Square 50%	translated	
+S_WAVE_SQ25	方波 25%	方波 25%	Square 25%	translated	
+S_WAVE_TRI	三角波	三角波	Triangle	translated	
+S_WAVE_SAW	鋸齒波	锯齿波	Saw	translated	
+S_TUNER_GUITAR	吉他弦	吉他弦	Guitar string	translated	
+S_TUNER_A4	A4 基準	A4 基准	A4 pitch	translated	
+S_TUNER_NONE	沒有聽到音	没有听到音	No note heard	translated	
+S_TUNER_NO_MIC	麥克風無法使用	麦克风无法使用	Microphone unavailable	translated	
+S_ORIGINAL_SIZE	原尺寸	原尺寸	Original	translated	
+S_ZOOMED	放大	放大	Zoomed	translated	
+S_LYRICS	歌詞	歌词	Lyrics	translated	
+S_VOICE_ROWS	聲部列	声部列	Voice rows	translated	
+S_PIANO_ROLL	鋼琴捲簾	钢琴卷帘	Piano roll	translated	
+S_STATE	狀態	状态	State	translated	
+S_SOLO_VOICE	獨奏	独奏	Solo	translated	
+S_NO_LYRICS	沒有歌詞	没有歌词	No lyrics	translated	
+S_LYRICS_NOT_UTF8	歌詞檔不是 UTF-8	歌词文件不是 UTF-8	Lyrics file is not UTF-8	translated	
+S_REFUSE_VGM_CHIPS	此檔需要尚未模擬的晶片：%s	此文件需要尚未模拟的芯片：%s	This file needs chips that are not emulated: %s	translated	
+S_REFUSE_OPL_MODULE	此曲使用 AdLib（OPL）音色，無法播放	此曲使用 AdLib（OPL）音色，无法播放	This module uses AdLib (OPL) instruments and cannot be played	translated	
+S_REFUSE_AIFF_CODEC	不支援此 AIFF 壓縮格式（%s）	不支持此 AIFF 压缩格式（%s）	This AIFF compression (%s) is not supported	translated	
+S_REFUSE_TTA_ENCRYPTED	不支援加密的 TTA 檔	不支持加密的 TTA 文件	Password-protected TTA files are not supported	translated	
+S_REFUSE_MPC_OLD	此 Musepack 版本太舊，無法播放	此 Musepack 版本太旧，无法播放	This Musepack version is too old to play	translated	
+S_REFUSE_ADX_TYPE	此 ADX 檔的編碼不支援（只支援標準 ADPCM）	此 ADX 文件的编码不支持（只支持标准 ADPCM）	This ADX file uses an encoding that is not supported (standard ADPCM only)	translated	
+S_REFUSE_BRSTM_CODEC	此 BRSTM 不是 DSP-ADPCM 編碼，無法播放	此 BRSTM 不是 DSP-ADPCM 编码，无法播放	This BRSTM is not DSP-ADPCM and cannot be played	translated	
+S_REFUSE_YM_VARIANT	此 YM 檔是數位混音或追蹤格式，不支援	此 YM 文件是数字混音或追踪格式，不支持	This YM file is a digital-mix or tracker variant and is not supported	translated	
+S_REFUSE_P8_NO_MUSIC	此 PICO-8 卡帶沒有音樂	此 PICO-8 卡带没有音乐	This PICO-8 cart has no music	translated	
+S_REFUSE_P8_PNG	此 PNG 不是 PICO-8 卡帶圖（需為 160×205）	此 PNG 不是 PICO-8 卡带图（需为 160×205）	This PNG is not a PICO-8 cart image (160x205 needed)	translated	
+S_REFUSE_SID_BASIC	此 SID 檔是 BASIC 程式（需要 C64 的 BASIC ROM），不支援	此 SID 文件是 BASIC 程序（需要 C64 的 BASIC ROM），不支持	This SID file is a BASIC program (it needs the C64 BASIC ROM) and is not supported	translated	
+S_REFUSE_OPL_4OP	此曲需要 OPL3 四運算子音色，目前只支援 OPL2	此曲需要 OPL3 四运算子音色，当前只支持 OPL2	This song needs OPL3 four-operator voices; only OPL2 is emulated	translated	
+S_REFUSE_OPL_PACKED	此 Adlib Tracker 2 檔使用 aPlib 壓縮（版本 9–11），不支援	此 Adlib Tracker 2 文件使用 aPlib 压缩（版本 9–11），不支持	This Adlib Tracker 2 file is aPlib-packed (versions 9-11) and is not supported	translated	
+S_REFUSE_XMP_BAD	此模組檔已損壞，或屬於不支援的變體	此模组文件已损坏，或属于不支持的变体	This module file is damaged or a variant that is not supported	translated	
+S_REFUSE_OPL_DAMAGED	此 DOS 音樂檔已損壞（大小欄位超出範圍或資料不完整），無法播放	此 DOS 音乐文件已损坏（大小字段超出范围或数据不完整），无法播放	This DOS music file is damaged (a size field is out of range or the data is cut short) and cannot be played
+S_REFUSE_EXPERIMENTAL_OFF	實驗性格式未開啟（設定 → 實驗性格式）	实验性格式未开启（设置 → 实验性格式）	Experimental formats are off (Settings → Experimental formats)	translated	
+S_EXPERIMENTAL_FORMATS	實驗性格式	实验性格式	Experimental formats	translated	
+S_EXPERIMENTAL_ARM	這些播放器較不成熟，損壞的檔案可能讓播放器重開機。再點一次開啟	这些播放器较不成熟，损坏的文件可能让播放器重启。再点一次开启	These readers are less mature: a damaged file may reboot the player. Tap again to turn on	translated	
+S_CRASH_SKIPPED	上次播放時當機，已略過	上次播放时死机，已跳过	Crashed last time it played, skipped	translated	
+S_TF_INFO	資訊	信息	Info	translated	
+S_TF_RINGS	圓環	圆环	Rings	translated	
+S_TF_HUD	HUD	HUD	HUD	translated	
+S_TF_HUD_NOPACK	缺 faces.zip	缺 faces.zip	No faces.zip	translated	
+S_STOPWATCH	碼錶	码表	Stopwatch	translated	
+S_COUNTDOWN	倒數計時	倒数计时	Countdown	translated	
+S_CD_TIME_UP	倒數結束	倒数结束	Countdown finished	translated	
+S_SW_LAP	計圈	计圈	Lap	translated	
+S_SW_TAP_START	點一下開始	点一下开始	Tap to start	translated	
+S_SW_RUNNING	計時中	计时中	Running	translated	
+S_CD_SET_TIME	點一下設定時間	点一下设置时间	Tap to set the time	translated	
+S_CD_PAUSED	已暫停	已暂停	Paused	translated	
+S_CD_MIN	分	分	Min	translated	
+S_CD_SEC	秒	秒	Sec	translated	
+S_SW_LAP_LINE	第 %d 圈  %s  %s	第 %d 圈  %s  %s	Lap %d  %s  %s	translated	
+S_SW_PAUSED_LINE	已暫停・點一下繼續	已暂停・点一下继续	Paused, tap to go on	translated	
+S_HUD_COL_GREEN	綠色	绿色	Green	translated	
+S_HUD_COL_RED	紅色	红色	Red	translated	
+S_HUD_COL_CYAN	青色	青色	Cyan	translated	
+S_HUD_COL_TRI	三色	三色	Tri-colour	translated	
+S_HUD_KNOB_COLOUR	＝換顏色	：换颜色	: HUD colour	translated	
+S_AUTO_POWER_OFF	自動關機	自动关机	Auto power-off	translated	
+S_AUTO_OFF_MSG	閒置 %d 分鐘，即將關機	闲置 %d 分钟，即将关机	Idle for %d min: powering off	translated	
+S_LOWBAT_WARN	電量低 (%d %%)，請充電	电量低 (%d %%)，请充电	Battery low (%d %%): please charge	translated	
+S_LOWBAT_BOOT	電量太低 (%d %%)，請充電	电量太低 (%d %%)，请充电	Battery too low (%d %%): please charge	translated	
+S_LOWBAT_OFF	電量耗盡，已記住播放位置，即將關機	电量耗尽，已记住播放位置，即将关机	Battery empty: your place is saved, powering off	translated	
+S_CHG_CHARGING	充電中	充电中	Charging	translated	
+S_CHG_FULL	已充飽	已充满	Fully charged	translated	
+S_CHG_IDLE	未充電	未充电	Not charging	translated	
+S_CHG_START	開機	开机	Start player	translated	
+S_POWER_OFF	關機	关机	Power off	translated	
+S_CHG_TAP_OFF	再點一次：關機	再点一次：关机	Tap again: power off	translated	
+S_CHG_HINT	按電源鍵開機	按电源键开机	Press the power key to start	translated	
+S_AMIGA_TONE	Amiga 音色	Amiga 音色	Amiga tone	translated	
+S_PACK_MISSING	卡上沒有內容包（_player/pack.txt）：到網頁工具下載「TF 卡內容包」，解壓縮到卡的根目錄	卡上没有内容包（_player/pack.txt）：到网页工具下载“TF 卡内容包”，解压到卡的根目录	No content pack on the card (_player/pack.txt): download the "TF card pack" from the web tool and unzip it into the card root	translated	
+S_PACK_OLD	卡上的內容包比這版韌體要求的舊：到網頁工具下載新的「TF 卡內容包」，解壓縮到卡的根目錄	卡上的内容包比这版固件要求的旧：到网页工具下载新的“TF 卡内容包”，解压到卡的根目录	The card's content pack is older than this firmware needs: download the new "TF card pack" from the web tool and unzip it into the card root	translated	
+S_PACK_VERSION	內容包版本：	内容包版本：	Card pack: 	translated	
+S_CPU_CLOCK	實驗性處理器時脈	实验性处理器时钟	Experimental CPU clock	translated	
+S_CPU_CLOCK_ARM	實驗性：降低處理器時脈（240／160 MHz）可省一點電，但高解析、LDAC、重效果可能斷音。我們只在 320 MHz 測試；開機與當機後會回到 320 MHz。再點一次開啟	实验性：降低处理器时钟（240／160 MHz）可省一点电，但高解析、LDAC、重效果可能断音。我们只在 320 MHz 测试；开机与死机后会回到 320 MHz。再点一次开启	Experimental: a lower CPU clock (240 / 160 MHz) saves a little power, but hi-res, LDAC and heavy effects may break up. We only test at 320 MHz; a boot or a crash goes back to 320 MHz. Tap again to turn on	translated	
+S_STATUS_CPU_CLOCK	處理器時脈：%d MHz	处理器时钟：%d MHz	CPU clock: %d MHz	translated	
+S_CT_TITLE	記憶卡診斷	存储卡诊断	Card diagnostics	translated	
+S_CT_CAPACITY	容量：%s	容量：%s	Capacity: %s	translated	
+S_CT_FREE	剩餘：%s	剩余：%s	Free: %s	translated	
+S_CT_FS	檔案系統：%s	文件系统：%s	File system: %s	translated	
+S_CT_NAME	型號：%s	型号：%s	Card: %s	translated	
+S_CT_CLOCK	匯流排時脈：%u MHz	总线时钟：%u MHz	Bus clock: %u MHz	translated	
+S_CT_RAW_ROW	直接讀取（raw）	直接读取（raw）	Direct read (raw)	translated	
+S_CT_FILE_ROW	檔案測試（寫入＋讀回）	文件测试（写入＋读回）	File test (write + read back)	translated	
+S_CT_FILE_ARM	會在卡上寫入 4 MB 暫存檔，測完刪除。再點一次開始	会在卡上写入 4 MB 临时文件，测完删除。再点一次开始	Writes a 4 MB temp file on the card, deleted afterwards. Tap again to start	translated	
+S_CT_NOT_RUN	尚未測試	尚未测试	Not run yet	translated	
+S_CT_RUNNING	測試中… %u%%	测试中… %u%%	Testing... %u%%	translated	
+S_CT_RAW_A	16 KB 讀取：%s MB/s（最慢區 %s）	16 KB 读取：%s MB/s（最慢区 %s）	16 KB reads: %s MB/s (slowest region %s)	translated	
+S_CT_RAW_REG	頭／中／尾：%s／%s／%s MB/s	头／中／尾：%s／%s／%s MB/s	Start / mid / end: %s / %s / %s MB/s	translated	
+S_CT_RAW_REG_NONE	區域速度沒有存檔，請再做一次直接讀取	区域速度没有存档，请再做一次直接读取	Regions: not saved, run the raw test again	translated	
+S_CT_RAW_B	最慢一次讀取：%s ms	最慢一次读取：%s ms	Slowest single read: %s ms	translated	
+S_CT_RAW_C	卡的極限（64 KB）：%s MB/s	卡的极限（64 KB）：%s MB/s	Card maximum (64 KB): %s MB/s	translated	
+S_CT_FILE_W	檔案寫入：%s MB/s	文件写入：%s MB/s	File write: %s MB/s	translated	
+S_CT_FILE_R	檔案讀回：%s MB/s	文件读回：%s MB/s	File read-back: %s MB/s	translated	
+S_CT_VERIFY_OK	資料比對：正確	数据比对：正确	Data check: OK	translated	
+S_CT_VERIFY_BAD	資料比對：不符	数据比对：不符	Data check: MISMATCH	translated	
+S_CT_FAIL_NOSPACE	剩餘空間不足 8 MB，不能做檔案測試	剩余空间不足 8 MB，不能做文件测试	Less than 8 MB free, the file test cannot run	translated	
+S_CT_FAIL_SMALL	卡太小（不到 64 MB），不能測試	卡太小（不到 64 MB），不能测试	Card too small (under 64 MB) to test	translated	
+S_CT_FAIL_IO	讀寫失敗，測試中止	读写失败，测试中止	Read or write failed, test stopped	translated	
+S_CT_FAIL_NOMEM	記憶體不足，不能測試	内存不足，不能测试	Out of memory, cannot test	translated	
+S_CT_FORMATS	能播放的格式	能播放的格式	Playable formats	translated	
+S_CT_LAST	上次：%s	上次：%s	Last run: %s	translated	
+S_CT_SAVE_FAIL	測試完成，但結果沒能存進卡	测试完成，但结果没能存进卡	Done, but the result could not be saved on the card	translated	
+S_CT_LADDER	%s  需 %s MB/s	%s  需 %s MB/s	%s  needs %s MB/s	translated	
+S_CT_NOTE_NEED	低標＝每秒資料量 × %s（餘裕）	低标＝每秒数据量 × %s（余裕）	Minimum = the format's data per second x %s (margin)	translated	
+S_CT_NOTE_FLAC	FLAC 以未壓縮的 %u%% 估算，實際檔案通常更小	FLAC 按未压缩的 %u%% 估算，实际文件通常更小	FLAC is counted at %u%% of uncompressed; real files are usually smaller	translated	
+S_CT_NOTE_MARG	勉強＝達到低標的 %u%%：可能能播，也可能卡頓	勉强＝达到低标的 %u%%：可能能播，也可能卡顿	Marginal = at least %u%% of the minimum: may play, may stutter	translated	
+S_CT_NOTE_RAW	直接讀取只量卡本身；實際播放經過檔案系統，碎片多的卡會更慢，檔案測試較接近	直接读取只量卡本身；实际播放经过文件系统，碎片多的卡会更慢，文件测试更接近	Raw read measures the card itself; real playback goes through the file system and a fragmented card is slower. The file test is closer	translated	
+S_CT_NOTE_SLOWEST	直接讀取的標記用最慢的區域；你的檔案實際放在哪裡才算數，檔案測試會顯示這個；每個區域讀兩次，第二次才算（第一次先喚醒記憶卡）	直接读取的标记用最慢的区域；你的文件实际放在哪里才算数，文件测试会显示这个；每个区域读两次，第二次才算（第一次先唤醒存储卡）	The raw marker uses the slowest region; where your files actually sit decides, the file test shows that; each region is read twice and the second pass counts (the first wakes the card)	translated	
+S_CT_NOTE_CAL	門檻只用一張卡校準（2026-11-20），是估計，不是保證	门槛只用一张卡校准（2026-11-20），是估计，不是保证	The limits were calibrated on one card only (2026-11-20): estimates, not a guarantee	translated	
+S_CT_NOTE_SPOTS	只讀三個區域、各幾秒；卡的其他地方仍可能有慢處	只读三个区域、各几秒；卡的其他地方仍可能有慢处	Only three regions are read, a few seconds each; the card can still have slow spots elsewhere	translated	
+S_CT_MARK_RAW	這張卡 raw %s MB/s	这张卡 raw %s MB/s	This card raw %s MB/s	translated	
+S_CT_MARK_FILE	這張卡 檔案讀回 %s MB/s	这张卡 文件读回 %s MB/s	This card file read-back %s MB/s	translated	
+S_CT_MARK_RAW_NONE	這張卡 raw：尚未測試	这张卡 raw：尚未测试	This card raw: not tested yet	translated	
+S_CT_MARK_FILE_NONE	這張卡 檔案讀回：尚未測試	这张卡 文件读回：尚未测试	This card file read-back: not tested yet	translated	
+S_CT_MARK_LAST	・上次	・上次	 (last run)	translated	
+S_CT_NOTE_FOLLOW	各格式的判定看檔案讀回的標記；沒有檔案測試時看 raw 的標記	各格式的判定看文件读回的标记；没有文件测试时看 raw 的标记	The marks follow the file read-back marker; without a file test, the raw one	translated	
+S_NOWFP_STYLE	播放頁樣式	播放页样式	Now playing	translated	
+S_NOWFP_CARDS	封面＋資訊	封面＋信息	Cover + info	translated	
+S_NOWFP_FULL	滿版封面	满版封面	Full cover	translated	
+S_NOWFP_GRID	選單格	菜单格	Menu grid	translated	
+S_USB_LOST_CARD_RELEASED	連線中斷，卡已釋放	连接中断，卡已释放	USB dropped, card released	translated	
+S_USB_LOST_GUIDE	換一條線，再點「重新連接」	换一条线，再点“重新连接”	Try another cable, then tap Reconnect	translated	
+S_USB_SLEEP_CARD_RELEASED	電腦休眠或暫停，卡已釋放	电脑休眠或暂停，卡已释放	Computer asleep or suspended, card released	translated	
+S_USB_SLEEP_GUIDE	電腦醒來後，點「重新連接」	电脑醒来后，点“重新连接”	When the computer is awake, tap Reconnect	translated	
+S_CARD_NOT_RESPONDING_PROPERLY	記憶卡沒有正常回應	存储卡没有正常响应	Card not responding properly	translated	
+S_REPOWER_SWITCH	用電源開關關機再開	用电源开关关机再开	Switch the device off and on with the power switch	translated	
+S_REINSERT_OR_REPOWER	重新插卡，或完全關機再開	重新插卡，或完全关机再开	Re-insert the card, or power the device fully off and on	translated	
+S_INSERT_A_CARD	請插入記憶卡	请插入存储卡	Insert a memory card	translated	
+S_REINSERT_OR_TRY_ANOTHER	請重新插卡，或換一張卡	请重新插卡，或换一张卡	Re-insert the card, or try another card	translated	
+S_NOT_RESPONDING	沒有回應	没有响应	not responding	translated	
+S_RECONNECT	重新連接	重新连接	Reconnect	translated	
+S_CARD_ATTACHED_AGAIN	卡已重新接上	卡已重新接上	Card attached again	translated	
+S_PLUG_THE_CABLE_IN_FIRST	先接上 USB 線	先接上 USB 线	Plug the cable in first	translated	
+S_COULD_NOT_REOPEN_THE_CARD	無法重新開啟記憶卡	无法重新打开存储卡	Could not reopen the card	translated	
+S_SETG_DISPLAY	顯示	显示	Display	translated	
+S_SETG_SOUND	聲音	声音	Sound	translated	
+S_SETG_POWER	電源	电源	Power	translated	
+S_SETG_CARDCONN	記憶卡與連線	存储卡与连接	Card & connection	translated	
+S_SETG_ADVANCED	進階	高级	Advanced	translated	
+S_SETG_SYSTEM	系統	系统	System	translated	
+S_HOLD_STILL_THEN_REZERO	請拿穩或放平，再點重新歸零	请拿稳或放平，再点重新归零	Hold it steady or lay it flat, then tap Re-zero	translated	
+S_RE_ZERO	重新歸零	重新归零	Re-zero	translated	
+S_SET_TIME	設定時間	设置时间	Set time	translated	
+S_YEAR	年	年	Year	translated	
+S_MONTH	月	月	Month	translated	
+S_DAY	日	日	Day	translated	
+S_APPLY	套用	应用	Apply	translated	
+S_TIME_IS_SET	時間已設定	时间已设置	Time set	translated	
+S_TIMESET_NOT_SET	尚未對時	尚未校时	Time not set yet	translated	
+S_TIMESET_WIFI	用 Wi-Fi 對時	用 Wi-Fi 校时	Sync over Wi-Fi	translated	
+S_TIMESET_NOTE_RTC	時間由內建時鐘保存，關機後仍會走	时间由内置时钟保存，关机后仍会走	Kept by the built-in clock, keeps running when off	translated	
+S_TIMESET_NOTE	關機後時間會遺失	关机后时间会丢失	Lost at power-off	translated	
+S_SPK_LEAVE_ASK	離開藍牙喇叭模式並播放？\n需要重新開機	离开蓝牙音箱模式并播放？\n需要重新启动	Leave speaker mode and play?\nNeeds a restart	translated	
+S_SPK_LEAVE_PLAY	離開並播放	离开并播放	Leave and play	translated	
+S_SPK_LEAVE_HINT	重新開機離開藍牙喇叭模式\n然後播放	重新启动离开蓝牙音箱模式\n然后播放	Restart out of speaker mode\nthen play	translated	
+S_NG_PLAYMODE	播放模式	播放模式	Play mode	translated	
+S_NG_SHUFFLE_ON	隨機：開	随机：开	Shuffle: on	translated	
+S_NG_SHUFFLE_OFF	隨機：關	随机：关	Shuffle: off	translated	
+S_NG_REPEAT_ALL	循環：全部	循环：全部	Repeat: all	translated	
+S_NG_REPEAT_ONE	循環：單曲	循环：单曲	Repeat: one	translated	
+S_NG_NEXT_PAGE	下一頁	下一页	Next page	translated	
+S_NG_PREV_STYLE	上一樣式	上一样式	Prev style	translated	
+S_NG_NEXT_STYLE	下一樣式	下一样式	Next style	translated	
+S_NG_COLOURS	配色	配色	Colours	translated	
+S_NG_PREV_COLOUR	上一配色	上一配色	Prev colours	translated	
+S_NG_NEXT_COLOUR	下一配色	下一配色	Next colours	translated	

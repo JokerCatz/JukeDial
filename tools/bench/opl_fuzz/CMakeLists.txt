@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# Coverage-guided fuzz harness for the AdPlug backend (components/libadplug through pc_backend_opl.c, the real open + render path).
+# No clang here, so no libFuzzer: GCC's -fsanitize-coverage=trace-pc,trace-cmp feeds a small in-process fuzzer (fuzz.cpp).
+# ASan + UBSan (fatal), every malloc goes through a truncating / capping wrapper (32-bit size_t simulation, board-sized heap).
+cmake_minimum_required(VERSION 3.16)
+project(opl_fuzz C CXX)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(ROOT ${CMAKE_CURRENT_SOURCE_DIR}/../../..)
+set(CORE ${ROOT}/components/player_core)
+set(ADPD ${ROOT}/components/libadplug)
+file(GLOB ADP_CPP ${ADPD}/adplug/*.cpp)
+file(GLOB ADP_C ${ADPD}/adplug/*.c)
+set(SAN -fsanitize=address,undefined -fno-sanitize-recover=undefined -fno-omit-frame-pointer)
+add_library(adp_fz STATIC ${ADP_CPP} ${ADP_C} ${ADPD}/binio/binio.cpp ${ADPD}/binio/binstr.cpp ${ADPD}/adplug_c.cpp ${ADPD}/players_table.cpp)
+target_include_directories(adp_fz PUBLIC ${ADPD} PRIVATE ${ADPD}/adplug ${ADPD}/binio)
+target_compile_definitions(adp_fz PRIVATE stricmp=strcasecmp NDEBUG)    # ADP_SCAN_TICKS stays the firmware's 120000 (a hang check needs the real bound)
+target_compile_options(adp_fz PRIVATE -w -O1 -g -fwrapv -include strings.h ${SAN} -fsanitize-coverage=trace-pc,trace-cmp)
+target_compile_options(adp_fz PRIVATE $<$<COMPILE_LANGUAGE:CXX>:-std=gnu++11>)
+include(${ADPD}/adplug_scope.cmake)
+adplug_scope_new(adp_fz)
+add_executable(opl_fuzz fuzz.cpp ${CORE}/src/pc_backend_opl.c ${CORE}/src/pc_chipseq.c ${CORE}/src/pc_extvoice.c ${CORE}/src/pc_vmute.c ${CORE}/src/pc_voice.c ${CORE}/src/pc_io.c)
+target_include_directories(opl_fuzz PRIVATE ${CORE}/include ${CORE}/src)
+target_compile_options(opl_fuzz PRIVATE -O1 -g ${SAN})
+target_link_options(opl_fuzz PRIVATE ${SAN} -Wl,--wrap=malloc -Wl,--wrap=calloc -Wl,--wrap=realloc -Wl,--wrap=free)
+target_link_libraries(opl_fuzz adp_fz stdc++ m)
+set_target_properties(opl_fuzz PROPERTIES LINKER_LANGUAGE CXX)

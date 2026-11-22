@@ -1,0 +1,4 @@
+# IRAM function -> PSRAM (.ext_ram.bss) symbol pairs that tools/check/check_flash_park.py accepts. One "function symbol  # reason" per line.
+# A new pair is a defect until shown otherwise: code in IRAM may run while the cache is suspended, and a PSRAM miss then faults.
+wr_btdm_osal_event_init s_btdm_osal_ev_pool     # IDF libbt, not ours: IDF maps all libbt BSS to PSRAM itself when ESP_ALLOW_BSS_SEG_EXTERNAL_MEMORY=y (bt/controller/linker_esp_btdm_controller.lf); whether IDF ever calls it with the cache suspended is NOT verified (2026-11-19)
+wr_btdm_osal_event_deinit s_btdm_osal_ev_pool   # same

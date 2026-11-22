@@ -1,0 +1,20 @@
+# page  UTC instant the virtual clock reads for that page (tools/simtools/sim_diff.py; sim "simtime"). The board baseline is the batch C run's (shot 2026-11-13 at about
+# 14:43-14:44 Taipei time, 06:43-06:44 UTC by the board's clock, which ran ~16 s ahead of the PC's; .local/batchC/est.txt has the instants estimated from the PNG times).
+# The instants below are the ones that reproduce each shot pixel for pixel: the minute is the board's, the seconds were fitted by search over the whole page flow
+# (whole seconds, then 50 ms steps where the page shows a moving hand; the fake tick phase moves them by a second or so against what the board's hands show),
+# so they are only valid for tools/simtools/ui_baseline.py's page order.
+# Because the seconds are fitted, the board comparison does NOT verify the second-hand position or the ring phase: it shows only that some instant inside that
+# minute reproduces the shot, not that the simulator draws the hands at the right place for a given second.
+# Also set before the page opens: the moon on the clock pages is drawn once, at creation.
+# Refit 2026-11-13 (board batch A fix): clock, info, sun, moon show no seconds (the estimated instant reproduces them); minimal and digital fit a whole second;
+# classic and rings fit a 50 ms step.
+# Refit 2026-11-13 (board batch C, .local/batchC/fit_times.py): same method; clock, info, sun, moon at the estimate; minimal and digital a whole second;
+# classic and rings a 50 ms step.
+clock 2026-11-13 06:43:41.000
+clockface_classic 2026-11-13 06:43:50.850
+clockface_minimal 2026-11-13 06:43:58.000
+clockface_digital 2026-11-13 06:44:07.000
+clockface_info 2026-11-13 06:44:13.000
+clockface_sun 2026-11-13 06:44:22.000
+clockface_rings 2026-11-13 06:44:31.600
+clockface_moon 2026-11-13 06:44:38.000

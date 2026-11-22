@@ -1,0 +1,4 @@
+# synthetic stations (nothing listens on these ports)
+Sim FM 一號|http://127.0.0.1:8000/one.mp3
+Sim 新聞台|http://127.0.0.1:8000/news.aac
+Sim 古典|http://127.0.0.1:8000/classic.mp3

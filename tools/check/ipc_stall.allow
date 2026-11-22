@@ -1,0 +1,9 @@
+# Functions that reference esp_ipc_isr_stall_other_cpu and that tools/check/check_flash_park.py (3) accepts. One "function  # reason" per line.
+# esp_ipc_isr_stall_other_cpu stalls the other core in an IPC ISR with its branch predictor ON (the hazard of the 2026-11-19 boot crash,
+# the internal notes); our own code parks through core_park_begin() (always accepted).
+# IDF v6.1 callers and why none is listed (2026-11-20, round / FakePod / peer / ldac builds):
+#   sleep_modes.c (esp_light_sleep_start, esp_deep_sleep_start), lowpower/port/esp32s31/sleep_cpu.c: not linked (no sleep call, PM off);
+#   mspi_timing_tuning.c mspi_timing_change_speed_mode_cache_safe: calls it only under SOC_CACHE_INTERNAL_MEM_VIA_L1CACHE, which the
+#     ESP32-S31 does not define (on this chip it only freezes the cache), so it is no caller here;
+#   gdbstub_riscv.c: gdbstub not enabled.
+# Present in the ELF today: none. A new line here needs the reason it is unreachable or harmless, checked against the IDF source.

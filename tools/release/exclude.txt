@@ -1,0 +1,4 @@
+# Paths that stay out of the public tree (the export task reads this file: one repository-relative path per line; '#' starts a comment).
+# Each line: <path>  # reason
+components/gme/gme/Ym2612_MAME.cpp  # GPL-2.0-or-later; present upstream in Game_Music_Emu but not compiled (GME_SRCS has no entry; VGM_YM2612_GENS is the LGPL core). Not deleted from the private vendored tree.
+components/gme/license.gpl2.txt  # the GPL-2 text that ships beside Ym2612_MAME.cpp upstream; nothing GPL is left once that file is out

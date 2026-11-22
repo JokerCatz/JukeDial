@@ -1,0 +1,3 @@
+# make build-ldac: on top of sdkconfig.defaults + sdkconfig.defaults.bt (the patched Bluedroid with five A2DP endpoints, tools/bt_ldac). A fragment, not a copy of app/sdkconfig:
+# a copy kept the defaults of the day it was made (FIX3 I5); tools/check_sdkconfig.py fails the build when an existing build-ldac/sdkconfig is behind the defaults.
+CONFIG_BT_A2DP_SEP_NUM_MAX=5

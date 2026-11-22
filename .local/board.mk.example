@@ -1,0 +1,6 @@
+# Copy this file to .local/board.mk (untracked) and fill in YOUR boards. Nothing here is a default: with no PORT the flash targets stop.
+# Serial ports are addressed by their /dev/serial/by-id name only (ls /dev/serial/by-id/); never a bare /dev/ttyACM*.
+# The main board (round JC3636F118, or FakePod):
+PORT ?= /dev/serial/by-id/usb-Espressif_USB_JTAG_serial_debug_unit_XX:XX:XX:XX:XX:XX-if00
+# Optional second (bench) board for the *-peer targets: the part of its by-id name that identifies it (the target then needs PORT=/dev/serial/by-id/usb-<PEER_ID>-if00)
+# PEER_ID := 1a86_USB_Single_Serial_XXXXXXXXXX

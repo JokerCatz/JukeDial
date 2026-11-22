@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ba" viewBox="150 205 915 770" width="240" height="202" stroke-linejoin="round" stroke-linecap="round" role="img" aria-hidden="true">
+<style>svg.ba{max-width:100%;height:auto}@media (prefers-color-scheme:dark){svg.ba{color:#d8dde4}}svg.ba .o{stroke:currentColor;stroke-width:6}svg.ba .i{stroke:#000;stroke-opacity:.4;stroke-width:3;fill:none}svg.ba .g{fill:#d9a93a;stroke:#6b4f12;stroke-width:2.5}</style>
+<!-- JukeDial: the FakePod, drawn over the product photo: aluminium box, square screen, end face with USB-C, two gold keys, TF slot, jack and screws. -->
+<path class="o" fill="#c9cdd3" d="M540.5 242.6Q564 224 590.7 237.7L1028.4 462.9Q1048 473 1047.8 495L1047.3 552Q1047 592 1018 619.5L679.9 940.1Q661 958 638.7 944.6L192.3 675.4Q170 662 168.9 636L165.9 562Q165 540 182.2 526.3Z"/>
+<path fill="#aab0b8" d="M661.9 846Q662 832 672.3 822.5L1033.4 486.6Q1048 473 1047.8 493L1047.3 552Q1047 592 1018 619.5L679.9 940.1Q661 958 661.2 932Z"/>
+<path class="i" d="M661.9 844V934"/>
+<path fill="#eceef1" d="M540.5 242.6Q564 224 590.7 237.7L1028.4 462.9Q1048 473 1031.9 488L673.7 821.1Q662 832 648.2 823.9L184 551.1Q165 540 182.2 526.3Z"/>
+<path class="o" fill="none" d="M540.5 242.6Q564 224 590.7 237.7L1028.4 462.9Q1048 473 1047.8 495L1047.3 552Q1047 592 1018 619.5L679.9 940.1Q661 958 638.7 944.6L192.3 675.4Q170 662 168.9 636L165.9 562Q165 540 182.2 526.3Z"/>
+<path fill="#0b0d10" stroke="#000" stroke-width="2" d="M533.5 286.8Q567.8 259.3 606.9 279.6L951.1 458.6Q986.6 477.1 957.1 504.1L697.8 742Q665.4 771.8 627.3 749.7L271.5 544.1Q236.9 524.1 268.1 499.1Z"/>
+<g fill="#e8ecf1" stroke="#e8ecf1" stroke-width="2.6" transform="matrix(4.236 2.327 -3.261 2.797 567.818 259.345)"><ellipse cx="46" cy="60" rx="6.5" ry="4.5" stroke="none" transform="rotate(-20 46 60)"/><path fill="none" d="M51.5 59V36q9 2 9 11"/></g>
+<g fill="#101215" stroke="#000" stroke-width="2">
+<rect x="-56" y="-15" width="112" height="30" rx="15" transform="matrix(0.729 -0.685 0 1 738 831)"/>
+<rect x="-70" y="-8.5" width="140" height="17" rx="8.5" transform="matrix(0.729 -0.685 0 1 952 588)"/>
+<ellipse cx="976" cy="600" rx="13" ry="27" transform="rotate(28 976 600)"/>
+<ellipse cx="684" cy="905" rx="11" ry="20" transform="rotate(20 684 905)"/><ellipse cx="1019" cy="564" rx="8" ry="16" transform="rotate(25 1019 564)"/>
+</g>
+<circle r="1" vector-effect="non-scaling-stroke" fill="#111" transform="matrix(12.574 -11.809 0 21.28 808 747)"/>
+<circle r="1" vector-effect="non-scaling-stroke" class="g" transform="matrix(10.934 -10.269 0 19 808 747)"/>
+<path class="g" stroke="none" d="M815.2 725.9L831.6 735.6L817.2 777.7L800.8 768.1Z"/>
+<path class="g" d="M815.2 725.9l16.4 9.6M800.8 768.1l16.4 9.6"/>
+<circle r="1" vector-effect="non-scaling-stroke" class="g" fill="#f0cf73" transform="matrix(10.934 -10.269 0 19 824.382 756.625)"/>
+<circle r="1" vector-effect="non-scaling-stroke" fill="#111" transform="matrix(12.574 -11.809 0 21.28 860 698)"/>
+<circle r="1" vector-effect="non-scaling-stroke" class="g" transform="matrix(10.934 -10.269 0 19 860 698)"/>
+<path class="g" stroke="none" d="M867.2 676.9L883.6 686.6L869.2 728.7L852.8 719.1Z"/>
+<path class="g" d="M867.2 676.9l16.4 9.6M852.8 719.1l16.4 9.6"/>
+<circle r="1" vector-effect="non-scaling-stroke" class="g" fill="#f0cf73" transform="matrix(10.934 -10.269 0 19 876.382 707.625)"/>
+</svg>

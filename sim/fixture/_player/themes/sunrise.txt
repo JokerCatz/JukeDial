@@ -1,0 +1,8 @@
+# test theme of the simulator: a warm base, a gold of its own, a third accent for the 說明 cells, one palette entry (dice face)
+base = miku
+bg = #1A0F0A
+panel = #2B1A12
+gold = #FFE066
+help = #5A3A20
+help_text = #FFE8C8
+dice.0 = #FFF4D6

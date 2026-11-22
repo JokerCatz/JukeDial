@@ -1,0 +1,12 @@
+# one shell line per independent leak run, slowest first (make sim-leak: tools/simtools/leak_par.py, -P nproc/2). The viz line is one run per action; games is NOT sharded (a shard
+# of fewer games leaves the glyph cache unthrashed and lv_bytes wobbles by +-600 B in a pattern: not a leak, but the exact rule fails)
+SIM_FP=1 python3 tools/simtools/leak_cycles.py games:20 --port sim --every 1 --warm 120   # warm 120: the glyph cache plateaus later since GS (2026-11-16, 30 cycles constant at 220382). CF2: every game on the square panel (its own process: the glyph cache of the tools run before it would shift the baseline)
+SIM_FP=1 python3 tools/simtools/leak_cycles.py frame:20 --port sim --every 1 --warm 60   # F1a2 / CF2: the popup on the square panel's content pages, a hold anywhere = home
+SIM_FP=1 python3 tools/simtools/leak_cycles.py tools:20 --port sim --every 1 --warm 30   # CF2: the toys on the square panel
+SIM_FP=1 python3 tools/simtools/leak_cycles.py screens:20 --port sim --every 1 --warm 70
+SIM_FP=1 python3 tools/simtools/leak_cycles.py fpkeys:100 --port sim --every 1 --warm 80   # the keys, a drag turn, the strip, 疊塔 and 四子棋 by the keys only (warm-up 80: the caches fill for about 60 cycles, then lv_bytes is constant; with 20 the run failed by 554 bytes that repeat exactly)
+SIM_FP=1 python3 tools/simtools/leak_cycles.py popring:20,homering:20 --port sim --every 1 --warm 10
+SIM_FP=1 python3 tools/simtools/leak_cycles.py nowfp:20 --port sim --every 1 --warm 20   # NOWFP: the static now-playing page, styles A and B
+SIM_FP=1 python3 tools/simtools/leak_cycles.py gs:20 --port sim --every 1 --warm 70   # GS: the quick settings and the gesture tutorial on the square panel
+SIM_FP=1 python3 tools/simtools/leak_cycles.py btaudio:20 --port sim --every 1 --warm 10   # BTAUDIO: the Bluetooth audio, Wired output (six rows) and details output block on the square panel
+SIM_FP=1 python3 tools/simtools/leak_cycles.py lab:20,nowstyles:20,libwalk:20 --port sim --every 1 --warm 20   # night3 E: the lab console, the three now-playing styles, the folder list

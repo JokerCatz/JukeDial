@@ -1,0 +1,17 @@
+format = 1
+name = "Odd"
+
+[[music]]
+kind = "tape"
+
+[[music]]
+kind = "gain"
+params = { gain_db = -3.0 }
+
+[[music]]
+kind = "bass"
+only_for = ["chip"]
+
+[[music]]
+kind = "widener"
+enabled = false

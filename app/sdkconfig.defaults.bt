@@ -1,0 +1,37 @@
+# Bluetooth sub-project (spec 2026-11-09-bluetooth-design.md), stage BT1: Bluedroid with Classic (A2DP).
+CONFIG_BT_ENABLED=y
+CONFIG_BT_BLUEDROID_ENABLED=y
+CONFIG_BT_CLASSIC_ENABLED=y
+CONFIG_BT_A2DP_ENABLE=y
+CONFIG_BT_SPP_ENABLED=n
+# host memory in PSRAM where Bluedroid allows it
+CONFIG_BT_ALLOCATION_FROM_SPIRAM_FIRST=y   # host allocations in PSRAM (the earlier hang was the controller mode)
+CONFIG_BT_BLE_DYNAMIC_ENV_MEMORY=y
+# the app decodes / encodes itself (spec 3.1): SBC + AAC endpoints, esp_audio_codec
+CONFIG_BT_A2DP_USE_EXTERNAL_CODEC=y
+CONFIG_BT_A2DP_CODEC_AAC_ENABLED=y
+CONFIG_BT_SSP_ENABLED=y
+# controller in dual mode: Classic (speaker / headphones) and LE (Auracast). The default here is BLE only, and
+# esp_bluedroid_enable then hangs when Classic is enabled (found on the board 2026-11-09).
+CONFIG_BTDM_CTRL_MODE_BTDM=y
+CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY=n
+CONFIG_BTDM_CTRL_MODE_BLE_ONLY=n
+# BT4 Auracast: LE 5.0 + ISO + LE Audio broadcast source (esp_ble_audio, Bluedroid host)
+CONFIG_BT_BLE_ENABLED=y
+CONFIG_BT_BLE_50_FEATURES_SUPPORTED=y
+CONFIG_BT_BLE_FEAT_ISO_EN=y
+CONFIG_BT_LE_ISO_SUPPORT=y
+CONFIG_BT_ISO_MAX_CHAN=2
+CONFIG_BT_BAP_BROADCAST_SOURCE=y
+CONFIG_BT_PBP=y
+# Auracast: stereo as two BIS (left / right) in one subgroup
+CONFIG_BT_BAP_BROADCAST_SRC_STREAM_COUNT=2
+CONFIG_BT_BAP_BROADCAST_SRC_SUBGROUP_COUNT=1
+# esp_audio_codec: the S31 assembly-optimized libraries (the portable C ones cost LC3 ~58% of a core, 2026-11-09)
+CONFIG_ESP_AUDIO_CODEC_S31_USE_ASM=y
+# BT5 Auracast listening (broadcast sink, mode 4): BIS receive + scan delegator + PACS sink
+CONFIG_BT_BAP_BROADCAST_SINK=y
+CONFIG_BT_BAP_BROADCAST_SNK_STREAM_COUNT=2
+CONFIG_BT_BAP_SCAN_DELEGATOR=y
+CONFIG_BT_PAC_SNK=y
+CONFIG_BT_ISO_SYNC_RECEIVER=y

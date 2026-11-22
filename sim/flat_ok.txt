@@ -1,0 +1,2 @@
+# pictures that are deliberately ONE colour (tools/simtools/ui_baseline.py flat_shots fails any other single-colour picture); name + reason
+tools_torch the torch page is solid white

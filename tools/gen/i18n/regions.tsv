@@ -1,0 +1,120 @@
+# Region labels of the radio search (the web page), one neutral table. Names only: no flags, no "country", no political wording.
+# code (ISO 3166-1 alpha-2) <TAB> zh_tw <TAB> zh_cn <TAB> en <TAB> rank_tw <TAB> rank_cn   (rank: the place in the list for that UI language, blank = by station count after the ranked ones)
+# The order (ledger 2026-11-15): 繁中 Taiwan and Hong Kong first; 簡中 mainland China first; English: by station count only. Regenerate tools/web/regions.js: python3 tools/gen/gen_regions.py
+TW	台灣	台湾	Taiwan	0	3
+HK	香港	香港	Hong Kong	1	1
+MO	澳門	澳门	Macau	2	2
+CN	中國	中国	China		0
+JP	日本	日本	Japan		
+KR	韓國	韩国	South Korea		
+KP	北韓	朝鲜	North Korea		
+MN	蒙古	蒙古	Mongolia		
+US	美國	美国	United States		
+CA	加拿大	加拿大	Canada		
+MX	墨西哥	墨西哥	Mexico		
+BR	巴西	巴西	Brazil		
+AR	阿根廷	阿根廷	Argentina		
+CL	智利	智利	Chile		
+CO	哥倫比亞	哥伦比亚	Colombia		
+PE	秘魯	秘鲁	Peru		
+VE	委內瑞拉	委内瑞拉	Venezuela		
+EC	厄瓜多	厄瓜多尔	Ecuador		
+BO	玻利維亞	玻利维亚	Bolivia		
+PY	巴拉圭	巴拉圭	Paraguay		
+UY	烏拉圭	乌拉圭	Uruguay		
+CU	古巴	古巴	Cuba		
+DO	多明尼加	多米尼加	Dominican Republic		
+PR	波多黎各	波多黎各	Puerto Rico		
+JM	牙買加	牙买加	Jamaica		
+CR	哥斯大黎加	哥斯达黎加	Costa Rica		
+PA	巴拿馬	巴拿马	Panama		
+GT	瓜地馬拉	危地马拉	Guatemala		
+GB	英國	英国	United Kingdom		
+IE	愛爾蘭	爱尔兰	Ireland		
+FR	法國	法国	France		
+DE	德國	德国	Germany		
+IT	義大利	意大利	Italy		
+ES	西班牙	西班牙	Spain		
+PT	葡萄牙	葡萄牙	Portugal		
+NL	荷蘭	荷兰	Netherlands		
+BE	比利時	比利时	Belgium		
+LU	盧森堡	卢森堡	Luxembourg		
+CH	瑞士	瑞士	Switzerland		
+AT	奧地利	奥地利	Austria		
+SE	瑞典	瑞典	Sweden		
+NO	挪威	挪威	Norway		
+DK	丹麥	丹麦	Denmark		
+FI	芬蘭	芬兰	Finland		
+IS	冰島	冰岛	Iceland		
+EE	愛沙尼亞	爱沙尼亚	Estonia		
+LV	拉脫維亞	拉脱维亚	Latvia		
+LT	立陶宛	立陶宛	Lithuania		
+PL	波蘭	波兰	Poland		
+CZ	捷克	捷克	Czechia		
+SK	斯洛伐克	斯洛伐克	Slovakia		
+HU	匈牙利	匈牙利	Hungary		
+RO	羅馬尼亞	罗马尼亚	Romania		
+BG	保加利亞	保加利亚	Bulgaria		
+GR	希臘	希腊	Greece		
+HR	克羅埃西亞	克罗地亚	Croatia		
+RS	塞爾維亞	塞尔维亚	Serbia		
+SI	斯洛維尼亞	斯洛文尼亚	Slovenia		
+MT	馬爾他	马耳他	Malta		
+CY	賽普勒斯	塞浦路斯	Cyprus		
+TR	土耳其	土耳其	Turkey		
+RU	俄羅斯	俄罗斯	Russia		
+UA	烏克蘭	乌克兰	Ukraine		
+BY	白俄羅斯	白俄罗斯	Belarus		
+GE	喬治亞	格鲁吉亚	Georgia		
+AM	亞美尼亞	亚美尼亚	Armenia		
+AZ	亞塞拜然	阿塞拜疆	Azerbaijan		
+KZ	哈薩克	哈萨克斯坦	Kazakhstan		
+UZ	烏茲別克	乌兹别克斯坦	Uzbekistan		
+IN	印度	印度	India		
+PK	巴基斯坦	巴基斯坦	Pakistan		
+BD	孟加拉	孟加拉国	Bangladesh		
+LK	斯里蘭卡	斯里兰卡	Sri Lanka		
+NP	尼泊爾	尼泊尔	Nepal		
+AF	阿富汗	阿富汗	Afghanistan		
+ID	印尼	印度尼西亚	Indonesia		
+MY	馬來西亞	马来西亚	Malaysia		
+SG	新加坡	新加坡	Singapore		
+TH	泰國	泰国	Thailand		
+VN	越南	越南	Vietnam		
+PH	菲律賓	菲律宾	Philippines		
+MM	緬甸	缅甸	Myanmar		
+KH	柬埔寨	柬埔寨	Cambodia		
+LA	寮國	老挝	Laos		
+AU	澳洲	澳大利亚	Australia		
+NZ	紐西蘭	新西兰	New Zealand		
+IR	伊朗	伊朗	Iran		
+IQ	伊拉克	伊拉克	Iraq		
+IL	以色列	以色列	Israel		
+JO	約旦	约旦	Jordan		
+LB	黎巴嫩	黎巴嫩	Lebanon		
+SY	敘利亞	叙利亚	Syria		
+SA	沙烏地阿拉伯	沙特阿拉伯	Saudi Arabia		
+AE	阿拉伯聯合大公國	阿拉伯联合酋长国	United Arab Emirates		
+KW	科威特	科威特	Kuwait		
+QA	卡達	卡塔尔	Qatar		
+OM	阿曼	阿曼	Oman		
+BH	巴林	巴林	Bahrain		
+YE	葉門	也门	Yemen		
+EG	埃及	埃及	Egypt		
+MA	摩洛哥	摩洛哥	Morocco		
+DZ	阿爾及利亞	阿尔及利亚	Algeria		
+TN	突尼西亞	突尼斯	Tunisia		
+NG	奈及利亞	尼日利亚	Nigeria		
+GH	迦納	加纳	Ghana		
+SN	塞內加爾	塞内加尔	Senegal		
+CI	象牙海岸	科特迪瓦	Cote d'Ivoire		
+CM	喀麥隆	喀麦隆	Cameroon		
+KE	肯亞	肯尼亚	Kenya		
+ET	衣索比亞	埃塞俄比亚	Ethiopia		
+TZ	坦尚尼亞	坦桑尼亚	Tanzania		
+UG	烏干達	乌干达	Uganda		
+ZA	南非	南非	South Africa		
+ZW	辛巴威	津巴布韦	Zimbabwe		
+ZM	尚比亞	赞比亚	Zambia		
+MZ	莫三比克	莫桑比克	Mozambique		
+AO	安哥拉	安哥拉	Angola		

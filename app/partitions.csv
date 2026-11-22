@@ -1,0 +1,6 @@
+# 2026-11-18: app 8M -> 0xBF0000 (12 MB - 64 KB: the 64 KB before 0x10000 are bootloader+table+nvs+phy), fonts = the last 4 MB (0xC00000); nvs untouched (settings, BT keys)
+# Name,   Type, SubType, Offset,   Size
+nvs,      data, nvs,     0x9000,   0x6000
+phy_init, data, phy,     0xf000,   0x1000
+factory,  app,  factory, 0x10000,  0xBF0000
+fonts,    data, 0x40,    0xC00000, 4M

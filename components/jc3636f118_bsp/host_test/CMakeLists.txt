@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+cmake_minimum_required(VERSION 3.16)
+project(bsp_host_test C)
+add_executable(test_bsp_math test_bsp_math.c ../src/bsp_math.c)
+target_include_directories(test_bsp_math PRIVATE ../include)
+target_compile_options(test_bsp_math PRIVATE -Wall -Wextra -Werror)
+target_link_libraries(test_bsp_math m)
+enable_testing()
+add_test(NAME bsp_math COMMAND test_bsp_math)
+add_executable(test_knob_fsm test_knob_fsm.c ../src/bsp_knob_fsm.c)
+target_include_directories(test_knob_fsm PRIVATE ../include)
+target_compile_options(test_knob_fsm PRIVATE -Wall -Wextra -Werror)
+add_test(NAME knob_fsm COMMAND test_knob_fsm)

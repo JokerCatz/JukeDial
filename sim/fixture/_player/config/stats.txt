@@ -1,0 +1,2 @@
+mp3:/sdcard/export/夜航星圖/03_late_tide.mp3=1,5
+mp3:/sdcard/export/山間小火車/01_first_train.mp3=1,3

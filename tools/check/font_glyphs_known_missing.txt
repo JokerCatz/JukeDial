@@ -1,0 +1,2 @@
+# characters used on screen that the installed fonts/ lack. Empty since the standard-set fonts (make fonts-build) were installed on 2026-11-13:
+# a new entry here means a font rebuild is due (add the character to tools/gen/font_sets/extra_chars.txt if no rule covers it).

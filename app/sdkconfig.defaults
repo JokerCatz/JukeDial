@@ -1,0 +1,79 @@
+CONFIG_IDF_TARGET="esp32s31"
+CONFIG_IDF_EXPERIMENTAL_FEATURES=y
+# no build path (home folder, user name, worktree) inside the image: the web flasher publishes it (tools/web_publish.py refuses an image that has one); also a fixed build date
+CONFIG_APP_REPRODUCIBLE_BUILD=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+# every allocation above 1 KB goes to PSRAM (spec 4.2)
+CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL=1024
+CONFIG_SPIRAM_MALLOC_RESERVE_INTERNAL=65536
+CONFIG_FREERTOS_TASK_CREATE_ALLOW_EXT_MEM=y
+# large static buffers marked EXT_RAM_BSS_ATTR live in PSRAM
+CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_320=y
+CONFIG_FREERTOS_HZ=1000
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_FATFS_LFN_HEAP=y
+CONFIG_FATFS_API_ENCODING_UTF_8=y
+CONFIG_ESP_LVGL_ADAPTER_ENABLE_FPS_STATS=y
+CONFIG_ESP_LVGL_ADAPTER_ENABLE_FREETYPE=y
+CONFIG_LV_USE_FREETYPE=y
+# GS: the page-count bubble font (ui_geom.h UI_PAGE_BUBBLE_FONT)
+CONFIG_LV_FONT_UNSCII_8=y
+CONFIG_LV_FONT_MONTSERRAT_20=y
+CONFIG_LV_FONT_MONTSERRAT_28=y
+# LVGL objects in PSRAM through app/main/psram_alloc.c (CLIB malloc put every object < 1 KB in internal RAM)
+CONFIG_LV_USE_CUSTOM_MALLOC=y
+# CONFIG_LV_USE_CLIB_MALLOC is not set
+# CONFIG_LV_USE_BUILTIN_MALLOC is not set
+# LVGL threads pinned to core 0 with PSRAM stacks (app/main/lvos/lv_os_pinned.c)
+CONFIG_LV_OS_CUSTOM=y
+CONFIG_LV_OS_CUSTOM_INCLUDE="lv_os_pinned.h"
+CONFIG_LV_DRAW_SW_DRAW_UNIT_CNT=1
+CONFIG_LV_DRAW_THREAD_STACK_SIZE=32768
+CONFIG_LV_USE_SNAPSHOT=y
+
+# Wi-Fi/lwIP buffers in PSRAM when possible (internal RAM is tight with Bluetooth)
+CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP=y
+# network radio: servers are far away (high RTT), a 5.7 KB window caps a stream near 10 KB/s
+CONFIG_LWIP_TCP_WND_DEFAULT=32768
+CONFIG_LWIP_TCP_RECVMBOX_SIZE=32
+CONFIG_LWIP_TCPIP_RECVMBOX_SIZE=64
+# Wi-Fi RX side / out-of-order TCP queue, pinned to the values the regenerated app/sdkconfig has (2026-11-16 drift: the round board's old untracked sdkconfig had
+# RX 2 / BA window 2 / OOSEQ 4 and every number measured on it was taken with those; the peer board and every fresh build run these). Pinned so a Kconfig default change cannot move them silently.
+CONFIG_ESP_WIFI_STATIC_RX_BUFFER_NUM=16
+CONFIG_ESP_WIFI_RX_BA_WIN=16
+CONFIG_LWIP_TCP_OOSEQ_MAX_PBUFS=0
+# Wi-Fi static TX buffers 16 -> 6: +17 KB internal RAM (castwifi spike 2026-11-16; soak in the trade-off notes)
+CONFIG_ESP_WIFI_STATIC_TX_BUFFER_NUM=6
+# Wi-Fi hot paths run from flash: -15.7 KB internal RAM, throughput unchanged on the board (LAN 450-600 KB/s, 2026-11-09)
+# CONFIG_ESP_WIFI_IRAM_OPT is not set
+# CONFIG_ESP_WIFI_EXTRA_IRAM_OPT is not set
+# CONFIG_ESP_WIFI_RX_IRAM_OPT is not set
+# CONFIG_ESP_WIFI_SLP_IRAM_OPT is not set
+# USB mode (reboot into it): mass storage + HID consumer keys on the OTG port; USB-Serial-JTAG stays as is
+CONFIG_TINYUSB_MSC_ENABLED=y
+CONFIG_TINYUSB_HID_COUNT=1
+CONFIG_TINYUSB_CDC_COUNT=0
+CONFIG_LV_USE_QRCODE=y
+CONFIG_FX_VELVET_ROOM=y
+# https radio (2026-11-16, the trade-off notes): mbedTLS buffers in PSRAM (~3 KB internal per connection instead of ~25 KB; PEERM-report) + the root-cert bundle (~+72 KB flash).
+# An existing generated sdkconfig keeps the old values: delete it (app/sdkconfig, app/build-*/sdkconfig) once to pick these up, as with the TX buffers.
+CONFIG_MBEDTLS_EXTERNAL_MEM_ALLOC=y
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_FULL=y
+# Experimental run-time CPU clock (app/main/cpu_clock.c, 2026-11-20): PM on only for esp_pm_configure(max = min = N MHz). No dynamic frequency scaling at boot (320 MHz stays
+# the tested speed), no tickless idle, no light sleep (trip-wire: tools/check/check_flash_park.py). IDF's own cost: ~2 KB DIRAM (tools/check/diram_budget.txt).
+# An existing generated sdkconfig keeps the old values: delete it (app/sdkconfig, app/build-*/sdkconfig) once to pick these up.
+CONFIG_PM_ENABLE=y
+# CONFIG_PM_DFS_INIT_AUTO is not set
+# CONFIG_FREERTOS_USE_TICKLESS_IDLE is not set

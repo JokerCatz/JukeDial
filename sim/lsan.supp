@@ -1,0 +1,4 @@
+# LeakSanitizer suppressions for the WINDOWED simulator only (make sim-run sets LSAN_OPTIONS=suppressions=sim/lsan.supp).
+# The headless mode never calls SDL and must not use this file (make sim-test, sim-leak, sim-shots, sim-diff run without it).
+# Checked 2026-11-11 on X11 (DISPLAY=:1): a windowed run that opens pages and quits reports no leak at all, so nothing is suppressed yet.
+# If SDL / fontconfig / X11 noise ever shows up, add one line per entry here, e.g.  leak:libSDL2

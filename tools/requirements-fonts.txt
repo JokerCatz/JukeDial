@@ -1,0 +1,4 @@
+# Python packages of the font tools (make fonts-venv; tools/fonts/add_glyphs.py). Pinned to the versions the tracked fonts were built with.
+# fonttools: subsetting, merging, instancing; brotli: reads the woff2 icon source. Pillow is NOT needed here (only make icons-sheet / splash use it).
+fonttools==4.68.0
+brotli==1.2.1

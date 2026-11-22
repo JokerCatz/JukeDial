@@ -1,0 +1,35 @@
+ECDICT - English to Chinese dictionary database
+Source: https://github.com/skywind3000/ECDICT (commit 39cfb9672c0906b63569e0453c2e6abfb9ab182a, fetched 2026-11-11)
+Licence: MIT (the repository's LICENSE file, copied verbatim below; the GitHub API reports spdx_id MIT).
+Used by: tools/gen/make_vocab.py builds the 單字 vocab decks (glyph packs) from ecdict.csv (word, translation, pos, tag,
+frq, bnc). The 66 MB CSV stays in .local/ecdict/ (git-ignored, never committed); the decks (derived data) go to the
+TF card; the 100-word sample is app/main/assets/vocab/sample.zip (in the firmware).
+
+Other parts of a deck:
+- Chinese text converted from simplified to traditional characters with OpenCC (https://github.com/BYVoid/OpenCC,
+  Apache-2.0), run on the PC only; nothing of OpenCC is in the firmware.
+- Glyph bitmaps rendered from Noto Sans CJK TC (SIL OFL 1.1, the same licence text as docs/licenses/noto-emoji-OFL.txt).
+- tools/gen/vocab/roots.tsv (roots, prefixes, suffixes, short meanings, example words): written for this project.
+
+---- LICENSE ----
+MIT License
+
+Copyright (c) 2025 Linwei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

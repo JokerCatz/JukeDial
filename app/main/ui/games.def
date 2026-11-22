@@ -1,0 +1,23 @@
+/* The game registry (games hub G0): ONE line per game, GAME(id, zh, en, scr), in ALPHABETICAL ORDER of id (the hub lists them in this order).
+ *   id   the short name: the console (`games open <id>`), the picture `game_<id>`, the help entry `game_help_<id>`, the page's name "tools_game_<id>"
+ *   zh / en   the name on the hub's ring cell (en is shown when the font has no CJK glyphs)
+ *   scr  the game's page: `const ui_screen_t scr` in ui/scr_game_<id>.c, which also defines `const ui_game_help_t game_help_<id>` (its rules, one paragraph in zh and en)
+ * To add a game: write ui/scr_game_<id>.c (and components/player_core/src/pc_game_<id>.c + host_test/test_game_<id>.c for the pure rules: the host test
+ * is found by its name, no CMake line) and INSERT ONE LINE BELOW AT ITS ALPHABETICAL PLACE. Nothing else changes: the hub, its ring size, 說明, the
+ * pictures (tools/simtools/ui_baseline.py), the leak action and the checks (tools/check/check_games.py) read this file. Two games on two branches then merge
+ * without a conflict unless both took the same line position (git resolves two different inserted lines at different places; at the same place keep both). */
+GAME(beat, "節拍點擊", "Beat tap", scr_game_beat)
+GAME(breakout, "環形打磚塊", "Ring breakout", scr_game_breakout)
+GAME(c4,  "四子棋", "Connect four", scr_game_c4)
+GAME(deflect, "旋轉擋板", "Deflector", scr_game_deflect)
+GAME(dominoes, "骨牌", "Dominoes", scr_game_dominoes)
+GAME(guess, "猜歌", "Guess the song", scr_game_guess)
+GAME(knobtoy, "旋鈕小玩意", "Knob toys", scr_game_knobtoy)
+GAME(life, "生命遊戲", "Game of Life", scr_game_life)
+GAME(puzzle15, "15 拼圖", "15 puzzle", scr_game_puzzle15)
+GAME(radio, "電台調頻尋寶", "Radio hunt", scr_game_radio)
+GAME(safe, "保險箱開鎖", "Safe cracker", scr_game_safe)
+GAME(simon, "四色記憶", "Simon", scr_game_simon)
+GAME(spiro, "萬花尺", "Spirograph", scr_game_spiro)
+GAME(tower, "疊塔", "Stack tower", scr_game_tower)
+GAME(ttt, "井字棋", "Tic-tac-toe",  scr_game_ttt)

@@ -1,0 +1,64 @@
+# path (from app/main)      kind   R1 R2 R3 R4 R5 R6   why
+# A page line is a ratchet (tools/check/ui_lint.py): a count above it fails, a count below it fails too (lower the number).
+# Pages absent from this file have allowance 0. Every file under ui/ (.c, and .h since the final review I-2) is a page until it has a
+# `piece` line here (raw LVGL allowed); ui/scr_* can never be a piece. Outside ui/ a .c file is a page only when it has an lv_ token.
+# R6 (explanation text on a page; explanations live behind 說明) is 0 on every line since fx apps T15: a page line that needs an R6 allowance must say in its why where the text moves to.
+
+console.c                   page   1 0 0 0 0 0 test tools: the leaktest page (a timer, one object on the top layer) and the screenshot hooks; a test page, not a user page
+splash.c                    page   2 0 2 0 0 0 the power-on picture (2026-11-19): not a page on the UI stack, it runs in the boot front before any page exists: one black object on the system layer and one image object (1:1, centred), removed before the first page; no widget of the kit applies
+ui/scr_clock.c              page   1 0 6 0 0 0 the clock page text lines (line(): a 300 wide centred label at a y, content text) and the moon placement (the pomodoro is a tface now); the page taps and the face box are kit pieces
+ui/scr_fortune.c            page   9 12 60 4 0 0 content drawing (wheel, ten-pull, tarot); the wheel root tap and the card frame tap are hand-wired controls inside that drawing (wheel_tap, card_tap; the ten-pull cards are ui_button); the other pages tap through ui_page_tap and the gacha is a menu ring since T7
+ui/scr_lists.c              page   2 1 20 0 3 0 content drawing (reel frame and dim rows, the pack title holder, idea card, pack title pictures); R5 knob hint sentence; reworded by the no-knob port
+ui/scr_meta.c               page   2 0 7 0 0 0 content drawing: the track details text column (title and tag lines in one scrolling flex column); one of the R3 hits is the column flex flow
+ui/scr_now.c                page   5 5 10 0 0 0 content drawing: the cover disc, cover image, title and scene-name labels, and the one root tap that opens the ring; the buttons around the ring are the shared ring since T3
+ui/scr_tools.c              page   2 2 16 0 0 0 content drawing (dice faces and pips, slot reel block, win strokes); the slot rules moved behind 說明 (fx apps T15), so no R6 left
+ui/scr_viz.c                page   1 1 3 0 4 0 content drawing (spectrum image: its create and its not-clickable flag); R5 knob hint sentence; reworded by the no-knob port
+ui/scr_vocab.c              page   1 1 15 0 0 0 quiz drawing is content drawing (the question band, the prompt and answer glyph text, the deck title width); vocab home is a menu ring and the answers a choice grid since T7
+
+ui/album_view.c             piece  shared piece (raw LVGL allowed)
+ui/clock_face.c             piece  shared piece (raw LVGL allowed)
+ui/font.c                   piece  the font loader (the pixel sizes of font_main / font_large come from ui_geom.h per panel, 2026-11-20)
+ui/face_art.c               piece  the designed faces (TFACE 2026-11-18): fixed art layers tinted per scheme, slots filled with fixed-format values (digit sprites, state plates, bars) into one PSRAM image; tface composes it for the HUD kind
+ui/tface.c                  piece  the timing faces (2026-11-18): info / rings / the designed HUD face from one data struct (tface.h) and the real data every HUD face shows; the clock face, the pomodoro and the stopwatch / countdown pages compose it
+ui/glyph_text.c             piece  shared piece (raw LVGL allowed)
+ui/inst_bars.c              piece  shared piece (raw LVGL allowed)
+ui/inst_pads.c              piece  the instrument's drum pads (UI unify T11): 8 sector masks, their draw, the press hit test and the fade; the pads page composes it
+ui/ledrim.c                 piece  shared piece (raw LVGL allowed)
+ui/now_menu.c               piece  shared piece (raw LVGL allowed)
+ui/now_fp.c                 piece  the square panel's static now-playing page (2026-11-20): cover box, passive status icons, text lines and the time bar from the UI_NOW* geometry; scr_now.c only hands it the cover and the title
+ui/ui_ninegrid.c            piece  the FakePod's nine-grid of invisible tap zones (2026-11-22): the zone hit-test, the translucent cells and bands made at the first show and deleted at the hide; pages only attach it with a table
+ui/ui_qs.c                piece  the quick-settings page (GS): its rows, switches and the status line are one shared page, composed of ui_button / ui_label; raw LVGL for the row placement
+ui/ui_tour.c              piece  the gesture tutorial (GS): one big drawn hint per step; a shared page, raw LVGL for the drawing
+ui/ui_arena.c              piece  the arena (ideas G1): the field games' play field, one object, its draw event, its bound 30 fps fixed-step timer, the touch, the knob's borrow, the effects and the console dump
+ui/ui_dial.c               piece  the dial (ideas G2): the needle gauge of the toys and 保險箱開鎖, one object, its draw event, its bound 30 fps timer, the touch, the knob's borrow, the effects and the console dump
+ui/ui_beat.c               piece  the beat feed (ideas G3): pc_beat over the spectrum, one 20 Hz timer deleted with its owner page, the console dump; no widgets of its own
+ui/ui_board.c              piece  the board (games hub G0): one object, its draw event, the grid layout, hit test and the console dump; every board game page composes it
+ui/ui_cards.c               piece  the cards (ideas G4 骨牌): one object, its draw event (code-drawn tiles), pile layouts (fan, snake), hit test, selection, think dots and the console dump; every card game page composes it
+ui/game_style.c             piece  the games' style table (G0b): palettes, mark shapes, grid looks; ui_board, game_fx and game_result read it, no page names a colour
+ui/game_fx.c                piece  the in-field effects of the games (G0b): one object over the board, its draw event, its bound 30 fps timer and the console dump
+ui/game_result.c            piece  the result card of the games (G0b): a card in the play field, its labels, its delay timer and its tap; the golden-game decision
+ui/ui_sectors.c             piece  the sectors (G1 四色記憶): one object, its draw event (arcs, hub, progress ring), hit test, flash timer, key cursor and the console dump; every sector game page composes it
+ui/ui_sectors.h             piece  header of the shared piece ui/ui_sectors.c
+ui/ui_frame.c              piece  the content-first page frame (F1a2): the overlay scrim, the ... bubble, the chrome list and the console dump; every page composes it through ui_back_button and ui_frame_*
+ui/ui_exit.c               piece  the shared exit (G4b): the 返回 pill, the pause overlay with 繼續 / 返回, the three-dot bubble and the console dump; full-screen field pages compose it instead of a Back button
+ui/ui_bubbles.c            piece  the bubble field (捏泡泡紙): one object, its draw event and hit test, the layout and the console dump; the bubbles page composes it
+ui/ui_code_pad.c            piece  the code pad (cardfmt): four direction keys and B / A, the progress dots, the key record and the console dump; the card format page composes it
+ui/ui_fxparam.c             piece  the sound-effect rows (fx apps T7): the filter list row, the parameter rows generated from the parameter table, the console dump; the two filter pages compose it
+ui/ui_help.c                piece  the 說明 piece (fx apps T6): the list-end help row, the explain page body and the QR box
+ui/ui_help_texts.c          piece  every help text in one file (fx apps T6): explanations live here, never on a page
+ui/reel.c                   piece  shared piece (raw LVGL allowed)
+ui/ui.c                     piece  shared piece (raw LVGL allowed)
+ui/ui_axis.c                piece  shared piece (raw LVGL allowed)
+ui/ui_common.c              piece  shared piece (raw LVGL allowed)
+ui/ui_kit.c                 piece  shared piece (raw LVGL allowed)
+ui/ui_popring.c            piece  shared piece (raw LVGL allowed)
+ui/ui_safe.c                piece  the safe-mode screen (UI unify T13): fixed colours and built-in fonts on the display's own screen, no theme; shared piece
+ui/ui_ring.c                piece  shared piece (raw LVGL allowed)
+ui/ui_theme.c               piece  shared piece (raw LVGL allowed)
+
+# headers (scanned since the final review I-2): the shared area's own interfaces
+ui/ui_geom.h                piece  the shared geometry constants (header only: the 360 / 180 numbers live here)
+ui/ui_kit.h                 piece  header of the shared piece ui/ui_kit.c (it declares the positional helpers ui_label, ui_button)
+ui/ui_lyrics.c           piece  the lyrics view (visualiser kind 歌詞, 2026-11-17): a holder, three flex bands and up to five wrapping labels; the viz page composes it and only sets the text
+ui/scr_cardtest.c           page   0 0 0 0 0 9 the card diagnostics ladder ends with eight plain sentences (night2: the raw-marker-uses-the-slowest-region line, and the regions row fallback text) on how its numbers are derived and what they cannot promise (the disclosure must be on the page itself, not only behind 說明; the same text is in 說明, ui_help_texts.c HELP_CARDTEST)
+ui/scr_timeset.c           page   0 0 0 0 0 1 the one status line under the rows (「時間由內建時鐘保存，關機後仍會走」 on a FakePod with a valid RTC, else the short 「關機後時間會遺失」): a state, not an explanation; the explanation is behind 說明 (HELP_TIMESET)

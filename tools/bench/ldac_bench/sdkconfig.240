@@ -1,0 +1,2 @@
+# 240 MHz comparison build: idf.py -B build240 -DSDKCONFIG=build240/sdkconfig -DSDKCONFIG_DEFAULTS="sdkconfig.defaults;sdkconfig.240"
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y

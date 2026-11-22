@@ -1,0 +1,264 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: LGPL-2.1-or-later -->
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; media-src https: blob:; connect-src 'self' https://*.api.radio-browser.info; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JukeDial</title>
+<style>
+:root{--bg:#0f1216;--panel:#181d24;--panel2:#1f262f;--line:#2b333e;--text:#e8ecf1;--dim:#8d97a5;--acc:#4fc3f7;--ok:#66bb6a;--warn:#ffb74d;--bad:#ef5350}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Noto Sans TC",sans-serif}
+main{max-width:760px;margin:auto;padding:0 16px 60px}
+button{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}
+button:hover{border-color:var(--acc)}button:disabled{opacity:.45;cursor:default;border-color:var(--line)}
+button.acc{background:var(--acc);color:#04121a;border-color:var(--acc);font-weight:600}
+button.sm{padding:4px 10px;font-size:13px}button.icon{width:40px;height:40px;padding:0;border-radius:50%;font-size:16px}
+input,select,textarea{background:#0a0d11;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;width:100%}
+input[type=range]{padding:0;border:0;background:none;accent-color:var(--acc)}
+input[type=checkbox]{width:auto;accent-color:var(--acc)}
+textarea{font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;min-height:220px}
+.row{display:flex;gap:8px;align-items:center}.grow{flex:1;min-width:0}.wrap{flex-wrap:wrap}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+.dim{color:var(--dim);font-size:13px}.small{font-size:12px}.ell{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--panel2);color:var(--dim);white-space:nowrap}
+.chip.ok{background:#173d1c;color:#b9f0bd}.chip.bad{background:#4a1717;color:#ffc9c9}.chip.warn{background:#4a3612;color:#ffe0a8}
+h2{font-size:16px;margin:22px 0 4px}h3{font-size:15px;margin:0}
+/* top */
+#top{position:sticky;top:0;z-index:5;background:rgba(15,18,22,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+#top .in{max-width:760px;margin:auto;padding:10px 16px}
+#nowt{font-weight:600}#nows{font-size:13px;color:var(--dim)}
+.pill{font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim)}
+.pill.on{border-color:var(--ok);color:var(--ok)}
+nav{display:flex;gap:6px;margin-top:10px}nav button{flex:1;padding:8px 4px}nav button.sel{background:var(--acc);color:#04121a;border-color:var(--acc);font-weight:600}
+section{display:none}section.on{display:block}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line);padding:8px 16px;border-radius:999px;opacity:0;transition:.25s;pointer-events:none;z-index:9}
+#toast.show{opacity:1}#toast.bad{border-color:var(--bad);color:#ffc9c9}
+.sub{margin:12px 0}.sub button{padding:6px 12px;font-size:14px}.sub button.sel{border-color:var(--acc);color:var(--acc)}
+.url{font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--dim);word-break:break-all;user-select:all;margin-top:6px;background:#0a0d11;border-radius:6px;padding:4px 8px}
+/* stations */
+.st{display:flex;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.st:first-child{border-top:0}.st .t{flex:1;min-width:0}
+.st.playing .name{color:var(--acc)}
+.edit .st{flex-wrap:wrap}
+/* effects */
+.fx{border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0;background:var(--panel2)}
+.fx.off{opacity:.55}
+.fx.dimrow{border-style:dashed}.fx .why{color:#ffe0a8}
+.sl{display:grid;grid-template-columns:110px 1fr 74px;gap:10px;align-items:center;margin:6px 0}
+.sl output{font-size:13px;text-align:right;color:var(--dim)}
+@media (max-width:560px){.sl{grid-template-columns:1fr 70px}.sl input{grid-column:1/-1;grid-row:2}}
+/* device */
+.set{display:grid;grid-template-columns:1fr 220px;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.set:first-of-type{border-top:0}
+@media (max-width:560px){.set{grid-template-columns:1fr}}
+ol{margin:6px 0 0;padding-left:20px}
+</style>
+</head>
+<body>
+<div id="top"><div class="in">
+  <div class="row"><b>JukeDial</b><span class="pill" id="conn-pill"></span><span class="grow"></span><select id="langsel" class="sm" style="width:auto" title="頁面語言" data-i-title="W_PAGE_LANGUAGE"></select><button class="acc sm" id="conn"></button></div>
+  <div class="row" style="margin-top:8px" id="nowbar" hidden>
+    <div class="grow"><div id="nowt" class="ell">—</div><div id="nows" class="ell"></div></div>
+    <button class="icon" id="stopbtn" title="停止播放" data-i-title="W_STOP_PLAYBACK">■</button>
+  </div>
+  <div class="row" style="margin-top:6px" id="volbar" hidden><span class="dim small" data-i="W_VOLUME">音量</span><input type="range" min="0" max="100" id="vol" class="grow"><span id="volv" class="dim small" style="width:28px;text-align:right"></span></div>
+  <nav><button data-t="radio" class="sel" data-i="W_RADIO">電台</button><button data-t="find" data-i="W_FIND_STATIONS">找電台</button><button data-t="fx" data-i="W_EFFECTS">音效</button><button data-t="lists" data-i="W_LISTS">清單</button><button data-t="dev" data-i="W_DEVICE">裝置</button><button data-t="flash" data-i="W_FLASH">刷機</button><button data-t="fonts" data-i="W_FONTS">字型</button></nav>
+</div></div>
+<main>
+
+<div class="card" id="guide">
+  <h3 data-i="W_HOW_TO_CONNECT">怎麼連線</h3>
+  <ol class="dim">
+    <li data-i="W_CONNECT_THE_PLAYER_TO_THIS_COMPUTER_WITH_A_U">用 USB 線把本機接到這台電腦。</li>
+    <li data-ih="W_USE_THE_SETUP_SIDE_OF_THE_PLUG_IF_THE_PLAYER"><b>插頭要插「設定面」</b>：本機螢幕若顯示「USB 隨身碟」或問你要不要切換成隨身碟，表示插在隨身碟那面，請把 USB-C 翻面再插。</li>
+    <li data-ih="W_PRESS_CONNECT_AT_THE_TOP_RIGHT_AND_PICK_USB">按右上角「連線」，選 <b>USB JTAG/serial debug unit</b>（Linux 上是 ttyACM0）。清單只會列出本機這類裝置。</li>
+  </ol>
+  <div class="dim small" style="margin-top:6px" data-i="W_NEEDS_DESKTOP_CHROME_OR_EDGE_FINDING_STATION">需要電腦版 Chrome 或 Edge。找電台和試聽不用連線也能用。</div>
+</div>
+
+<div class="card" id="nobrowser" hidden style="border-color:var(--warn)" data-i="W_THIS_BROWSER_HAS_NO_WEB_SERIAL_USE_DESKTOP_C">這個瀏覽器沒有 Web Serial：請用電腦版 Chrome 或 Edge</div>
+<section id="radio" class="on">
+  <div class="card">
+    <div class="row"><h3 class="grow" data-i="W_MY_STATIONS">我的電台</h3><button class="sm" id="editbtn" data-i="W_EDIT">編輯</button></div>
+    <div class="row wrap small dim" id="rlrow" hidden style="margin-top:6px"><span data-i="W_LISTS">清單</span><select id="rlsel"></select><button class="sm" id="rlnew" data-i="W_NEW_LIST">新清單</button><span data-i="W_THE_PLAYER_S_RADIO_PAGE_CAN_SWITCH_LISTS_WIT">本機的電台頁可以切換清單；沒有電台時各清單各自空著。</span></div>
+    <div id="rlist" class="dim" style="margin-top:6px"></div>
+  </div>
+  <div class="card">
+    <h3 data-i="W_ADD_A_URL">加入網址</h3>
+    <div class="dim small" data-i="W_THE_PLAYER_CAN_ONLY_PLAY_STATIONS_WHOSE_URL">本機只能播 http 開頭的電台（MP3、AAC、OGG、HLS）。不確定時先按「本機檢查」。不知道網址？到「找電台」搜尋。</div>
+    <div class="row wrap" style="margin-top:8px"><input id="addname" placeholder="名稱（可留空）" data-i-placeholder="W_NAME_OPTIONAL" style="flex:1 1 160px"><input id="addurl" placeholder="http://…" style="flex:2 1 240px"></div>
+    <div class="row wrap" style="margin-top:8px"><button id="addtest" data-i="W_PREVIEW_HERE">♪ 電腦試聽</button><button id="addchk" data-i="W_CHECK_ON_PLAYER">本機檢查</button><button class="acc" id="addgo" data-i="W_ADD">加入</button><span class="dim small grow" id="addmsg"></span></div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="dim small" id="fwifi" style="margin-top:10px"></div>
+  <div class="row wrap small dim" style="margin-top:8px"><span data-i="W_SEARCH_SERVER">搜尋伺服器</span><select id="rbsel"></select><span id="rbnow"></span></div>
+  <div class="sub row wrap" id="fnav"><button data-v="top" class="sel" data-i="W_POPULAR">熱門</button><button data-v="genre" data-i="W_GENRE">類型</button><button data-v="country" data-i="W_REGION">地區</button><button data-v="lang" data-i="W_LANGUAGE">語言</button><button data-v="search" data-i="W_SEARCH">搜尋</button></div>
+  <div class="card" id="fpanel"></div>
+  <div class="row wrap" id="fbar" hidden><div class="grow"><b id="ftitle"></b> <span class="dim small" id="fcount"></span></div><label class="row dim small"><input type="checkbox" id="fonly"> <span data-i="W_HIDE_STATIONS_THAT_CAN_T_PLAY_INCLUDING_HTTP">隱藏不能播的（含只有 https）</span></label></div>
+  <div id="fres"></div>
+  <div class="row" style="justify-content:center"><button id="fmore" hidden data-i="W_LOAD_MORE">載入更多</button></div>
+  <div class="dim small" id="fmsg" style="margin-top:8px"></div>
+</section>
+
+<section id="fx">
+  <div class="card">
+    <div class="row wrap"><select id="fxsel" class="grow" style="flex:1 1 200px"></select><button id="fxuse" data-i="W_APPLY_TO_PLAYER">套用到本機</button></div>
+    <div class="dim small" id="fxnow" style="margin-top:6px"></div>
+  </div>
+  <div id="fxbody" hidden>
+    <div class="row wrap"><label class="row dim small"><input type="checkbox" id="fxlive" checked> <span data-i="W_LISTEN_WHILE_ADJUSTING_SENT_TO_THE_PLAYER_LI">邊調邊聽（即時送到本機，未儲存）</span></label><span class="grow"></span><button id="fxsave" data-i="W_SAVE">儲存</button><button id="fxsaveas" data-i="W_SAVE_AS_NEW_PRESET">另存新預設</button></div>
+    <div class="dim small" style="margin:6px 0" data-i="W_THE_ORDER_IS_FIXED_ON_THE_PLAYER">順序固定在本機</div>
+    <div id="fxnodes"></div>
+    <details class="card"><summary class="dim" data-i="W_ADVANCED_EDIT_THE_TOML_DIRECTLY">進階：直接編輯 TOML</summary><textarea id="fxtext" spellcheck="false"></textarea><div class="row" style="margin-top:6px"><button class="sm" id="fxparse" data-i="W_APPLY_TEXT">套用文字</button><span class="dim small" data-i="W_THE_CHIPCHILL_EFFECT_PRESET_FORMAT_FORMAT_1">chipchill 的音效預設格式（format = 1）。</span></div></details>
+  </div>
+</section>
+
+<section id="lists">
+  <div class="card">
+    <div class="row"><h3 class="grow" data-i="W_LISTS_ON_THE_PLAYER">本機的清單</h3><button class="sm" id="lrefresh" data-i="W_REFRESH">重新整理</button></div>
+    <div id="llist" class="dim" style="margin-top:6px"></div>
+  </div>
+  <div class="card">
+    <h3 data-i="W_NEW_OR_OPEN">新增或開啟</h3>
+    <div class="dim small" data-i="W_LISTS_FOR_THE_LUNCH_PICK_A_PERSON_AND_IDEAS">午餐、抽人、點子三種小工具用的清單。字在這台電腦上畫好再送過去，所以任何字和 emoji 都能用。</div>
+    <div class="row wrap" style="margin-top:8px"><select id="lkind" style="flex:1 1 200px"></select><button id="lnew" data-i="W_BLANK">空白</button><button id="ltpl" data-i="W_START_FROM_A_SAMPLE">從範例開始</button>
+      <label class="row"><button data-pick data-i="W_OPEN_ZIP">開啟 zip…</button><input type="file" id="lopen" accept=".zip" hidden></label></div>
+  </div>
+  <div id="led" hidden>
+    <div class="card">
+      <div class="dim small" id="lkindnow"></div>
+      <div class="row wrap" style="margin-top:6px"><input id="ltitle" placeholder="清單標題" data-i-placeholder="W_LIST_TITLE" style="flex:2 1 200px"><input id="lname" placeholder="檔名.zip" data-i-placeholder="W_FILENAME_ZIP" style="flex:1 1 140px"></div>
+      <div class="dim small" style="margin-top:6px" data-i="W_ONE_ITEM_PER_LINE_ADD_2_AFTER_AN_ITEM_TO_MAK">一行一項。項目後面加「×2」會被抽中兩倍機率，「×0」暫時不抽。</div>
+      <div id="lgroups"></div>
+      <button id="laddg" class="sm" data-i="W_ADD_A_GROUP">＋ 加一組</button>
+    </div>
+    <div class="card">
+      <div class="row wrap"><button id="lprev" data-i="W_PREVIEW">預覽</button><button id="ldl" data-i="W_DOWNLOAD_ZIP">下載 zip</button><button class="acc" id="lup" data-i="W_SEND_TO_PLAYER">傳到本機</button><span class="dim small grow" id="lstat"></span></div>
+      <canvas id="lcanvas" width="360" height="360" style="margin-top:10px;max-width:100%;border-radius:50%"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="dev">
+  <div class="card"><h3 data-i="W_SCREEN_AND_HAPTICS">螢幕與觸感</h3><div id="g-screen"></div></div>
+  <div class="card"><h3 data-i="W_SOUND">聲音</h3><div id="g-sound"></div></div>
+  <div class="card"><h3 data-i="W_BLUETOOTH">藍牙</h3><div id="g-bt"></div></div>
+  <div class="card"><h3 data-i="W_TOYS">小工具</h3><div id="g-tools"></div></div>
+  <div class="card"><h3 data-i="W_CLOCK_AND_ALARM">時鐘與鬧鐘</h3>
+    <div class="set"><div data-i="W_ALARM">鬧鐘</div><select id="al-on"><option value="0" data-i="W_OFF">關</option><option value="1" data-i="W_ON">開</option></select></div>
+    <div class="set"><div data-i="W_TIME">時間</div><input type="time" id="al-time" step="60"></div>
+    <div class="set"><div data-i="W_REPEAT">重複</div><select id="al-days"><option value="62" data-i="W_WEEKDAYS_MON_TO_FRI">平日（週一到週五）</option><option value="127" data-i="W_EVERY_DAY">每天</option><option value="65" data-i="W_WEEKENDS">週末</option><option value="0" data-i="W_ONCE_ONLY">只一次</option></select></div>
+    <div class="set"><div><div data-i="W_RINGTONE">鈴聲</div><div class="dim small" data-i="W_ON_THE_PLAYER_S_ALARM_PAGE_IT_CAN_BE_SET_TO">在本機的鬧鐘頁可以改成「目前播放的歌」</div></div><div class="row"><span id="al-sound" class="grow dim small ell"></span><button class="sm" id="al-builtin" data-i="W_USE_THE_BUILT_IN_CHIME">用內建鐘聲</button></div></div>
+    <div class="set"><div><div data-i="W_TIME_ZONE">時區</div><div class="dim small" id="tz-note" data-i="W_THE_TIME_ZONE_CAN_ONLY_BE_SET_HERE_NOT_ON_TH">時區只能在這裡設定（本機不能改）：用瀏覽器的時區（連夏令時間一起設定），或手動選一個固定的時差；沒設定時是 UTC+8</div></div><div class="row"><span id="tz-cur" class="dim small"></span><select id="tz-fixed"></select><button class="sm" id="tz-browser" data-i="W_USE_THIS_BROWSER_S_TIME_ZONE">使用這台瀏覽器的時區</button></div></div>
+    <div class="set"><div><div data-i="W_SUNRISE_AND_SUNSET">日出日落</div><div class="dim small" id="sun-cur" data-i="W_NO_LOCATION_SET_THE_PLAYER_S_CLOCK_PAGE_AND">尚未設定位置：本機的時鐘頁和日光錶面不顯示日出日落（月相、節氣只需要時區）</div></div><div class="row"><button class="sm" id="sun-set" data-i="W_SET_THE_SUNRISE_LOCATION">設定日出日落位置</button><button class="sm" id="sun-clear" hidden data-i="W_CLEAR_LOCATION">清除位置</button></div></div>
+    <div class="dim small" id="sun-guide" hidden style="line-height:1.6;border-left:3px solid var(--line);padding-left:10px;margin:6px 0">
+      <div data-i="W_WITHOUT_A_LOCATION_THE_PLAYER_S_CLOCK_PAGE_A">本機沒有設定位置時，時鐘頁和「日光」錶面不會顯示日出日落（本機上也沒有別處可以設定）；月相和節氣只需要時區，不受影響。要顯示的話，位置只能在這裡設定。步驟：</div>
+      <div data-i="W_1_PRESS_GET_LOCATION_BELOW_THE_BROWSER_ASKS">1. 按下面的「取得位置」，瀏覽器會問你是否允許這個頁面取得位置，請選允許。</div>
+      <div data-i="W_2_ONLY_THE_LATITUDE_AND_LONGITUDE_ARE_STORED">2. 只有緯度和經度會被存下來，而且四捨五入到 0.01 度（約一公里）；存在本機的記憶卡，不會上傳到網路，也不含你的 Wi-Fi 資料。</div>
+      <div data-i="W_3_YOU_CAN_PRESS_CLEAR_LOCATION_AT_ANY_TIME_T">3. 之後隨時可以按「清除位置」刪掉，日出日落就不再顯示。</div>
+      <div class="row" style="margin-top:6px"><button class="sm" id="sun-go" data-i="W_GET_LOCATION">取得位置</button><button class="sm" id="sun-cancel" data-i="W_CANCEL">取消</button></div>
+    </div>
+    <div class="dim small" id="al-note"></div>
+  </div>
+  <div class="card"><h3 data-i="W_WI_FI_FOR_LISTENING_TO_RADIO">Wi-Fi（聽電台用）</h3>
+    <div class="dim small" data-i="W_SENT_ONLY_OVER_THE_USB_CABLE_TO_THE_PLAYER_A">只經 USB 線送到本機，存進 TF 卡，不會出現在 log。</div>
+    <div class="row wrap" style="margin-top:8px"><input id="ssid" placeholder="網路名稱" data-i-placeholder="W_NETWORK_NAME" style="flex:1 1 160px"><input id="pass" type="password" placeholder="密碼" data-i-placeholder="W_PASSWORD" style="flex:1 1 160px"><button id="wsave" data-i="W_WRITE">寫入</button></div>
+    <div class="dim small" id="wifistat" style="margin-top:6px"></div>
+  </div>
+  <div class="card"><h3 data-i="W_ADVANCED">進階</h3><div class="dim small" data-i="W_ENGINEERING_OPTIONS_NORMALLY_LEFT_ALONE_A_WR">工程用的選項，一般不用改；改錯可能沒有聲音或連不上，改回預設就好。</div><div id="g-adv"></div></div>
+  <div class="card"><h3 data-i="W_SYSTEM">系統</h3>
+    <div class="row" style="margin-top:8px"><button id="reboot" data-i="W_REBOOT">重開機</button><span class="dim small" data-i="W_WHATEVER_IS_PLAYING_KEEPS_PLAYING">正在播的東西會接著播。</span></div>
+    <div class="dim small" id="mem" style="margin-top:8px"></div>
+    <details style="margin-top:8px"><summary class="dim small" data-i="W_PLAYER_LOG">本機 log</summary><pre id="log" style="font-size:12px;max-height:300px;overflow:auto;white-space:pre-wrap"></pre></details>
+  </div>
+</section>
+
+<section id="flash">
+  <div class="card"><h3 data-i="W_FLASH_TITLE">更新韌體</h3>
+    <div class="dim small" data-ih="W_FLASH_INTRO">把<b>新版韌體寫進本機</b>。需要電腦版 Chrome 或 Edge。流程：選板子 → 選你下載的韌體檔 → 連線並檢查 → 備份（建議）→ 寫入。寫入期間不要拔線，也不要關掉這個分頁。這個頁面本身不放韌體。</div>
+    <div class="dim small" style="margin-top:6px" data-i="W_FLASH_BOOT_HINT">連不上時：按住本機的 BOOT 針孔再插上 USB 線（進下載模式，需要你在場），然後再按「連線並檢查」。圓形板的針孔在 USB-C 旁邊；FakePod 沒有針孔：兩個鍵同時按住再開機（或插上 USB）。</div>
+    <div class="set"><div data-i="W_FLASH_BOARD">板子</div><select id="fl-board"></select></div>
+    <div id="fl-art" hidden style="text-align:center;margin:8px 0"><div id="fl-art-img" style="width:240px;max-width:100%;margin:auto;color:var(--text)"></div></div>
+    <div class="dim small" id="fl-auto" hidden></div>
+    <div id="fl-mismatch" hidden><div class="chip bad" id="fl-mismatch-t" style="display:block;margin:4px 0;white-space:normal"></div></div>
+    <div class="dim small" id="fl-dl" style="margin-top:6px" data-i="W_FLASH_DL_NONE">先選板子，這裡會顯示這塊板子進下載模式的方法與要接的 USB 埠。</div>
+  </div>
+  <div class="card" id="fl-file-card"><h3 data-i="W_FLASH_FILE_TITLE">選韌體檔</h3>
+    <div class="dim small" data-i="W_FLASH_FILE_INFO">到專案的 Releases 頁面下載你這塊板子的檔案：jukedial-VERSION-round.bin（圓形板）或 jukedial-VERSION-fakepod.bin（FakePod）。檔案只在你的瀏覽器裡讀取與檢查，不會上傳到任何地方。</div>
+    <div class="row" style="margin-top:8px"><a class="acc" id="fl-releases" hidden target="_blank" rel="noopener noreferrer" data-i="W_FLASH_RELEASES_LINK">開啟 Releases 頁面</a></div>
+    <div id="fl-drop" class="row" style="margin-top:10px;padding:14px;border:1px dashed var(--dim,#888);border-radius:8px"><button class="sm" id="fl-pick" data-i="W_FLASH_LOAD_PICK">選檔…</button><input type="file" id="fl-file" accept=".bin" hidden><span class="dim small grow" data-i="W_FLASH_FILE_DROP">或把檔案拖到這裡</span></div>
+    <div id="fl-finfo" style="margin-top:8px"></div>
+    <div class="row" style="margin-top:10px"><button class="acc" id="fl-check" data-i="W_FLASH_CHECK_BTN">連線並檢查</button><span class="dim small grow" id="fl-msg"></span></div>
+  </div>
+  <div class="card" id="fl-card"><h3 data-i="W_FLASH_CARD_TITLE">TF 卡內容包</h3>
+    <div class="dim small" data-i="W_FLASH_CARD_INFO">TF 卡內容包 jukedial-VERSION-card.zip 也在同一個 Releases 頁面（資料夾骨架、設定範本、HUD 錶面、字型、白噪音包）。下載後解壓縮到 TF 卡根目錄；同名的設定檔會被覆蓋，改過的請先備份。</div>
+  </div>
+  <div class="card" id="fl-info" hidden>
+    <div id="fl-rows"></div>
+    <div id="fl-checks" style="margin-top:8px"></div>
+    <div id="fl-opts" hidden>
+      <div class="dim small" id="fl-plan" style="white-space:pre-line;margin-top:10px"></div>
+      <div class="chip warn" id="fl-ptnote" hidden style="white-space:normal;margin-top:6px" data-i="W_FLASH_PT_MOVED">本機現在的分割表和檔案的不同：舊的設定可能找不到（會當成第一次使用）。</div>
+      <label class="row" style="margin-top:10px"><input type="checkbox" id="fl-factory"> <span data-i="W_FLASH_FACTORY">原廠重設：連設定與藍牙配對也一起清掉</span></label>
+      <label class="row" style="margin-top:10px"><input type="checkbox" id="fl-backup" checked> <span data-i="W_FLASH_BACKUP">先備份整個快閃記憶體（強烈建議，要花幾分鐘）</span></label>
+      <label class="row dim small" id="fl-skiprow" hidden style="margin-left:24px"><input type="checkbox" id="fl-skip"> <span data-i="W_FLASH_SKIP_OK">我知道會失去目前的韌體與設定</span></label>
+      <div class="row" style="margin-top:10px"><button class="acc" id="fl-go" data-i="W_FLASH_GO">開始寫入</button></div>
+    </div>
+    <div class="row" style="margin-top:10px"><button id="fl-cancel" data-i="W_CANCEL">取消</button></div>
+    <progress id="fl-bar" max="1000" value="0" hidden style="width:100%;margin-top:10px"></progress>
+    <div class="dim small" id="fl-stat"></div>
+  </div>
+  <div class="card" id="fl-done" hidden><div data-ih="W_FLASH_DONE_NOTE">刷好了。本機重新開機後，<b>第一次開機會出現語言選單</b>（繁中／简中／English）；設定與字型可能需要重新載入。請再按右上角的「連線」。</div>
+    <div class="chip warn" id="fl-done-fp" hidden style="white-space:normal;margin-top:8px" data-i="W_FLASH_DONE_FAKEPOD">FakePod：寫完後網頁會用看門狗重設讓它離開下載模式，但這在瀏覽器裡沒辦法確認。如果畫面一直不亮，請拔掉 USB 線和電池電源再接回去。</div></div>
+</section>
+
+<section id="fonts">
+  <div class="card"><h3 data-i="W_FONTS_TITLE">曲庫字型</h3>
+    <div class="dim small" data-ih="W_FONTS_INTRO">依<b>你的曲庫</b>在這台電腦上切出字型（ui-tc、ui-sc），檔案不會上傳到任何地方。做好後下載，進外接模式，把檔案複製到卡上的 <b>_player/fonts/</b> 資料夾，再退出外接模式並重新開機。</div>
+  </div>
+  <div class="card"><h3 data-i="W_FONTS_STEP_CHARS">1. 字集</h3>
+    <div class="row wrap"><button id="fo-read" data-i="W_FONTS_READ_DEVICE">從本機讀取字集</button>
+      <label class="row"><button data-pick data-i="W_FONTS_LOAD_FILE">從檔案載入字集…</button><input type="file" id="fo-file" hidden></label></div>
+    <div class="dim small" id="fo-chars" style="margin-top:6px"></div>
+    <div class="dim small" style="margin-top:10px" data-i="W_FONTS_EXTRA">再加幾個字（選填）</div>
+    <textarea id="fo-extra" spellcheck="false" style="min-height:60px"></textarea>
+    <label class="row" style="margin-top:6px"><input type="checkbox" id="fo-gb2" checked> <span data-i="W_FONTS_GB2">包含 GB2312 第二級（多約 3000 個簡體字，檔案較大）</span></label>
+  </div>
+  <div class="card"><h3 data-i="W_FONTS_STEP_SRC">2. 來源字型</h3>
+    <div class="set"><div data-i="W_FONTS_SRC_TC">Noto Sans TC（TrueType）</div><div class="row"><span class="dim small grow" id="fo-tc-st"></span><button class="sm" data-pick data-i="W_FLASH_LOAD_PICK">選檔…</button><input type="file" id="fo-tc" accept=".ttf" hidden></div></div>
+    <div class="set"><div data-i="W_FONTS_SRC_SC">Noto Sans SC（TrueType）</div><div class="row"><span class="dim small grow" id="fo-sc-st"></span><button class="sm" data-pick data-i="W_FLASH_LOAD_PICK">選檔…</button><input type="file" id="fo-sc" accept=".ttf" hidden></div></div>
+    <div class="set"><div data-i="W_FONTS_SRC_EXT">ui-ext.ttf（符號、韓文、emoji；現成的，不重做）</div><div class="row"><span class="dim small grow" id="fo-ext-st"></span><button class="sm" data-pick data-i="W_FLASH_LOAD_PICK">選檔…</button><input type="file" id="fo-ext" accept=".ttf" hidden></div></div>
+  </div>
+  <div class="card"><h3 data-i="W_FONTS_STEP_BUILD">3. 建置</h3>
+    <div class="row"><button class="acc" id="fo-build" data-i="W_FONTS_BUILD">建置字型</button><span class="dim small grow" id="fo-msg"></span></div>
+    <div id="fo-result" style="margin-top:8px"></div>
+    <div class="row wrap" id="fo-dl" style="margin-top:8px"></div>
+    <div class="row" style="margin-top:8px" id="fo-sendrow" hidden><button class="acc" id="fo-send" data-i="W_FONTS_SEND">傳到本機</button><span class="dim small grow" id="fo-sstat"></span></div>
+    <progress id="fo-sbar" max="1000" value="0" hidden style="width:100%;margin-top:6px"></progress>
+  </div>
+</section>
+</main>
+<div id="flashbanner" class="chip warn" hidden style="position:fixed;top:0;left:0;right:0;z-index:9;text-align:center;padding:8px;border-radius:0" data-i="W_FLASHING_PLEASE_DO_NOT_TOUCH_ANYTHING">刷機中，先別動</div>
+<div id="toast"></div>
+<audio id="pre" preload="none"></audio>
+<script src="conn.js"></script>
+<script src="i18n.js"></script>
+<script src="lang.js"></script>
+<script src="glyphpack.js"></script>
+<script src="lists.js"></script>
+<script src="flasher.js"></script>
+<script src="fontsets.js"></script>
+<script src="fontsubset.js"></script>
+<script src="fontbuild.js"></script>
+<script src="fontput.js"></script>
+<script src="regions.js"></script>
+<script src="page.js"></script>
+<script src="flashtab.js"></script>
+<script src="fonttab.js"></script>
+<script src="boot.js"></script>
+</body>
+</html>

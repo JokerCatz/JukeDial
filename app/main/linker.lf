@@ -1,0 +1,23 @@
+# The app's own zero-initialised globals live in PSRAM (internal RAM is the scarce one: Bluetooth / Wi-Fi
+# controllers and DMA need it). So NO code that can run while the cache is suspended (IRAM_ATTR functions, ESP_INTR_FLAG_IRAM handlers,
+# anything called from them) may touch a zero-initialised global of this component unless it is marked DRAM_ATTR, and no static here
+# may be handed to DMA. tools/check/check_flash_park.py (make size) fails when IRAM code references .ext_ram.bss directly; it cannot see
+# accesses through pointers. (2026-11-19: the boot crash blamed on this mapping was the parked core's branch predictor, core_park.c.)
+[mapping:main_extram_bss]
+archive: libmain.a
+entries:
+    * (extram_bss)
+
+# 外接模式 T3: esp_hid (BLE HID device): its zero-initialised statics too (compiled with -msmall-data-limit=0 from main/CMakeLists.txt)
+[mapping:esp_hid_extram_bss]
+archive: libesp_hid.a
+entries:
+    * (extram_bss)
+
+# 外接模式 T4: TinyUSB's UAC2 software FIFO (32 x 392 B = 12,544 B, filled by the USB ISR through the CPU, never by DMA) lives in PSRAM so the player image
+# keeps its internal RAM; the 392 B DMA bounce buffer and the feedback word stay internal (override: app/components/esp_tinyusb, tusb_config.h)
+[mapping:tusb_audio_extram]
+archive: libespressif__tinyusb.a
+entries:
+    audio_device:ep_out_sw_buf (extram_bss)
+    audio_device:ctrl_buf (extram_bss)

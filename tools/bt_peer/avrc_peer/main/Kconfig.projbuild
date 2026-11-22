@@ -1,0 +1,7 @@
+menu "AVRCP Bench Peer Configuration"
+    config EXAMPLE_LOCAL_DEVICE_NAME
+        string "Local Device Name"
+        default "JC Peer AVRC"
+        help
+            Use this option to set local device name.
+endmenu

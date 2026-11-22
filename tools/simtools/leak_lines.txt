@@ -1,0 +1,61 @@
+# one shell line per independent leak run, slowest first (make sim-leak: tools/simtools/leak_par.py, -P nproc/2). The viz line is one run per action; games is NOT sharded (a shard
+# of fewer games leaves the glyph cache unthrashed and lv_bytes wobbles by +-600 B in a pattern: not a leak, but the exact rule fails)
+python3 tools/simtools/leak_cycles.py vizown:20 --port sim --every 1   # warm-up per action (WARM): the glyph caches fill first
+python3 tools/simtools/leak_cycles.py vizplay:20 --port sim --every 1   # warm-up per action (WARM): the glyph caches fill first
+python3 tools/simtools/leak_cycles.py games:20 --port sim --every 1 --warm 30   # games G0: the hub's 說明 and every game of games.def (list-driven; moves, the device's answer, the mode button, Back while it thinks)
+python3 tools/simtools/leak_cycles.py vizkinds:20 --port sim --every 1   # warm-up per action (WARM): the glyph caches fill first
+python3 tools/simtools/leak_cycles.py frame:20 --port sim --every 1 --warm 60   # F1a2: the page frame (the round glass: the pilot pages 喝水 / 習慣 / 氛圍, the bubble, a knob turn, an option, the exit's pause overlay)
+python3 tools/simtools/leak_cycles.py screens:20,tools:20,vocab:20,theme:20 --port sim --every 1 --warm 70
+python3 tools/simtools/leak_cycles.py vizpage:20 --port sim --every 1   # warm-up per action (WARM): the glyph caches fill first
+python3 tools/simtools/leak_cycles.py vizring_leave:20 --port sim --every 1   # warm-up per action (WARM): the glyph caches fill first
+rm -rf .local/sim/chooser_root && mkdir -p .local/sim/chooser_root/vocab .local/sim/chooser_root/lists && cp -r sim/fixture/. .local/sim/chooser_root/ && for i in 1 2 3 4 5 6 7; do cp app/main/assets/vocab/sample.zip .local/sim/chooser_root/vocab/d$i.zip; cp app/main/assets/lists/lunch.zip .local/sim/chooser_root/lists/l$i.zip; done && python3 tools/simtools/leak_cycles.py choosers:20 --port sim --every 1 --warm 70 --root .local/sim/chooser_root   # Task 11: the deck and list choosers (7 packs each)
+python3 tools/simtools/leak_cycles.py alarmpage:20,axisrows:20 --port sim --every 1 --warm 10   # Task 12: the alarm page with an armed row; UI unify T5: settings brightness and the alarm hour and minute rows as axes
+python3 tools/simtools/leak_cycles.py clockfaceaxis:20,albumaxis:20 --port sim --every 1 --warm 10   # Task 7: the face ring and an album-ring axis (the borrowed knob)
+sim/pickers_root.sh .local/sim/pickers_root && python3 tools/simtools/leak_cycles.py pickers:20 --port sim --every 1 --warm 10 --root .local/sim/pickers_root   # Task 13: the four picker lists
+python3 tools/simtools/leak_cycles.py ratetest:20 --port sim --every 1 --warm 10   # hires T11: the rate test page (settings row, a confirm, Back mid-tier)
+python3 tools/simtools/leak_cycles.py hires:20 --port sim --every 1 --warm 40   # hires T14: rate changes 44.1/96/48/192/384 kHz and a sink on/off during a 384k track
+python3 tools/simtools/leak_cycles.py setaxis:20,msgpage:20,homering:20,langcycle:20 --port sim --every 1 --warm 10   # final fix round: settings axis + armed row, message over the cover page, long-press home
+python3 tools/simtools/leak_cycles.py setrows:20 --port sim --every 1 --warm 10   # fx apps T13: the untagged-level axis row, the reboot row armed and let run out
+python3 tools/simtools/leak_cycles.py popring:20 --port sim --every 1 --warm 10   # UI unify T3: the tap-revealed ring (playing ring, timeout / Back; album ring)
+python3 tools/simtools/leak_cycles.py status:20 --port sim --every 1 --warm 10   # hires T7: the 現況 page (playing ring cell, refresh timer, Back)
+python3 tools/simtools/leak_cycles.py explain:20 --port sim --every 1 --warm 10   # fx apps T6: the explain page (QR, knob), opened from the settings row and from a popring's help cell
+rm -rf .local/sim/radio_root && cp -r sim/fixture .local/sim/radio_root && printf 'A|http://a.example/s\nB|http://b.example/s|http://b2.example/s\n' > .local/sim/radio_root/_player/config/radio.txt && printf 'C|http://c.example/s\nD|http://d.example/s\n' > .local/sim/radio_root/_player/config/radio_jazz.txt && python3 tools/simtools/leak_cycles.py radiolists:20 --port sim --every 1 --warm 10 --root .local/sim/radio_root   # radio2: the list chooser row (next list, page rebuilt, twice), Back
+python3 tools/simtools/leak_cycles.py helppages:20 --port sim --every 1 --warm 10   # fx apps T14: the Wi-Fi row's and the radio list's help pages, open and Back
+python3 tools/simtools/leak_cycles.py fxpages:20 --port sim --every 1 --warm 10   # fx apps T7: the filter list and every filter page (borrow, reset arm, 說明, the equalizer rebuild)
+python3 tools/simtools/leak_cycles.py kitpage:20 --port sim --every 1 --warm 10   # UI unify T4: the page kit's test pages (axis button, choice row/grid, pill, hub, titled list, dots)
+python3 tools/simtools/leak_cycles.py scene:20 --port sim --every 1 --warm 10   # UI unify T6: the scene editor (layer ring with a borrowed volume, add-a-sound lists, the delete row armed)
+python3 tools/simtools/leak_cycles.py toys:20 --port sim --every 1 --warm 10   # UI unify T7: the dice count and the people group as axis buttons (later dispatches add the gacha and pomodoro rings)
+python3 tools/simtools/leak_cycles.py bubbles:20 --port sim --every 1 --warm 10   # bubble task: the bubble field page (pop ten, the rest, the re-lay timer, Back)
+python3 tools/simtools/leak_cycles.py ringdrag:20 --port sim --every 1 --warm 10   # G4c: drag-turned pages of the 小工具 ring and the 遊戲 hub, a short drag, a drag from Back, long-press Back
+python3 tools/simtools/leak_cycles.py simon:20 --port sim --every 1 --warm 10   # ideas G1: 四色記憶 on ui_sectors (rounds, milestone, card, 練習, 雙人, 洗牌, styles, keys, Back mid-show)
+python3 tools/simtools/leak_cycles.py drink:20,habits:20 --port sim --every 1 --warm 10   # ideas G7: 喝水提醒 and 習慣打卡 (taps, the ring axes, the armed cells, 說明, Back)
+python3 tools/simtools/leak_cycles.py counter:20 --port sim --every 1 --warm 10   # ideas G2: 多組計數器 (taps, the borrowed knob, the ring: 2 / 4 / 8 rebuilds, names, style, the armed zero, 說明, Back)
+python3 tools/simtools/leak_cycles.py ambient:20 --port sim --every 1 --warm 10   # ideas G5: 氛圍頁 (four scenes, pokes, rare events, the borrowed knob, the ring, the exit pill, Back)
+python3 tools/simtools/leak_cycles.py breath:20 --port sim --every 1 --warm 10   # ideas G7: 呼吸教練 (patterns, lengths, the noise follow, a session to its end, the ring, 說明, the exit pill, Back)
+python3 tools/simtools/leak_cycles.py covers:20 --port sim --every 1 --warm 10   # hires T8e: the 封面快取 page (pause / resume, mode, build now, 說明; from 設定 and from 現況)
+python3 tools/simtools/leak_cycles.py arena:20 --port sim --every 1 --warm 60   # G1: the shared play field through 環形打磚塊 (serve, knob, taps, ring pause, styles, rules, screen off, the end card, Back mid-burst)
+python3 tools/simtools/leak_cycles.py beat:20 --port sim --every 1 --warm 60   # ideas G3: 節拍點擊 and the beat feed (metronome, classic and off-beat on the synthetic track, knob, styles, windows, screen off, a round to the card, Back)
+python3 tools/simtools/leak_cycles.py dial:20 --port sim --every 1 --warm 10   # G2: the shared dial through 保險箱開鎖 (taps, knob, lock, wrong, open, card, rules, screen off, meter mode, Back)
+python3 tools/simtools/leak_cycles.py guess:20 --port sim --every 1 --warm 10   # ideas G4: 猜歌 (clips through the fake player, replay, answers, a game to the card and again, rules, styles, Back mid-clip)
+python3 tools/simtools/leak_cycles.py tower:20 --port sim --every 1 --warm 10   # ideas G3: 疊塔 on the shared field (drops, cuts, camera, rules, speeds, ring pause, screen off, the miss and card, Back)
+python3 tools/simtools/leak_cycles.py puzzle15:20 --port sim --every 1 --warm 10   # ideas G4: 15 拼圖 on the board's tiles (slides, the three rules rebuilding the board, styles, hints, screen off, the card, again, Back)
+python3 tools/simtools/leak_cycles.py dominoes:20 --port sim --every 1 --warm 40   # warm 40: glyph cache with the CJK fonts (2026-11-16, constant 100484 after it); ideas G4: 骨牌 on ui_cards (select, move, device step, ring, styles, rules, a whole game and its card, Back)
+python3 tools/simtools/leak_cycles.py radio:20 --port sim --every 1 --warm 10   # G3: 電台調頻尋寶 on the dial with its proximity cue (taps, knob, miss, locks, golden station, rules, glow modes, screen off, card, Back)
+python3 tools/simtools/leak_cycles.py knobtoy:20 --port sim --every 1 --warm 10   # G6: 旋鈕小玩意 (wind-up and fishing on the dial, the dial made again on a rule change: taps, knob, release, snap, fish zone, catch, line, golden, styles, glow, screen off, card, Back)
+python3 tools/simtools/leak_cycles.py life:20 --port sim --every 1 --warm 10   # ideas G6: 生命遊戲 on the arena canvas (every axis, taps, the ring, extinction card, beat rule, rest, screen off, Back mid-run)
+python3 tools/simtools/leak_cycles.py spiro:20 --port sim --every 1 --warm 10   # ideas G5: 萬花尺 on the arena canvas (new curves, rules, axes, styles, ring pause, screen off, Back mid-draw)
+python3 tools/simtools/leak_cycles.py deflect:20 --port sim --every 1 --warm 10   # ideas G6: 旋轉擋板 on the shared field (taps, knob, bounces, misses, rules, square layout, ring pause, screen off, the card, Back)
+python3 tools/simtools/leak_cycles.py sfxbank:20 --port sim --every 1 --warm 10   # sfx task 2: the 音效庫 page (three plays, the list turned, 說明, Back)
+python3 tools/simtools/leak_cycles.py cardfmt:20 --port sim --every 1 --warm 10   # cardfmt: the card page and the format flow without the format (warning, code pad, armed row, Back, 說明)
+python3 tools/simtools/leak_cycles.py exit:20 --port sim --every 1 --warm 30   # G4b: the shared exit on the bubble sheet and on every game (pill, pause overlay, resume, Back while paused)
+python3 tools/simtools/leak_cycles.py btmeta:20 --port sim --every 1 --warm 10   # AVRCP 1.6 step 1: the phone's title, artist, album and cover on the playing page, 詳細, cleared
+python3 tools/simtools/leak_cycles.py inst_pages:20 --port sim --mode inst --every 1 --warm 10   # UI unify T9: the instrument app (sim --mode inst), every page
+python3 tools/simtools/leak_cycles.py inst_rings:20 --port sim --mode inst --every 1 --warm 10   # UI unify T11: every instrument ring (timeout, Back), the looper's file ring
+python3 tools/simtools/leak_cycles.py ext_ring:20 --port sim --mode ext --every 1 --warm 10   # 外接模式 T2: the external mode's ring (keys, layers, reload, config page, 說明, exit armed; sim --mode ext)
+python3 tools/simtools/leak_cycles.py ext_ble:20 --port sim --mode ext --every 1 --warm 10   # 外接模式 T3: the question page both ways, advertising, a connection, a key over BLE, unpair
+python3 tools/simtools/leak_cycles.py ext_usb:20 --port sim --mode ext --every 1 --warm 10   # 外接模式 T4: the descriptor walk, alternate settings, the USB mix cell (armed, timeout, three switches)
+python3 tools/simtools/leak_cycles.py ext_uac:20 --port sim --mode ext --every 1 --warm 10   # 外接模式 T5: the sound card's stream, two formats, the knob = device volume, the feature unit, stop
+python3 tools/simtools/leak_cycles.py gs:20 --port sim --every 1 --warm 70   # GS: the quick settings and the gesture tutorial, flicks
+python3 tools/simtools/leak_cycles.py btaudio:20 --port sim --every 1 --warm 10   # BTAUDIO: the Bluetooth audio page, the Wired output page and the details page's output block
+sim/tree_root.sh .local/sim/tree_root && python3 tools/simtools/leak_cycles.py tree:20 --port sim --every 1 --warm 10 --root .local/sim/tree_root   # LIBTREE: the song tree, paged levels, up flicks
+python3 tools/simtools/leak_cycles.py cardtest:20 --port sim --every 1 --warm 10   # 記憶卡診斷: the card diagnostics page (raw read, file test, Back mid-test, help)

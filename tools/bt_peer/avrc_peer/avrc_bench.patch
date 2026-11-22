@@ -1,0 +1,44 @@
+diff --git a/host/bluedroid/btc/profile/std/avrc/btc_avrc.c b/host/bluedroid/btc/profile/std/avrc/btc_avrc.c
+index 0f5e229..df148b6 100644
+--- a/host/bluedroid/btc/profile/std/avrc/btc_avrc.c
++++ b/host/bluedroid/btc/profile/std/avrc/btc_avrc.c
+@@ -851,6 +851,28 @@ static void handle_rc_metamsg_cmd (tBTA_AV_META_MSG *p_meta_msg)
+ ** Returns          void
+ **
+ *******************************************************************************/
++/* Bench hook (tools/bt_peer/avrc_peer, avrc_bench.patch; never in the player): the test peer's application may change,
++ * delay or drop the automatic SetAbsoluteVolume answer. The hook runs on the BTC task before the answer is sent; true =
++ * answer now with *volume (possibly changed), false = no answer now (the application answers later through
++ * btc_avrc_bench_abs_vol_rsp(), or never). The weak default answers at once with the requested value: the stock behaviour. */
++bool __attribute__((weak)) btc_avrc_bench_answer(UINT8 label, UINT8 ctype, UINT8 *volume)
++{
++    (void)label; (void)ctype; (void)volume;
++    return true;
++}
++
++/* a deferred answer (any task: BTA_AvMetaRsp posts to the BTA task) */
++void btc_avrc_bench_abs_vol_rsp(UINT8 label, UINT8 ctype, UINT8 volume)
++{
++    tAVRC_RESPONSE avrc_rsp;
++    memset(&(avrc_rsp.volume), 0, sizeof(tAVRC_RSP));
++    avrc_rsp.volume.opcode = opcode_from_pdu(AVRC_PDU_SET_ABSOLUTE_VOLUME);
++    avrc_rsp.volume.pdu = AVRC_PDU_SET_ABSOLUTE_VOLUME;
++    avrc_rsp.volume.status = AVRC_STS_NO_ERROR;
++    avrc_rsp.volume.volume = volume;
++    send_metamsg_rsp(btc_rc_cb.rc_handle, label, ctype, &avrc_rsp);
++}
++
+ static void btc_rc_upstreams_evt(UINT16 event, tAVRC_COMMAND *pavrc_cmd, UINT8 ctype, UINT8 label)
+ {
+     BTC_TRACE_EVENT("%s pdu: 0x%x handle: 0x%x ctype:%x label:%x", __FUNCTION__,
+@@ -866,7 +888,9 @@ static void btc_rc_upstreams_evt(UINT16 event, tAVRC_COMMAND *pavrc_cmd, UINT8 c
+         avrc_rsp.volume.pdu = AVRC_PDU_SET_ABSOLUTE_VOLUME;
+         avrc_rsp.volume.status = AVRC_STS_NO_ERROR;
+         avrc_rsp.volume.volume = pavrc_cmd->volume.volume;
+-        send_metamsg_rsp(btc_rc_cb.rc_handle, label, ctype, &avrc_rsp);
++        if (btc_avrc_bench_answer(label, ctype, &avrc_rsp.volume.volume)) {   /* bench: may change, delay or drop the answer */
++            send_metamsg_rsp(btc_rc_cb.rc_handle, label, ctype, &avrc_rsp);
++        }
+ 
+         // set up callback
+         esp_avrc_tg_cb_param_t param;

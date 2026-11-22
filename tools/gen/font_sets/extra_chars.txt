@@ -1,0 +1,3 @@
+# extra_chars: characters that should be in the UI fonts although no rule of make_font_subset.py covers them
+# (not in app/main, Big5 level 1, GB2312, library_chars.txt). One or more characters per line, any layout; lines starting with # are comments.
+# Typical source: `fontmiss` on the console (APP fontmiss ... list=U+XXXX) after playing songs and radio. Then: make fonts-build, install the fonts.

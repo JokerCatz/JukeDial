@@ -1,0 +1,72 @@
+# ID<TAB>zh_cn<TAB>en: the menu item names of the FILLED icons for the per-language guide icon sheets (make_icons.py --sheet ... --lang cn|en); not part of the firmware.
+# Real UI strings (tools/gen/i18n/strings.tsv, app/main/ui/games.def, data.tsv) where the icon maps to a menu item; a short translation otherwise.
+SONGS	歌曲	Songs
+CHIP	Chiptune	Chiptune
+NOISE	白噪音	Noise
+RADIO	电台	Radio
+CLOCK	时钟	Clock
+PHOTOS	相册	Photos
+TOOLS	小工具	Tools
+INSTRUMENT	乐器	Instrument
+FAVS	收藏	Favourite
+EFFECTS	音效	Sound FX
+BLUETOOTH	蓝牙	Bluetooth
+SETTINGS	设置	Settings
+DICE	骰子	Dice
+SLOT	老虎机	Slot
+FORTUNE	占卜	Fortune
+LUNCH	午餐	Lunch
+PICK	抽人	Draw
+IDEAS	点子	Ideas
+VOCAB	单词	Words
+BUBBLES	泡泡纸	Bubble wrap
+GAMES	游戏（默认游戏图标）	Games (default game icon)
+SFXBANK	音效库	Sound bank
+COUNTER	计数器	Counters
+AMBIENT	氛围	Ambient
+TORCH	手电筒	Flashlight
+TUNER	调音器	Tuner
+HELP	帮助	Help
+G_BEAT	节拍点击	Beat tap
+G_BREAKOUT	环形打砖块	Ring breakout
+G_C4	四子棋	Connect four
+G_DEFLECT	旋转挡板	Deflector
+G_DOMINOES	骨牌	Dominoes
+G_GUESS	猜歌	Guess the song
+G_KNOBTOY	旋钮小玩意	Knob toys
+G_LIFE	生命游戏	Game of Life
+G_PUZZLE15	15 拼图	15 puzzle
+G_RADIO	电台调频寻宝	Radio hunt
+G_SAFE	保险箱开锁	Safe cracker
+G_SIMON	四色记忆	Simon
+G_SPIRO	万花尺	Spirograph
+G_TOWER	叠塔	Stack tower
+G_TTT	井字棋	Tic-tac-toe
+ALARM	闹钟	Alarm
+POMODORO	番茄钟	Pomodoro
+STOPWATCH	码表	Stopwatch
+COUNTDOWN	倒数计时	Countdown
+T_PLAY	播放	Play
+T_PAUSE	暂停	Pause
+T_PREV	上一首	Previous
+T_NEXT	下一首	Next
+T_SHUFFLE	随机	Shuffle
+T_REPEAT	顺序	In order
+T_REPEAT1	单曲循环	Repeat one
+T_MORE	更多	More
+DRINK	喝水	Drink
+HABITS	打卡	Check-ins
+FACE	表盘	Face
+SYNC	校时	Sync time
+BT_OFF	关闭	Off
+BT_SPEAKER	蓝牙音箱	Bluetooth speaker
+BT_HEADSET	蓝牙耳机	Bluetooth headphones
+BT_CAST	Auracast 广播	Auracast broadcast
+BT_LISTEN	Auracast 收听	Auracast listen
+STATUS	状态	Status
+FORGET	清除配对	Forget paired
+OMIKUJI	今日签	Omikuji
+MOONBLOCKS	掷杯	Moon blocks
+WHEEL	转盘	Wheel
+GACHA	转蛋	Gacha
+TAROT	塔罗	Tarot

@@ -1,0 +1,6 @@
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=32768
+CONFIG_FREERTOS_HZ=1000
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_320=y
+# the music generator keeps the bench task busy for minutes: no task watchdog (its prints disturbed the timings)
+CONFIG_ESP_TASK_WDT_INIT=n

@@ -1,0 +1,10 @@
+{
+ "format": 1,
+ "kind": "people",
+ "title": "抽人轉盤",
+ "groups": [
+  {"name": "第一組", "items": [{"text": "小明"}, {"text": "小華"}, {"text": "阿美"}, {"text": "志豪"}, {"text": "怡君"}]},
+  {"name": "第二組", "items": [{"text": "家豪"}, {"text": "淑芬"}, {"text": "建宏"}, {"text": "雅婷"}]},
+  {"name": "第三組", "items": [{"text": "俊傑"}, {"text": "佩珊"}, {"text": "冠宇"}, {"text": "Amy"}, {"text": "Kevin 🐶"}]}
+ ]
+}

@@ -1,0 +1,6 @@
+dependencies:
+  example_init:
+    path: ${IDF_PATH}/examples/bluetooth/esp_ble_audio/common_components/example_init
+  example_utils:
+    path: ${IDF_PATH}/examples/bluetooth/esp_ble_audio/common_components/example_utils
+  espressif/esp_audio_codec: "==2.6.2"   # same as app/ (dependencies.lock)

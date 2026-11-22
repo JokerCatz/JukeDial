@@ -1,0 +1,5 @@
+# peer bench board only (make build-peer): the app console on UART0 (the 1a86 bridge) instead of USB-Serial-JTAG,
+# so the native USB port stays free for the external-mode TinyUSB device. Never part of the default build.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+# CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG is not set
+CONFIG_ESP_CONSOLE_UART_NUM=0

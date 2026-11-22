@@ -1,0 +1,2 @@
+# FakePod (make build-fakepod): on top of sdkconfig.defaults + sdkconfig.defaults.bt. The console stays on USB-Serial-JTAG (the A-side pair of the Type-C plug), as on the round board.
+# Nothing differs yet: the memory chip's mode and speed (the guide does not say) are the round board's until the board is in hand (checklist: FakePod first boot).
