@@ -9,10 +9,10 @@
 &nbsp;&nbsp;
 <img src="tools/web/board_fakepod.svg" alt="Line drawing of the JukeDial square FakePod board" width="240">
 <br>
-<em>Left: the round board (JC3636F118). Right: the square FakePod.</em>
+<em>Left: the round board (JC3636F118). Right: the square Fake Pod Nano Pro ("FakePod" for short in this project).</em>
 </p>
 
-**JukeDial** is a pocket music player and desk gadget for the **ESP32-S31**. One code base runs on two boards: **JC3636F118** (360 x 360 round touch screen, knob, haptic motor, LED ring) and **FakePod** (460 x 460 square screen, two keys, AXP2101 power chip, CS43131 DAC). It plays music from a TF card, outputs through a wired DAC, Bluetooth or Auracast, tunes internet radio, and adds a clock, small tools, games, an instrument app and ambient screens. Everything is driven by gestures (flick, drag, hold) and the knob, with no deep menus to dig through. Built on ESP-IDF v6.1, LVGL 9.5 and Bluedroid; the interface is in Traditional Chinese, Simplified Chinese and English.
+**JukeDial** is a pocket music player and desk gadget for the **ESP32-S31**. One code base runs on two boards: **JC3636F118** (360 x 360 round touch screen, knob, haptic motor, LED ring) and **Fake Pod Nano Pro** (460 x 460 square screen, two keys, AXP2101 power chip, CS43131 DAC). It plays music from a TF card, outputs through a wired DAC, Bluetooth or Auracast, tunes internet radio, and adds a clock, small tools, games, an instrument app and ambient screens. Everything is driven by gestures (flick, drag, hold) and the knob, with no deep menus to dig through. Built on ESP-IDF v6.1, LVGL 9.5 and Bluedroid; the interface is in Traditional Chinese, Simplified Chinese and English.
 
 **What it looks like** (simulator screenshots; the track and station names are invented):
 

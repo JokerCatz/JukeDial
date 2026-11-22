@@ -1,4 +1,4 @@
-# 19. FakePod-specific operation
+# 19. Fake Pod Nano Pro (FakePod): board-specific operation
 
 The FakePod has a 460 x 460 square screen, no knob, and just two keys (the top key = "+1" and also the power key, the bottom key = "-1") plus touch. This chapter collects what differs from the round board; everything else works as in the earlier chapters. Hardware differences are in [chapter 0](00-hardware.md).
 

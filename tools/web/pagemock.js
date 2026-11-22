@@ -229,9 +229,9 @@ if(location.search.includes('demo')||location.search.includes('mockserial')){
      await pickB('fakepod');await pickF(fpi,NF);E.regs=[];E.after='';
      await click('#fl-check');await waitFor(()=>!$('#fl-info').hidden);setb('#fl-backup',false);setb('#fl-skip',true);E.written=[];window.__flashDone=false;
      E.denyMismatch=true;E.confirms=[];await click('#fl-go');await sleep(200);
-     r.push(!$('#fl-mismatch').hidden&&/圓形/.test($('#fl-mismatch-t').textContent)&&/FakePod/.test($('#fl-mismatch-t').textContent)&&E.confirms.length==1&&/警告/.test(E.confirms[0])&&!E.written.length&&!window.__flashDone&&Conn.state=='flashing'?'MISMATCH-CANCEL-OK':'MISMATCH-CANCEL-FAIL '+JSON.stringify(E.confirms));
+     r.push(!$('#fl-mismatch').hidden&&/圓形/.test($('#fl-mismatch-t').textContent)&&/Fake Pod Nano Pro/.test($('#fl-mismatch-t').textContent)&&E.confirms.length==1&&/警告/.test(E.confirms[0])&&!E.written.length&&!window.__flashDone&&Conn.state=='flashing'?'MISMATCH-CANCEL-OK':'MISMATCH-CANCEL-FAIL '+JSON.stringify(E.confirms));
      E.denyMismatch=false;E.confirms=[];await click('#fl-go');await waitFor(()=>window.__flashDone,200);
-     r.push(E.confirms.length==2&&/警告/.test(E.confirms[0])&&/FakePod/.test(E.confirms[1])&&/兩個按鍵/.test(E.confirms[1])&&/位址 0x2000/.test(E.confirms[1])&&E.written.length==4?'MISMATCH-YES-OK':'MISMATCH-YES-FAIL '+JSON.stringify(E.confirms));
+     r.push(E.confirms.length==2&&/警告/.test(E.confirms[0])&&/Fake Pod Nano Pro/.test(E.confirms[1])&&/兩個按鍵/.test(E.confirms[1])&&/位址 0x2000/.test(E.confirms[1])&&E.written.length==4?'MISMATCH-YES-OK':'MISMATCH-YES-FAIL '+JSON.stringify(E.confirms));
      /* the FakePod leaves download mode by the S31 LP watchdog (esptool 5.x register sequence), not by RTS; the page says a browser cannot confirm it */
      r.push(JSON.stringify(E.regs)==JSON.stringify([[0x20801018,0x50d83aa1],[0x20801004,2000],[0x20801000,0xd0000102],[0x20801018,0]])&&E.after==''&&!$('#fl-done-fp').hidden?'FAKEPOD-WDT-OK':'FAKEPOD-WDT-FAIL '+JSON.stringify([E.regs,E.after,$('#fl-done-fp').hidden]));
      await waitFor(()=>Conn.state!='flashing');

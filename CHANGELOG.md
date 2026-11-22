@@ -6,7 +6,7 @@ JukeDial is a pocket music player and desk gadget for the ESP32-S31 (ESP-IDF v6.
 
 ### Boards
 - **Round board JC3636F118** (360 x 360 touch screen, knob, haptics, LED ring): supported. This is the board the release is tested on.
-- **FakePod** (460 x 460 square screen, two keys, AXP2101, CS43131 DAC): experimental. Flashed by hand with esptool or by the web tool once published; several of its functions have been written without the hardware at hand and are not all verified (see below).
+- **Fake Pod Nano Pro** (called FakePod below; 460 x 460 square screen, two keys, AXP2101, CS43131 DAC): experimental. Flashed by hand with esptool or by the web tool once published; several of its functions have been written without the hardware at hand and are not all verified (see below).
 
 ### Music
 - Local music from a TF card (FAT32 or exFAT, MBR) with covers, lyrics, speed 0.75x to 2x with pitch kept, crossfade, gapless playback, ReplayGain, spectrum pages.

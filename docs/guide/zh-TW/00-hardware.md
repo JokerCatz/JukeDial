@@ -12,7 +12,9 @@ JukeDial 跑在兩塊板子上，都以 **ESP32-S31**（雙核 RISC-V、320 MHz�
 - **電源：** USB-C。沒有電池晶片，也沒有時鐘晶片；只能用 ADC 讀供電電壓，所以沒有電量百分比，關機後時間不保留（開機後靠網路對時或手動設定）。
 - **動作感測：** 沒有可用的動作感測器，所以重力迷宮是用旋鈕轉重力。
 
-## 方形主板：FakePod Nano Pro
+## 方形主板：Fake Pod Nano Pro
+
+這塊板的全名是 Fake Pod Nano Pro（ESP32-S31）。它不是較早的 Fake Pod Nano（用 ESP32-S3，本專案不支援）。本說明以下簡稱 FakePod。
 第三方的開源硬體設計（作者：ZYFDroid；公開儲存庫：<https://gitee.com/ZYFDroid/night-player-fake-pod-nano>）。JukeDial 在它上面的韌體是我們自己寫的，依照公開的原理圖與筆記實作。
 - **顯示與輸入：** 460 × 460 方形 AMOLED（CO5300 控制器）、CST820 電容觸控、**兩顆按鍵**（上鍵＝「＋1」兼電源鍵，下鍵＝「－1」），沒有旋鈕。
 - **音訊：** 有線輸出走 **CS43131** DAC 兼耳機放大器（3.5 mm 耳機孔）；PDM 麥克風；TF 卡槽。
@@ -25,7 +27,7 @@ JukeDial 跑在兩塊板子上，都以 **ESP32-S31**（雙核 RISC-V、320 MHz�
 更多 FakePod 專屬的操作（九宮格、三種播放頁、傾斜迷宮、輸出推力）在[第 19 章](19-fakepod.md)。
 
 ## 比較
-| | 圓形（JC3636F118） | 方形（FakePod Nano Pro） |
+| | 圓形（JC3636F118） | 方形（Fake Pod Nano Pro） |
 |---|---|---|
 | 螢幕 | 360 × 360 圓形、背光 | 460 × 460 方形 AMOLED（CO5300） |
 | 觸控 | 有 | 有（CST820） |

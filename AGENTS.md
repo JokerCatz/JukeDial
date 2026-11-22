@@ -1,6 +1,6 @@
 # AGENTS.md
 
-JukeDial: firmware for an ESP32-S31 music player (360x360 round board with a knob; second target FakePod, 460x460 square, two keys). ESP-IDF v6.1, LVGL 9.5, Bluedroid. One code base, two boards.
+JukeDial: firmware for an ESP32-S31 music player (360x360 round board with a knob; second target Fake Pod Nano Pro ("FakePod" in the code and docs), 460x460 square, two keys). ESP-IDF v6.1, LVGL 9.5, Bluedroid. One code base, two boards.
 User docs: `README.md`, `docs/guide/`. Developer notes: `docs/dev/`.
 What is tested and what was measured: `docs/dev/testing.md`, `docs/dev/test-results.md`; feature map: `docs/dev/features.md`.
 

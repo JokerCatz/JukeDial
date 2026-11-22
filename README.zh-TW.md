@@ -9,10 +9,10 @@
 &nbsp;&nbsp;
 <img src="tools/web/board_fakepod.svg" alt="JukeDial 方形 FakePod 主板線稿" width="240">
 <br>
-<em>左：圓形主板（JC3636F118）。右：方形 FakePod。</em>
+<em>左：圓形主板（JC3636F118）。右：方形 Fake Pod Nano Pro（本專案簡稱 FakePod）。</em>
 </p>
 
-**JukeDial** 是一台跑在 **ESP32-S31** 上的隨身音樂播放器兼桌面小玩具，同一份程式支援兩塊板：**JC3636F118**（360 × 360 圓形觸控螢幕、旋鈕、震動馬達、LED 環）與 **FakePod**（460 × 460 方形螢幕、兩顆按鍵、AXP2101 電源晶片、CS43131 DAC）。它從 TF 卡播放音樂，輸出可以走有線 DAC、藍牙或 Auracast，也能聽網路電台，還有時鐘、小工具、遊戲、樂器與氛圍畫面。全部用手勢（快速滑、拖、按住）和旋鈕操作，不用鑽進層層選單。基於 ESP-IDF v6.1、LVGL 9.5 與 Bluedroid；介面有繁體中文、简体中文、English。
+**JukeDial** 是一台跑在 **ESP32-S31** 上的隨身音樂播放器兼桌面小玩具，同一份程式支援兩塊板：**JC3636F118**（360 × 360 圓形觸控螢幕、旋鈕、震動馬達、LED 環）與 **Fake Pod Nano Pro**（460 × 460 方形螢幕、兩顆按鍵、AXP2101 電源晶片、CS43131 DAC）。它從 TF 卡播放音樂，輸出可以走有線 DAC、藍牙或 Auracast，也能聽網路電台，還有時鐘、小工具、遊戲、樂器與氛圍畫面。全部用手勢（快速滑、拖、按住）和旋鈕操作，不用鑽進層層選單。基於 ESP-IDF v6.1、LVGL 9.5 與 Bluedroid；介面有繁體中文、简体中文、English。
 
 **實際畫面**（模擬器截圖，曲目與電台名稱都是虛構的）：
 

@@ -12,7 +12,9 @@ A knob board with a 360 x 360 round touch display.
 - **Power:** USB-C. There is no battery chip and no clock chip; the board can only read the supply voltage through an ADC, so there is no battery percentage, and the time is not kept while powered off (set it from the network or by hand after boot).
 - **Motion sensing:** there is no usable motion sensor, so the gravity maze turns gravity with the knob.
 
-## The square board: FakePod Nano Pro
+## The square board: Fake Pod Nano Pro
+
+The board's full name is Fake Pod Nano Pro (ESP32-S31). It is not the earlier Fake Pod Nano, which uses an ESP32-S3 and is not supported. This guide calls it FakePod for short.
 A third-party open hardware design (credit: ZYFDroid; public repository: <https://gitee.com/ZYFDroid/night-player-fake-pod-nano>). JukeDial's firmware on it is our own code, written against the published schematic and notes.
 - **Display and input:** 460 x 460 square AMOLED (CO5300 controller), CST820 capacitive touch, **two keys** (top key = "+1" and the power key, bottom key = "-1"), no knob.
 - **Audio:** wired output through a **CS43131** DAC and headphone amplifier (3.5 mm jack); a PDM microphone; a TF card slot.
@@ -25,7 +27,7 @@ A third-party open hardware design (credit: ZYFDroid; public repository: <https:
 More FakePod-specific operation (nine-grid, three now-playing styles, tilt maze, output drive) is in [chapter 19](19-fakepod.md).
 
 ## Comparison
-| | Round (JC3636F118) | Square (FakePod Nano Pro) |
+| | Round (JC3636F118) | Square (Fake Pod Nano Pro) |
 |---|---|---|
 | Display | 360 x 360 round, backlit | 460 x 460 square AMOLED (CO5300) |
 | Touch | yes | yes (CST820) |

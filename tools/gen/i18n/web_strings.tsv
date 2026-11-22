@@ -405,7 +405,7 @@ W_FLASH_BOOT_HINT	連不上時：按住本機的 BOOT 針孔再插上 USB 線（
 W_FLASH_BOARD	板子	板子	Board	translated	
 W_FLASH_BOARD_PICK	請選板子…	请选择板子…	Pick a board…	translated	
 W_FLASH_BOARD_ROUND	圓形旋鈕板（JC3636F118）	圆形旋钮板（JC3636F118）	Round knob board (JC3636F118)	translated	
-W_FLASH_BOARD_FAKEPOD	FakePod（方形螢幕、兩個按鍵）	FakePod（方形屏幕、两个按键）	FakePod (square screen, two keys)	translated	
+W_FLASH_BOARD_FAKEPOD	Fake Pod Nano Pro（方形螢幕、兩個按鍵）	Fake Pod Nano Pro（方形屏幕、两个按键）	Fake Pod Nano Pro (square screen, two keys)	translated	
 W_FLASH_CHECK_BTN	連線並檢查	连接并检查	Connect and check	translated	
 W_FLASH_CHIP	晶片	芯片	Chip	translated	
 W_FLASH_FLASH_SIZE	快閃記憶體	闪存	Flash memory	translated	
