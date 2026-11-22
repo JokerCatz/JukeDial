@@ -173,7 +173,7 @@ W_FLASH_BACKUP:["先備份整個快閃記憶體（強烈建議，要花幾分鐘
 W_FLASH_BACKUP_CONFIRM:["備份 {0}（{1} MB）已下載，並且和快閃記憶體比對過。請確認這個檔真的存在你的電腦上，再按「確定」開始寫入。","备份 {0}（{1} MB）已下载，并且和闪存比对过。请确认这个文件真的保存在你的电脑上，再点“确定”开始写入。","The backup {0} ({1} MB) was downloaded and checked against the flash. Make sure the file really is on your computer, then press OK to start writing."],
 W_FLASH_BACKUP_SAVED:["備份已下載：{0}","备份已下载：{0}","Backup downloaded: {0}"],
 W_FLASH_BOARD:["板子","板子","Board"],
-W_FLASH_BOARD_FAKEPOD:["FakePod（方形螢幕、兩個按鍵）","FakePod（方形屏幕、两个按键）","FakePod (square screen, two keys)"],
+W_FLASH_BOARD_FAKEPOD:["Fake Pod Nano Pro（方形螢幕、兩個按鍵）","Fake Pod Nano Pro（方形屏幕、两个按键）","Fake Pod Nano Pro (square screen, two keys)"],
 W_FLASH_BOARD_FAKEPOD_DESC:["方形螢幕 460×460、兩個按鍵、沒有旋鈕","方形屏幕 460×460、两个按键、没有旋钮","square 460×460 screen, two keys, no knob"],
 W_FLASH_BOARD_PICK:["請選板子…","请选择板子…","Pick a board…"],
 W_FLASH_BOARD_ROUND:["圓形旋鈕板（JC3636F118）","圆形旋钮板（JC3636F118）","Round knob board (JC3636F118)"],
