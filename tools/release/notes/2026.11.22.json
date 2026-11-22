@@ -1,0 +1,5 @@
+{
+"zh-TW": "第一個公開版本。每塊板一個合併映像檔：圓形板 JC3636F118 用 round，Fake Pod Nano Pro 用 fakepod；用網頁工具（Chrome 或 Edge）選檔刷入，更新會保留設定與藍牙配對。TF 卡內容在 card.zip；連不上線上網頁工具時用 webtool.zip 在本機開。Fake Pod Nano Pro 為實驗性支援。",
+"zh-CN": "第一个公开版本。每块板一个合并镜像文件：圆形板 JC3636F118 用 round，Fake Pod Nano Pro 用 fakepod；用网页工具（Chrome 或 Edge）选文件刷入，更新会保留设置与蓝牙配对。TF 卡内容在 card.zip；连不上在线网页工具时用 webtool.zip 在本机打开。Fake Pod Nano Pro 为实验性支持。",
+"en": "First public release. One merged image per board: round for the JC3636F118 round board, fakepod for the Fake Pod Nano Pro; flash it with the web tool (Chrome or Edge) by picking the file, an update keeps settings and Bluetooth pairings. The TF card contents are in card.zip; webtool.zip runs the web tool locally when the hosted page cannot be reached. Fake Pod Nano Pro support is experimental."
+}
